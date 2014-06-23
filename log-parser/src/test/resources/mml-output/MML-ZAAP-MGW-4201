@@ -1,0 +1,324 @@
+ZZAAP:; 
+ 
+ 
+LOADING PROGRAM VERSION 4.13-0 
+ 
+MGW       IPA2800                   2010-11-01  22:48:29 
+ 
+ACTIVE ALARMS 
+ 
+ 
+    (15484) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.16 
+*** ALARM   NIWU-2 ETGR-0 ET-32                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 32d 00  
+ 
+    (15487) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.16 
+*** ALARM   NIWU-2 ETGR-0 ET-35                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 35d 00  
+ 
+    (15486) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.16 
+*** ALARM   NIWU-2 ETGR-0 ET-34                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 34d 00  
+ 
+    (15485) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.16 
+*** ALARM   NIWU-2 ETGR-0 ET-33                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 33d 00  
+ 
+    (15496) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.49 
+*** ALARM   NIWU-2 ETGR-3 ET-44                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 44d 00  
+ 
+    (15499) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.49 
+*** ALARM   NIWU-2 ETGR-3 ET-47                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 47d 00  
+ 
+    (15498) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.49 
+*** ALARM   NIWU-2 ETGR-3 ET-46                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 46d 00  
+ 
+    (15497) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.49 
+*** ALARM   NIWU-2 ETGR-3 ET-45                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 45d 00  
+ 
+    (15492) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.44 
+*** ALARM   NIWU-2 ETGR-2 ET-40                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 40d 00  
+ 
+    (15495) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.44 
+*** ALARM   NIWU-2 ETGR-2 ET-43                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 43d 00  
+ 
+    (15494) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.44 
+*** ALARM   NIWU-2 ETGR-2 ET-42                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 42d 00  
+ 
+    (15493) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.44 
+*** ALARM   NIWU-2 ETGR-2 ET-41                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 41d 00  
+ 
+    (15488) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.27 
+*** ALARM   NIWU-2 ETGR-1 ET-36                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 36d 00  
+ 
+    (15491) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.28 
+*** ALARM   NIWU-2 ETGR-1 ET-39                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 39d 00  
+ 
+    (15490) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.28 
+*** ALARM   NIWU-2 ETGR-1 ET-38                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 38d 00  
+ 
+    (15489) IPA2800          1A003-00-2      COMM         2010-10-21 13:19:03.28 
+*** ALARM   NIWU-2 ETGR-1 ET-37                                                  
+    2915    FAULT RATE MONITORING                                            
+    ERDSUP  OMU-0                                           
+    ET 37d 00  
+ 
+    (15387) IPA2800          1A002-00-14     EQUIPM       2010-10-21 13:12:56.38 
+**  ALARM   NONE                                                                 
+    3050    NO RESPONSE FROM PLUG-IN UNIT                                    
+    HMALAR  OMU-0                                           
+    HDS_A 01 02 0E  
+ 
+    (15388) IPA2800          1A004-00-16     EQUIPM       2010-10-21 13:13:00.01 
+**  ALARM   NONE                                                                 
+    3050    NO RESPONSE FROM PLUG-IN UNIT                                    
+    HMALAR  OMU-0                                           
+    CCP10 01 04 10  
+ 
+    (15520) IPA2800          1A001-00-16     PROCES       2010-10-21 14:12:16.44 
+**  ALARM   OMU-0                                                                
+    2518    NO VALID FALLBACK COPY FOR DEFAULT PACKAGE                       
+    SW5ADM  OMU-0                                           
+    03  
+ 
+    (15507) IPA2800          1A002-00-6      QUAL         2010-10-21 13:30:12.04 
+**  ALARM   CM-1                                                                 
+    3407    MGW LICENCED FEATURE FAILURE                                     
+    MLPPRB  CM-1                                            
+    1037d 02 03 69d  
+ 
+    (15460) IPA2800          1A001-00-5      COMM         2010-10-21 13:18:14.12 
+*   ALARM   NIS1P-0 SET-0                                                        
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   NIS1P-0                                         
+    02  
+ 
+    (15462) IPA2800          1A001-00-5      COMM         2010-10-21 13:18:14.18 
+*   ALARM   NIS1P-0 SET-3                                                        
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   NIS1P-0                                         
+    02  
+ 
+    (15461) IPA2800          1A001-00-5      COMM         2010-10-21 13:18:14.17 
+*   ALARM   NIS1P-0 SET-2                                                        
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   NIS1P-0                                         
+    02  
+ 
+    (15502) IPA2800          1A002-00-5      COMM         2010-10-21 13:19:40.59 
+*   ALARM   NIS1P-1 SET-5                                                        
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   NIS1P-1                                         
+    02  
+ 
+    (15501) IPA2800          1A002-00-5      COMM         2010-10-21 13:19:40.63 
+*   ALARM   NIS1P-1 SET-4                                                        
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   NIS1P-1                                         
+    02  
+ 
+    (15504) IPA2800          1A002-00-5      COMM         2010-10-21 13:19:40.61 
+*   ALARM   NIS1P-1 SET-7                                                        
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   NIS1P-1                                         
+    02  
+ 
+    (15503) IPA2800          1A002-00-5      COMM         2010-10-21 13:19:40.60 
+*   ALARM   NIS1P-1 SET-6                                                        
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   NIS1P-1                                         
+    02  
+ 
+    (15464) IPA2800          1A003-00-1      COMM         2010-10-21 13:18:15.01 
+*   ALARM   IWS1E-0 SET-8                                                        
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   STER-0                                          
+    02  
+ 
+    (15463) IPA2800          1A003-00-1      COMM         2010-10-21 13:18:15.05 
+*   ALARM   IWS1E-0 SET-9                                                        
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   STER-0                                          
+    02  
+ 
+    (15466) IPA2800          1A004-00-1      COMM         2010-10-21 13:18:15.12 
+*   ALARM   IWS1E-1 SET-10                                                       
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   STER-1                                          
+    02  
+ 
+    (15465) IPA2800          1A004-00-1      COMM         2010-10-21 13:18:15.15 
+*   ALARM   IWS1E-1 SET-11                                                       
+    3900    INCOMING SDH SIGNAL MISSING                                      
+    0557H   STER-1                                          
+    02  
+ 
+    (15467) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.76 
+*   ALARM   NIWU-2 ETGR-0 ET-32                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 32d 00  
+ 
+    (15470) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.76 
+*   ALARM   NIWU-2 ETGR-0 ET-35                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 35d 00  
+ 
+    (15469) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.76 
+*   ALARM   NIWU-2 ETGR-0 ET-34                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 34d 00  
+ 
+    (15468) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.76 
+*   ALARM   NIWU-2 ETGR-0 ET-33                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 33d 00  
+ 
+    (15479) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.79 
+*   ALARM   NIWU-2 ETGR-3 ET-44                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 44d 00  
+ 
+    (15482) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.79 
+*   ALARM   NIWU-2 ETGR-3 ET-47                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 47d 00  
+ 
+    (15481) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.79 
+*   ALARM   NIWU-2 ETGR-3 ET-46                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 46d 00  
+ 
+    (15480) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.79 
+*   ALARM   NIWU-2 ETGR-3 ET-45                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 45d 00  
+ 
+    (15475) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.78 
+*   ALARM   NIWU-2 ETGR-2 ET-40                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 40d 00  
+ 
+    (15478) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.78 
+*   ALARM   NIWU-2 ETGR-2 ET-43                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 43d 00  
+ 
+    (15477) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.78 
+*   ALARM   NIWU-2 ETGR-2 ET-42                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 42d 00  
+ 
+    (15476) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.78 
+*   ALARM   NIWU-2 ETGR-2 ET-41                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 41d 00  
+ 
+    (15471) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.78 
+*   ALARM   NIWU-2 ETGR-1 ET-36                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 36d 00  
+ 
+    (15474) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.78 
+*   ALARM   NIWU-2 ETGR-1 ET-39                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 39d 00  
+ 
+    (15473) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.78 
+*   ALARM   NIWU-2 ETGR-1 ET-38                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 38d 00  
+ 
+    (15472) IPA2800          1A003-00-2      COMM         2010-10-21 13:18:26.78 
+*   ALARM   NIWU-2 ETGR-1 ET-37                                                  
+    2900    INCOMING SIGNAL MISSING                                          
+    ERDSUP  OMU-0                                           
+    ET 37d 00  
+ 
+    (21862) IPA2800                          EQUIPM       2010-11-01 22:48:28.73 
+    NOTICE  VTP-0                                                                
+    0805    I/O DEVICE OPERATING STATE CHANGED                               
+    IDMANA  OMU-0                                           
+    BL-EX WO-EX 00  
+ 
+    (21861) IPA2800                          EQUIPM       2010-11-01 22:48:20.06 
+    NOTICE  VTP-11                                                               
+    0805    I/O DEVICE OPERATING STATE CHANGED                               
+    IDMANA  OMU-0                                           
+    WO-EX BL-EX 00  
+ 
+    (21860) IPA2800                          EQUIPM       2010-11-01 22:48:16.21 
+    NOTICE  VTP-11                                                               
+    0805    I/O DEVICE OPERATING STATE CHANGED                               
+    IDMANA  OMU-0                                           
+    BL-EX WO-EX 00  
+ 
+NUMBER OF ACTIVE ALARMS DISPLAYED: 
+ 
+  *** ALARM  = 16 
+   ** ALARM  = 4 
+    * ALARM  = 27 
+     NOTICE  = 3 
+ 
+TOTAL:       = 50 
+ 
+COMMAND EXECUTED 
+
+ 
+ACTIVE ALARMS HANDLING COMMAND <AA_> 
+<   

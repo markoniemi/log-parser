@@ -1,0 +1,45 @@
+ZZWQO:CR; 
+ 
+ 
+LOADING PROGRAM VERSION 14.13-1 
+ 
+PACKAGES CREATED IN OMU: 
+ 
+    SW-PACKAGE     STATUS   DIRECTORY           ENVIRONMENT          DEF  ACT 
+                            PACKAGE-ID (REP-ID) DELIVERY 
+                                                CD-ID     GCD LEVEL 
+ 
+    TELENOR        FB       TELENOR             ME 9.11-0             Y    Y  
+                            ME 9.1-0         22 CIDO21XX 3.59-1    
+                                                MEXX91F2  (9.1/F2)      
+ 
+    MEXX91F2       BU       ME_9_1_0            ME 9.11-0             -    Y  
+                            ME 9.1-0         22 CIDO21XX 3.59-1    
+                                                MEXX91F2  (9.1/F2)      
+ 
+    FBJALLU        NW       FBJALLU             ME 9.8-1              -    Y  
+                            ME 9.1-0         17 CIDO21XX 3.43-0    
+                                                MEXX6300  (6.3)         
+ 
+    FBXX71F3       UT       FBXX71F3            ME 9.9-1              -    Y  
+                            ME 9.1-0         18 CIDO21XX 3.47-0    
+                                                MEXX71F3  (7.1/F3)      
+ 
+    FBM1405        UT       FBM1405             ME 9.9-1              -    Y  
+                            ME 9.1-0         19 CIDO21XX 3.52-0    
+                                                MEGU7500  (7.5)         
+ 
+    MEXX9000       UT       ME_9_1_0            ME 9.11-0             -    N  
+                            ME 9.1-0         21 CIDO21XX 3.59-1    
+                                                MEXX9000  (9.0)         
+ 
+    FBME83F3       UT       FBME83F3            ME 9.10-1             -    Y  
+                            ME 9.1-0         20 CIDO21XX 3.59-0    
+                                                MEXX83F3  (8.3/F3)      
+ 
+ 
+COMMAND EXECUTED 
+
+ 
+SOFTWARE PACKAGE ADMINISTRATION COMMAND <WQ_> 
+<   

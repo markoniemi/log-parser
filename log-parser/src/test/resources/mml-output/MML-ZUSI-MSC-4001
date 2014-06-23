@@ -1,0 +1,167 @@
+ZZUSI; 
+ 
+ 
+LOADING PROGRAM VERSION 25.7-0 
+ 
+EXECUTION STARTED 
+
+ 
+MSCi      MIKAEL                    2010-08-06  15:15:22 
+ 
+WORKING STATE OF UNITS 
+ UNIT       PHYS STATE LOCATION              INFO 
+ OMU-0      0000 SE-OU                       FLTY                           
+ OMU-1      0001 WO-EX                        -                             
+ STU-0      0002 WO-EX                       FLTY                           
+ STU-1      0003 SE-OU                       FLTY                           
+ CM-0       0004 SP-EX                       RP 1                           
+ CM-1       0005 WO-EX                        -                             
+ M-0        0006 SE-OU                       FLTY                           
+ M-1        0007 WO-EX                        -                             
+ CCSU-0     0050 WO-EX                       FLTY                           
+ CCSU-1     0051 WO-EX                        -                             
+ CCSU-2     0056 WO-EX                        -                             
+ CCSU-3     0057 WO-RE                       RPf1 FLTY OBSE                 
+ CCSU-4     0058 WO-EX                       FLTY                           
+ CCSU-5     0059 SE-OU                       FLTY                           
+ CCSU-6     005A SE-OU                       FLTY                           
+ CHU-0-0    0010 SP-EX                        -                             
+ CHU-0-1    0011 WO-EX                        -                             
+ PAU-0      0054 SP-EX                       IDLE                           
+ PAU-1      0055 SP-EX                       IDLE                           
+ CLS-0           WO-EX                       FLTY                           
+ CLS-1           SP-EX                        -                             
+ MB-0            WO-EX                       FLTY                           
+ MB-1            SE-OU                       FLTY                           
+ ET-450          SE-NH  2C002-07    CCSU-2    -                             
+ ET-451          WO-EX  2C002-07    CCSU-2    -                             
+ ET-452          WO-EX  2C002-07    CCSU-2    -                             
+ ET-453          WO-EX  2C002-07    CCSU-2    -                             
+ ET-454          SE-NH  2C002-07              -                             
+ ET-455          SE-NH  2C002-07              -                             
+ ET-456          WO-EX  2C002-07    CCSU-1    -                             
+ ET-457          WO-EX  2C002-07    CCSU-1    -                             
+ ET-458          WO-EX  2C002-07              -                             
+ ET-459          WO-EX  2C002-07              -                             
+ ET-460          WO-EX  2C002-07    CCSU-4    -                             
+ ET-461          WO-EX  2C002-07    CCSU-4    -                             
+ ET-462          WO-EX  2C002-07    CCSU-1    -                             
+ ET-463          WO-EX  2C002-07    CCSU-1    -                             
+ ET-464          WO-EX  2C002-07    CCSU-0    -                             
+ ET-465          WO-EX  2C002-07    CCSU-0    -                             
+ ET-466          WO-EX  2C002-07    CCSU-0    -                             
+ ET-467          WO-EX  2C002-07    CCSU-0    -                             
+ ET-468          WO-EX  2C002-07    CCSU-4    -                             
+ ET-469          WO-EX  2C002-07    CCSU-4    -                             
+ ET-470          WO-EX  2C002-07              -                             
+ ET-471          WO-EX  2C002-07              -                             
+ ET-472          WO-EX  2C002-07    CCSU-2    -                             
+ ET-473          WO-EX  2C002-07    CCSU-2    -                             
+ ET-474          WO-EX  2C002-07              -                             
+ ET-475          WO-EX  2C002-07              -                             
+ ET-476          WO-EX  2C002-07    BSU-0     -                             
+ ET-477          WO-EX  2C002-07    BSU-0     -                             
+ ET-478          WO-EX  2C002-07    BSU-8     -                             
+ ET-479          WO-EX  2C002-07    BSU-8     -                             
+ ET-480          WO-EX  2C002-07    BSU-8     -                             
+ ET-481          WO-EX  2C002-07    BSU-8     -                             
+ ET-482          WO-EX  2C002-07    CCSU-1    -                             
+ ET-483          WO-EX  2C002-07    CCSU-1    -                             
+ ET-484          WO-EX  2C002-07    CCSU-0    -                             
+ ET-485          WO-EX  2C002-07    CCSU-0    -                             
+ ET-486          WO-EX  2C002-07    CCSU-2    -                             
+ ET-487          WO-EX  2C002-07    CCSU-2    -                             
+ ET-488          WO-EX  2C002-07    BSU-8     -                             
+ ET-489          WO-EX  2C002-07    BSU-8     -                             
+ ET-490          WO-EX  2C002-07              -                             
+ ET-491          WO-EX  2C002-07              -                             
+ ET-492          WO-EX  2C002-07    CCSU-1    -                             
+ ET-493          WO-EX  2C002-07    CCSU-1    -                             
+ ET-494          WO-RE  2C002-07              -                             
+ ET-495          WO-RE  2C002-07              -                             
+ ET-496          WO-EX  2C002-07    CCSU-2    -                             
+ ET-497          WO-EX  2C002-07    CCSU-2    -                             
+ ET-498          WO-EX  2C002-07    CCSU-0    -                             
+ ET-499          WO-EX  2C002-07    CCSU-0    -                             
+ ET-500          WO-EX  2C002-07    CCSU-0    -                             
+ ET-501          WO-EX  2C002-07    CCSU-0    -                             
+ ET-502          WO-EX  2C002-07    CCSU-1    -                             
+ ET-503          WO-EX  2C002-07    CCSU-1    -                             
+ ET-504          WO-EX  2C002-07    CCSU-2    -                             
+ ET-505          WO-EX  2C002-07    CCSU-2    -                             
+ ET-506          WO-EX  2C002-07    CCSU-2    -                             
+ ET-507          WO-EX  2C002-07    CCSU-2    -                             
+ ET-508          WO-EX  2C002-07    CCSU-1    -                             
+ ET-509          SE-NH  2C002-07    CCSU-1    -                             
+ CCM-0      0008 WO-EX                       FLTY                           
+ CCM-1      0009 SE-OU                       RP 1 FLTY RCMD                 
+ BSU-0      0040 WO-EX                        -                             
+ BSU-1      0041 SP-EX                       IDLE                           
+ BSU-2      0042 SE-OU                       FLTY                           
+ BSU-3      0043 WO-EX                        -                             
+ BSU-4      0044 WO-EX                        -                             
+ BSU-5      0045 WO-EX                        -                             
+ BSU-6      0046 SP-EX                       IDLE                           
+ BSU-7      0047 SE-OU                       FLTY                           
+ BSU-8      0048 WO-EX                        -                             
+ BSU-9      0049 SE-OU                       FLTY                           
+ BSU-10     004A SP-EX                       IDLE                           
+ BSU-11     004B SE-OU                       FLTY                           
+ CMU-0      000A WO-EX                        -                             
+ CMU-1      000B SP-EX                       RP 1                           
+ VLRU-0-0   001A SE-OU                       FLTY                           
+ VLRU-0-1   001B WO-EX                        -                             
+ BDCU-0     0030 WO-EX                        -                             
+ BDCU-1     0031 WO-EX                        -                             
+ MFSU-0     0035 WO-RE                       RPf1 CDSK FIMM FLTY            
+ MFSU-1     0036 SE-OU                       FLTY                           
+ CASU-0     0052 SP-EX                       IDLE                           
+ CASU-1     0053 SP-EX                       IDLE                           
+ VLRU-1-0   001C WO-EX                        -                             
+ VLRU-1-1   001D SP-EX                        -                             
+ VLRU-2-0   001E WO-EX                        -                             
+ VLRU-2-1   001F SP-EX                        -                             
+ VLRU-3-0   0020 WO-EX                        -                             
+ VLRU-3-1   0021 SP-EX                        -                             
+ VLRU-4-0   0022 WO-EX                       FLTY                           
+ VLRU-4-1   0023 SE-OU                       RP 1 FLTY RCMD                 
+ CLAB-0          WO-EX                        -                             
+ CLAB-1          SP-EX                        -                             
+ CLAB-2          SP-EX                        -                             
+ CLAB-3          WO-EX                        -                             
+ CLAB-4          WO-EX                        -                             
+ CLAB-5          SP-EX                        -                             
+ CLAB-6          WO-EX                        -                             
+ CLAB-7          SP-EX                        -                             
+ CLAB-8          WO-EX                       FLTY                           
+ CLAB-9          SE-OU                       FLTY                           
+ CLAB-10         WO-EX                       FLTY                           
+ CLAB-11         SE-NH                        -                             
+ CLAB-12         SE-NH                        -                             
+ CLAB-13         SE-NH                        -                             
+ CLAB-14         SE-NH                        -                             
+ CLAB-15         SE-NH                        -                             
+ CLAB-32         SE-NH                        -                             
+ CLAB-33         SE-NH                        -                             
+ CLAB-34         SE-NH                        -                             
+ CLAB-35         SE-NH                        -                             
+ CLAB-64         SE-NH                        -                             
+ CLAB-65         SE-NH                        -                             
+ SBUS-0          WO-EX                        -                             
+ SBUS-1          SP-EX                        -                             
+ VLRU-5-0   0024 WO-EX                        -                             
+ VLRU-5-1   0025 SE-OU                       FLTY                           
+ CHU-1-0    0012 SE-OU                       FLTY                           
+ CHU-1-1    0013 WO-EX                       FLTY                           
+ 
+TOTAL OF 143   UNITS 
+ FAULTY UNIT                 28                                                 
+ OBSERVING BY SYSTEM         1                                                  
+ RESTART ON COMMAND          2                                                  
+ INCORRECT STATES            45                                                 
+ 
+COMMAND EXECUTED 
+
+ 
+WORKING STATE AND RESTART HANDLING COMMAND  
+<   

@@ -1,0 +1,568 @@
+ZZW7I:LIC,FULL:; 
+ 
+ 
+LOADING PROGRAM VERSION 1.19-0 
+ 
+LICENCE INFORMATION: 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC61249          
+    LICENCE NAME:..............L.1249 MSS Basic SW capacity              
+    LICENCE FILE NAME:.........F4000036 
+    SERIAL NUMBER:.............0001030982449 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1500000 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC71218          
+    LICENCE NAME:..............L.1218 Direct SM Delivery                 
+    LICENCE FILE NAME:.........F4000043 
+    SERIAL NUMBER:.............2101224791473 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........10 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC61381          
+    LICENCE NAME:..............L.1381 Camel 3 in MSS                     
+    LICENCE FILE NAME:.........F4000054 
+    SERIAL NUMBER:.............4011083420689 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC61384          
+    LICENCE NAME:..............L.1384 Camel 4 in MSS                     
+    LICENCE FILE NAME:.........F4000055 
+    SERIAL NUMBER:.............2111199580881 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31413          
+    LICENCE NAME:..............L.1413 H.248 Context Utilization counter  
+    LICENCE FILE NAME:.........F4000056 
+    SERIAL NUMBER:.............0611099094481 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31415          
+    LICENCE NAME:..............L.1415 MGW traffic reporting in MSS       
+    LICENCE FILE NAME:.........F4000057 
+    SERIAL NUMBER:.............6211113049585 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31417          
+    LICENCE NAME:..............L.1417 TrFO Codec Negotiation Measuremen  
+    LICENCE FILE NAME:.........F4000058 
+    SERIAL NUMBER:.............8411087836481 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31421          
+    LICENCE NAME:..............L.1421 Multiple Isolated IP Networks in   
+    LICENCE FILE NAME:.........F4000060 
+    SERIAL NUMBER:.............5411001830209 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC61472          
+    LICENCE NAME:..............L.1472 SIM Authentic. Digest AKA/TLS      
+    LICENCE FILE NAME:.........G2300166 
+    SERIAL NUMBER:.............0001070350577 
+    ORDER IDENTIFIER:..........100608 
+    CUSTOMER ID:...............Kara 3 
+    CUSTOMER NAME:.............Kara 3 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-06-08 
+    EXPIRATION DATE:...........2011-06-08 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1000000 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31432          
+    LICENCE NAME:..............L.1432 SIP over SCTP support              
+    LICENCE FILE NAME:.........F4000063 
+    SERIAL NUMBER:.............0911166332481 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31443          
+    LICENCE NAME:..............L.1443 MSS IP Based Iu-CS Interface LK    
+    LICENCE FILE NAME:.........G3700060 
+    SERIAL NUMBER:.............4211096526945 
+    ORDER IDENTIFIER:..........100913 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Kara3 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-09-13 
+    EXPIRATION DATE:...........2011-09-13 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31465          
+    LICENCE NAME:..............L.1465 DTMF transport over RTP in MSS     
+    LICENCE FILE NAME:.........F4000065 
+    SERIAL NUMBER:.............1511120937473 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC61466          
+    LICENCE NAME:..............L.1466  Multi PLMN support for RNC        
+    LICENCE FILE NAME:.........F4000066 
+    SERIAL NUMBER:.............6811149716993 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC61468          
+    LICENCE NAME:..............L.1468 Multi-Operator Core Network        
+    LICENCE FILE NAME:.........F4000067 
+    SERIAL NUMBER:.............6311114559297 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31478          
+    LICENCE NAME:..............L.1478 Virtual circuits support with SIP  
+    LICENCE FILE NAME:.........F4000068 
+    SERIAL NUMBER:.............9411114769905 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC33317          
+    LICENCE NAME:..............L.3317 MSS M3UA Statsitics                
+    LICENCE FILE NAME:.........F4000069 
+    SERIAL NUMBER:.............0811129456913 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC33320          
+    LICENCE NAME:..............L.3320 Intelligent MultiSIM               
+    LICENCE FILE NAME:.........F4000070 
+    SERIAL NUMBER:.............7711185045713 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............HLR 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31422          
+    LICENCE NAME:..............L.1422 Enhanced TFO and TrFO in MSS       
+    LICENCE FILE NAME:.........F4000061 
+    SERIAL NUMBER:.............1811132829633 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31416          
+    LICENCE NAME:..............L.1416 PBX Support Using IUA              
+    LICENCE FILE NAME:.........F4000072 
+    SERIAL NUMBER:.............4811132703041 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31460          
+    LICENCE NAME:..............L.1460 IPsec for Control Plane            
+    LICENCE FILE NAME:.........F4000073 
+    SERIAL NUMBER:.............7111256466433 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31426          
+    LICENCE NAME:..............L.1426 Sigtran Load Monitoring            
+    LICENCE FILE NAME:.........F4000074 
+    SERIAL NUMBER:.............3911256407089 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31461          
+    LICENCE NAME:..............L.1461  IPsec for Management Plane        
+    LICENCE FILE NAME:.........F4000075 
+    SERIAL NUMBER:.............8211264804897 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31487          
+    LICENCE NAME:..............L.1487 Integrated DNS Host File           
+    LICENCE FILE NAME:.........F4000076 
+    SERIAL NUMBER:.............1511014123281 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC63390          
+    LICENCE NAME:..............L.3390 AMR-WB Codec in MSS                
+    LICENCE FILE NAME:.........F4000071 
+    SERIAL NUMBER:.............4711088645873 
+    ORDER IDENTIFIER:..........090928 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Karaportti 3A 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............NOT ACTIVE LIMITED 
+    START DATE:................2009-09-28 
+    EXPIRATION DATE:...........2010-09-28 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC34113          
+    LICENCE NAME:..............L.4113 Core NW Node selection supp MSS    
+    LICENCE FILE NAME:.........F4900108 
+    SERIAL NUMBER:.............6511122053057 
+    ORDER IDENTIFIER:..........091130 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............NSN Kara 3 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2009-11-30 
+    EXPIRATION DATE:...........2010-11-30 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC34249          
+    LICENCE NAME:..............L.4249 Embedded I-BCF in MSS              
+    LICENCE FILE NAME:.........G0900220 
+    SERIAL NUMBER:.............0611191100529 
+    ORDER IDENTIFIER:..........100303 
+    CUSTOMER ID:...............NSN Kara3 
+    CUSTOMER NAME:.............TS/SS JALLU-MSS & KUKKO-MSS 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-03-03 
+    EXPIRATION DATE:...........2011-03-03 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC61479          
+    LICENCE NAME:..............L.1479 T38 Fax Support in MSS             
+    LICENCE FILE NAME:.........G1100012 
+    SERIAL NUMBER:.............0311182771585 
+    ORDER IDENTIFIER:..........100315 
+    CUSTOMER ID:...............KARA 3 
+    CUSTOMER NAME:.............TS/SS 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-03-15 
+    EXPIRATION DATE:...........2011-03-15 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC33391          
+    LICENCE NAME:..............L.3391 G.723.1 Codec in MSS               
+    LICENCE FILE NAME:.........G1100008 
+    SERIAL NUMBER:.............9511067248321 
+    ORDER IDENTIFIER:..........100315 
+    CUSTOMER ID:...............KARA 3 
+    CUSTOMER NAME:.............TS/SS 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-03-15 
+    EXPIRATION DATE:...........2011-03-15 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC33393          
+    LICENCE NAME:..............L.3393 iLBC Codec in MSS                  
+    LICENCE FILE NAME:.........G1100010 
+    SERIAL NUMBER:.............5311264432033 
+    ORDER IDENTIFIER:..........100315 
+    CUSTOMER ID:...............KARA 3 
+    CUSTOMER NAME:.............TS/SS 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-03-15 
+    EXPIRATION DATE:...........2011-03-15 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC34172          
+    LICENCE NAME:..............L.4172 AMR-WB subscription                
+    LICENCE FILE NAME:.........G1100009 
+    SERIAL NUMBER:.............6711265113745 
+    ORDER IDENTIFIER:..........100315 
+    CUSTOMER ID:...............KARA 3 
+    CUSTOMER NAME:.............TS/SS 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-03-15 
+    EXPIRATION DATE:...........2011-03-15 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC34174          
+    LICENCE NAME:..............L.4174 WB AMR activation on IMEI control  
+    LICENCE FILE NAME:.........G1100015 
+    SERIAL NUMBER:.............2311067866561 
+    ORDER IDENTIFIER:..........100315 
+    CUSTOMER ID:...............KARA 3 
+    CUSTOMER NAME:.............TS/SS 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-03-15 
+    EXPIRATION DATE:...........2011-03-15 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC34176          
+    LICENCE NAME:..............L.4176 AMR TFO only for AMR-WB terminals  
+    LICENCE FILE NAME:.........G1100011 
+    SERIAL NUMBER:.............1711182172225 
+    ORDER IDENTIFIER:..........100315 
+    CUSTOMER ID:...............KARA 3 
+    CUSTOMER NAME:.............TS/SS 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-03-15 
+    EXPIRATION DATE:...........2011-03-15 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC34179          
+    LICENCE NAME:..............L.4179 IMSI range/PLMN based control      
+    LICENCE FILE NAME:.........G1100016 
+    SERIAL NUMBER:.............1511142836529 
+    ORDER IDENTIFIER:..........100315 
+    CUSTOMER ID:...............KARA 3 
+    CUSTOMER NAME:.............TS/SS 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-03-15 
+    EXPIRATION DATE:...........2011-03-15 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31326          
+    LICENCE NAME:..............L.1326 Multipoint A                       
+    LICENCE FILE NAME:.........G3400989 
+    SERIAL NUMBER:.............9711067572049 
+    ORDER IDENTIFIER:..........100825 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............NSN Kara3 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-08-25 
+    EXPIRATION DATE:...........2011-08-25 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31470          
+    LICENCE NAME:..............L.1470 Multipoint Adv KIT                 
+    LICENCE FILE NAME:.........G3400990 
+    SERIAL NUMBER:.............3111154243905 
+    ORDER IDENTIFIER:..........100825 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............NSN Kara3 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-08-25 
+    EXPIRATION DATE:...........2011-08-25 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC31312          
+    LICENCE NAME:..............L.1312 Multipoint Iu                      
+    LICENCE FILE NAME:.........G3400988 
+    SERIAL NUMBER:.............6411014635889 
+    ORDER IDENTIFIER:..........100825 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............NSN Kara3 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-08-25 
+    EXPIRATION DATE:...........2011-08-25 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........1 
+---------------------------------------------- 
+    LICENCE CODE:..............MSGLIC61249          
+    LICENCE NAME:..............L.1249 MSS Basic SW capacity LK           
+    LICENCE FILE NAME:.........G3700094 
+    SERIAL NUMBER:.............0001122367073 
+    ORDER IDENTIFIER:..........100913 
+    CUSTOMER ID:...............Kara3 
+    CUSTOMER NAME:.............Kara3 
+    TARGET NE TYPE:............MSC 
+    TARGET ID:.................211102 
+    LICENCE STATE:.............ACTIVE LIMITED 
+    START DATE:................2010-09-13 
+    EXPIRATION DATE:...........2011-09-13 
+    EXPIRATION WARNING PERIOD:.30 
+    LICENCE CAPACITY:..........30000 
+ 
+ 
+COMMAND EXECUTED 
+
+ 
+LICENCE AND FEATURE HANDLING COMMAND <W7_> 
+<   

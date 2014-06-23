@@ -1,0 +1,68 @@
+EQUIPMENT MANAGEMENT COMMAND <WF_>
+< ZWFI:PS;
+
+LOADING PROGRAM VERSION 5.12-0
+
+EXECUTION STARTED
+
+READING DATA FROM DATABASE ...
+
+CHMS  SHMS  PPA  PIU       ATTACHED UNIT   HW CONF STATE  HW STATE
+----  ----  ---  --------  --------------  -------------  -----------
+01    1     01   SF10      SFU-0           OK             PRESENT
+01    1     04   CCP10     VANU-0          OK             PRESENT
+01    1     05   NI4S1_B   NIS1P-0         OK             PRESENT
+01    1     06   CCP10     CM-0            OK             PRESENT
+01    1     07   CCP10     CACU-0          OK             PRESENT
+01    1     08   CCP10     SPMU-0          OK             PRESENT
+01    1     09   MX622_C   MXU-0           OK             PRESENT
+01    1     10   PD20                      OK             PRESENT
+01    1     11   EHAT      EHU-0           OK             PRESENT
+01    1     14   HDS_A                     OK             PRESENT
+01    1     16   CCP10     OMU-0           OK             PRESENT
+01    1     17   HDS_A     WDU-0           OK             PRESENT
+01    1     19   TSS3      TBU-0           OK             PRESENT
+01    1     38   TBUF      TBU-1           OK             PRESENT
+01    2     01   SF10      SFU-1           OK             PRESENT
+01    2     03   CCP10     ISU-0           OK             PRESENT
+01    2     04   CCP10     VANU-1          OK             PRESENT
+01    2     05   NI4S1_B   NIS1P-1         OK             PRESENT
+01    2     06   CCP10     CM-1            OK             PRESENT
+01    2     07   CCP10     CACU-1          OK             PRESENT
+01    2     08   CCP10     SPMU-1          OK             PRESENT
+01    2     09   MX622_C   MXU-1           OK             PRESENT
+01    2     10   PD20                      OK             PRESENT
+01    2     11   MDS_A     FDU-0           OK             PRESENT
+01    2     14   HDS_A                     UNDEFINED      NOT_PRESENT
+01    2     16   CCP10     OMU-1           OK             PRESENT
+01    2     17   HDS_A     WDU-1           OK             PRESENT
+01    2     19   TBUF      TBU-0           OK             PRESENT
+01    2     38   TSS3      TBU-1           OK             PRESENT
+01    3     01   IW1S1     IWS1E-0         OK             PRESENT
+01    3     02   IW16P1    NIWU-2          OK             PRESENT
+01    3     04   AL2S_B    A2SU-0          OK             PRESENT
+01    3     05   CDSP_C    TCU-0           OK             PRESENT
+01    3     06   CDSP_C    TCU-2           OK             PRESENT
+01    3     09   MX622_C   MXU-2           OK             PRESENT
+01    3     10   PD20                      OK             PRESENT
+01    3     11   MX622_C   MXU-3           OK             PRESENT
+01    3     16   CCP10     ISU-1           OK             PRESENT
+01    3     19   TBUF      TBU-0           OK             PRESENT
+01    3     38   TBUF      TBU-1           OK             PRESENT
+01    4     01   IW1S1     IWS1E-1         OK             PRESENT
+01    4     04   AL2S_B    A2SU-1          OK             PRESENT
+01    4     05   CDSP_C    TCU-1           OK             PRESENT
+01    4     09   MX622_C   MXU-4           OK             PRESENT
+01    4     10   PD20                      OK             PRESENT
+01    4     11   MX622_C   MXU-5           OK             PRESENT
+01    4     16   CCP10                     UNDEFINED      NOT_PRESENT
+01    4     17   IPFGE     IPFEP-1         OK             PRESENT
+01    4     19   TBUF      TBU-0           OK             PRESENT
+01    4     38   TBUF      TBU-1           OK             PRESENT
+
+TOTAL OF    50  PLUG-IN UNITS
+
+COMMAND EXECUTED
+
+
+EQUIPMENT MANAGEMENT COMMAND <WF_>

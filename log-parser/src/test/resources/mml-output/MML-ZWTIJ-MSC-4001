@@ -1,0 +1,24 @@
+WTI:J:;
+
+EXECUTION STARTED
+
+RACK/                                               PDFU/
+CABINET  HALL LOC   CLAC 1    CLAC 2   AG    AL     PSFP PSA
+-------- ---- ---  --------- --------- -- --------- ---- ----
+MOMC           1A   1A001-04            1  1A001-04   2
+VLRC           1B   1B001-04            0  1B001-04   2
+VLRC           1C   1C001-04            0  1C001-04   2
+VLRC           1D   1D001-04            0  1D001-04   2
+VLRC           1E   1E001-04            0  1E001-04   2
+GSWC           2A   2C001-03            4  2C001-03   2
+GSWC           2B   2C001-03            2  2C001-03   2
+ETC            2C   2C001-03            0  2C001-03   2
+METC           2D   2D001-03            0  2D001-03   2
+IWC            2E   2E001-10            0  2E001-10   2
+
+TOTAL OF    10  RACKS AND CABINETS
+
+COMMAND EXECUTED
+
+
+EQUIPMENT MANAGEMENT COMMAND <WT_>

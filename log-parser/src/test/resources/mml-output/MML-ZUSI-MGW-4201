@@ -1,0 +1,51 @@
+ZZUSI:; 
+ 
+ 
+LOADING PROGRAM VERSION 6.15-0 
+ 
+WORKING STATES OF UNITS             2010-11-01  22:49:44   
+ 
+ UNIT            PHYS   LOG    STATE  INFO 
+ OMU-0           0000H  4002H  WO-EX  - 
+ OMU-1           0001H  4002H  SP-EX  - 
+ CM-0            000FH  4005H  SP-EX  - 
+ CM-1            0021H  4005H  WO-EX  - 
+ MXU-0           0015H  4242H  WO-EX  - 
+ MXU-1           0024H  4242H  SP-EX  - 
+ MXU-2           0054H  4243H  SP-EX  - 
+ MXU-3           0056H  4243H  WO-EX  - 
+ MXU-4           0057H  4244H  WO-EX  - 
+ MXU-5           0059H  4244H  SP-EX  - 
+ NIS1P-0       > 000AH  4612H  WO-EX  - 
+ NIS1P-1       > 0020H  4612H  SP-EX  - 
+ VANU-0          0006H  4722H  WO-EX  - 
+ VANU-1          001FH  4723H  WO-EX  - 
+ IPFEP-1         005BH  4732H  WO-EX  - 
+ CACU-0          0011H  454DH  SP-EX  - 
+ CACU-1          0022H  454DH  WO-EX  - 
+ SPMU-0          0013H  45FCH  WO-EX  - 
+ SPMU-1          0023H  45FCH  SP-EX  - 
+ ISU-0           001BH  454FH  WO-EX  - 
+ ISU-1           005AH  4550H  SP-EX  - 
+ SFU-0           0004H  45FDH  SP-EX  - 
+ SFU-1           001AH  45FDH  WO-EX  - 
+ EHU-0                         WO-EX  - 
+ IWS1E-0       >               WO-EX  - 
+ IWS1E-1       >               WO-EX  - 
+ TBU-0                         WO-EX  - 
+ TBU-1                         SP-EX  - 
+ A2SU-0        >               WO-EX  - 
+ A2SU-1        >               WO-EX  - 
+ NIWU-2        >               WO-EX  - 
+ TCU-0         >               WO-EX  - 
+ TCU-1         >               WO-EX  - 
+ TCU-2         >               WO-EX  - 
+ 
+NUMBER OF UNITS DISPLAYED = 34 
+ 
+ 
+COMMAND EXECUTED 
+
+ 
+WORKING STATE AND RESTART HANDLING COMMAND <US_> 
+<   

@@ -1,0 +1,41 @@
+ ZZWQO:CR;
+
+
+LOADING PROGRAM VERSION 14.16-0
+
+PACKAGES CREATED IN OMU:
+
+    SW-PACKAGE     STATUS   DIRECTORY           ENVIRONMENT          DEF  ACT
+                            PACKAGE-ID (REP-ID) DELIVERY
+                                                CD-ID     GCD LEVEL
+
+    FB110603       FB       MSCFB110603         MF 4.2-0              -    Y 
+                            MF 4.2-0          1 CIDO00XX 7.2-0    
+                                                MFXXP100  (P.1)        
+
+    MFXXP100       BU       MF_4_2_0            MF 4.2-0              Y    Y 
+                            MF 4.2-0          1 CIDO00XX 7.2-0    
+                                                MFXXP100  (P.1)        
+
+    MF420BU        NW       MF420BU             MF 4.2-0              -    Y 
+                            MF 4.2-0            CID0RDMI 5.1-32   
+                                                                       
+
+    ME090800       UT       ME_9_8_0            ME 9.8-0              -    Y 
+                            ME 9.8-0            CID0RDMI 5.1-23   
+                                                                       
+
+    TEST           UT       TEST                MF 4.2-0              -    Y 
+                            MF 4.2-0          1 CIDO00XX 7.2-0    
+                                                MFXXP100  (P.1)        
+
+    ME600600       UT       ME_60_6_0           ME 60.6-0             -    Y 
+                            ME 60.6-0           CID0RDMI 5.1-25   
+                                                                       
+
+
+COMMAND EXECUTED
+
+
+SOFTWARE PACKAGE ADMINISTRATION COMMAND <WQ_>
+< 

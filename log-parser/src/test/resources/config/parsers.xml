@@ -1,0 +1,328 @@
+<parsers>
+	<parser sensorType="UNIT_INFO" command="MML-ZWTIU-MSC-{0}" id="unitInfoMaster">
+		<block start="READING DATA FROM DATABASE ..." end="TOTAL OF ">
+			<line className="com.tieto.parser.model.UnitInfo">
+				<field attribute="name" end=" " trim="true" />
+				<block start="IN LOC " length="10" trim="true">
+					<field attribute="cabinet" offset="0" length="2" />
+					<field attribute="location" offset="2" length="6" />
+				</block>
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="UNIT_INFO" networkElementType="MGW"
+		command="MML-ZWFIPS-MGW-{0}" id="unitInfoIPA" parent="unitInfoMaster">
+		<block
+			start="----  ----  ---  --------  --------------  -------------  -----------"
+			end="TOTAL OF ">
+			<line className="com.tieto.parser.model.UnitInfo">
+				<field attribute="name" offset="27" length="14" trim="true" />
+				<field attribute="cabinet" offset="0" length="2" trim="true" />
+				<field attribute="location" offset="4" length="11" trim="true"
+					converter="com.tieto.parser.converter.MgwLocationConverter" />
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="UNIT_INFO" networkElementType="RNC"
+		command="MML-ZWFIPS-RNC-{0}" parent="unitInfoIPA" id="unitInfoRNC" />
+	<parser sensorType="UNIT_INFO" networkElementType="FLEXINS"
+		command="">
+		<block
+			start="-------- ----- ------------------- ---------- ------------------ --------------"
+			end="TOTAL OF">
+			<line className="com.tieto.parser.model.UnitInfo">
+				<block start="-PIU-">
+					<field attribute="name" offset="3" length="10" trim="true" />
+				</block>
+				<block end="-PIU-">
+					<block offset="15" length="20" trim="true">
+						<field attribute="cabinet" offset="0" length="2" />
+						<field attribute="location" offset="2" length="13"
+							converter="com.tieto.parser.converter.FlexiNSLocationConverter" />
+					</block>
+				</block>
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="CABINET_LAYOUT" command="MML-ZWTIJ-MSC-{0}"
+		id="cabinetLayoutMsc">
+		<block start="-------- ---- ---  --------- --------- -- --------- ---- ----"
+			end="TOTAL OF ">
+			<line className="com.tieto.parser.model.CabinetInfo">
+				<field attribute="type" offset="0" length="8" trim="true" />
+				<field attribute="name" offset="14" length="3" trim="true" />
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="CABINET_LAYOUT" networkElementType="MGW"
+		command="MML-ZWFIJ-MGW-{0}" id="cabinetLayoutIPA">
+		<block start="--------  ----------  ---" end="TOTAL OF ">
+			<line className="com.tieto.parser.model.CabinetInfo">
+				<field attribute="type" offset="0" length="8" trim="true" />
+				<field attribute="name" offset="9" length="11" trim="true" />
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="CABINET_LAYOUT" networkElementType="RNC"
+		command="MML-ZWFIJ-RNC-{0}" parent="cabinetLayoutIPA" />
+	<parser sensorType="UNIT_STATE" command="MML-ZUSI-MSC-{0}" id="unitStateMsc">
+		<block start="LOCATION              INFO" end="TOTAL OF ">
+			<line className="com.tieto.parser.model.UnitInfo">
+				<field attribute="name" offset="0" length="9" trim="true" />
+				<field attribute="state" offset="17" length="6" trim="true" />
+				<field attribute="info" offset="44" length="30" trim="true" />
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="UNIT_STATE" command="MML-ZUSI-MGW-{0}"
+		networkElementType="MGW" id="unitStateIPA">
+		<block start=" UNIT            PHYS   LOG    STATE  INFO" end="NUMBER OF UNITS DISPLAYED">
+			<line className="com.tieto.parser.model.UnitInfo">
+				<field attribute="name" offset="0" length="9" trim="true" />
+				<field attribute="state" offset="30" length="7" trim="true" />
+				<field attribute="info" offset="37" length="30" trim="true" />
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="UNIT_STATE" command="MML-ZUSI-RNC-{0}"
+		networkElementType="RNC" parent="unitStateIPA" />
+	<parser sensorType="IO_UNIT_STATE" command="">
+		<block start="TAPE TYPE" end="COMMAND EXECUTED">
+			<line className="com.tieto.parser.model.UnitInfo">
+				<field attribute="name" offset="0" length="7" trim="true" />
+				<field attribute="state" offset="7" length="6" trim="true" />
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="IO_UNIT_STATE" command=""
+		networkElementType="MGW" id="ioUnitStateIPA">
+		<block start="======================================================"
+			end="COMMAND EXECUTED">
+			<line className="com.tieto.parser.model.UnitInfo">
+				<field attribute="name" offset="16" length="8" trim="true" />
+				<field attribute="state" offset="28" length="7" trim="true" />
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="IO_UNIT_STATE" command=""
+		networkElementType="RNC" parent="ioUnitStateIPA" />
+	<parser sensorType="ALARM" command="MML-ZAHO-MSC-{0}" id="alarmMsc" lineBreak="&#13;&#10;">
+		<block start="ALARMS CURRENTLY ON" end="END OF ALARMS CURRENTLY ON">
+			<lineSequenceRecord searchRegExp=".*\*+\s+((ALARM|DISTUR)).*"
+				className="com.tieto.parser.model.Alarm">
+				<sequenceLine lineNumber="-1">
+					<field attribute="time" offset="56" length="20" type="java.util.Date"
+						converter="com.tieto.parser.converter.DateConverter" />
+				</sequenceLine>
+				<sequenceLine lineNumber="0">
+					<field attribute="severity" offset="0" length="3"
+						converter="com.tieto.parser.converter.AlarmSeverityConverter"
+						type="com.tieto.parser.model.Severity" />
+					<field attribute="unitName" offset="11" length="8" trim="true" />
+				</sequenceLine>
+				<sequenceLine lineNumber="1">
+					<field attribute="alarmId" offset="5" length="4" />
+					<field attribute="alarmNumber" offset="10" length="6" trim="true"
+						type="int" />
+					<field attribute="description" offset="16" length="60" trim="true" />
+				</sequenceLine>
+				<sequenceLine lineNumber="2">
+					<field attribute="details" offset="0" length="80" />
+				</sequenceLine>
+			</lineSequenceRecord>
+		</block>
+	</parser>
+	<parser sensorType="ALARM" command="MML-ZAAP-MGW-{0}"
+		networkElementType="MGW" id="alarmIPA" lineBreak="&#13;&#10;">
+		<block start="ACTIVE ALARMS" end="NUMBER OF ACTIVE ALARMS DISPLAYED:">
+			<lineSequenceRecord searchRegExp=".*\*+\s+((ALARM)).*"
+				className="com.tieto.parser.model.Alarm">
+				<sequenceLine lineNumber="-1">
+					<field attribute="alarmId" offset="5" length="5" />
+					<field attribute="time" offset="58" length="19" type="java.util.Date"
+						converter="com.tieto.parser.converter.DateConverter" />
+				</sequenceLine>
+				<sequenceLine lineNumber="0">
+					<field attribute="severity" offset="0" length="3"
+						converter="com.tieto.parser.converter.AlarmSeverityConverter"
+						type="com.tieto.parser.model.Severity" />
+					<block offset="11" length="8">
+						<block start=" " end=" ">
+							<field attribute="unitName" offset="0" length="8" trim="true" />
+						</block>
+					</block>
+				</sequenceLine>
+				<sequenceLine lineNumber="1" searchRegExp="\s{4}\d{4}\s{4}[A-Za-z0-9]">
+					<field attribute="alarmNumber" offset="3" length="6" trim="true"
+						type="int" />
+					<field attribute="description" offset="12" length="60" trim="true" />
+				</sequenceLine>
+				<sequenceLine lineNumber="2" searchRegExp="\s{4}\d{4}\s{4}[A-Za-z0-9]">
+					<field attribute="alarmNumber" offset="3" length="6" trim="true"
+						type="int" />
+					<field attribute="description" offset="12" length="60" trim="true" />
+				</sequenceLine>
+				<sequenceLine lineNumber="3" searchRegExp=".*[A-Za-z0-9].*">
+					<field attribute="details" offset="0" length="80" />
+				</sequenceLine>
+				<sequenceLine lineNumber="4" searchRegExp=".*[A-Za-z0-9].*">
+					<field attribute="details" offset="0" length="80" />
+				</sequenceLine>
+			</lineSequenceRecord>
+		</block>
+	</parser>
+	<parser sensorType="ALARM" command="MML-ZAAP-RNC-{0}"
+		networkElementType="RNC" parent="alarmIPA" />
+	<parser sensorType="CPU_LOAD" command="MML-ZDOI-MSC-{0}" id="cpuLoadMsc">
+		<block start="PROCESSOR TIME USAGE" end="COMMAND EXECUTED">
+			<block start="UNIT:" className="com.tieto.parser.model.CpuLoad">
+				<line lineNumber="0">
+					<field attribute="unitName" offset="20" length="10" trim="true" />
+				</line>
+				<field attribute="cpuLoad" type="java.lang.Integer" start="LOAD PERCENT:"
+					offset="20" length="5" trim="true" />
+			</block>
+		</block>
+	</parser>
+	<parser networkElementType="MSC" sensorType="CLEAR_CODE"
+		command="MML-ZTUTCLR-MSC-{0}" id="clearCodeMsc">
+		<block start="SIGNALLING     RING    SPEECH  CLEAR CODE" end="END OF REPORT"
+			count="1">
+			<line className="com.tieto.parser.model.ClearCode">
+				<field attribute="signalling" type="int" offset="0" length="9"
+					trim="true" />
+				<field attribute="ring" type="int" offset="10" length="9"
+					trim="true" />
+				<field attribute="speech" type="int" offset="20" length="9"
+					trim="true" />
+				<field attribute="type" type="int" offset="30" length="4"
+					trim="true" converter="com.tieto.parser.converter.HexConverter" />
+				<field attribute="info" offset="36" length="30" trim="true" />
+			</line>
+		</block>
+	</parser>
+	<parser sensorType="LICENSE" command="MML-ZWTILICFULL-MSC-{0}"
+		id="licenseMsc" lineBreak="&#10;">
+		<block start="LICENCE INFORMATION:" end="COMMAND EXECUTED">
+			<block start="----------------------------------------------"
+				className="com.tieto.parser.model.LicenseInfo">
+				<field attribute="code" start="LICENCE CODE:.............."
+					end="&#10;" trim="true" />
+				<field attribute="name" start="LICENCE NAME:.............."
+					end="&#10;" trim="true" />
+				<field attribute="filename" start="LICENCE FILE NAME:........."
+					end="&#10;" trim="true" />
+				<field attribute="serialNumber" start="SERIAL NUMBER:............."
+					end="&#10;" trim="true" />
+				<field attribute="targetNetworkElementType" start="TARGET NE TYPE:............"
+					end="&#10;" trim="true" />
+				<field attribute="state" start="LICENCE STATE:............."
+					end="&#10;" trim="true" />
+				<field attribute="startDate" start="START DATE:................"
+					end="&#10;" type="java.util.Date" converter="com.tieto.parser.converter.DateConverter"
+					trim="true" />
+				<field attribute="expirationTime" start="EXPIRATION DATE:..........."
+					end="&#10;" type="java.util.Date" converter="com.tieto.parser.converter.DateConverter"
+					trim="true" />
+				<field attribute="expirationWarningPeriod" start="EXPIRATION WARNING PERIOD:."
+					end="&#10;" type="int" trim="true" />
+				<field attribute="capacity" start="LICENCE CAPACITY:.........."
+					end="&#10;" type="int" trim="true" />
+			</block>
+		</block>
+	</parser>
+	<parser sensorType="FEATURE_UTILIZATION" command="">
+		<block start="USED CAPACITY REPORT:" end="COMMAND EXECUTED">
+			<block start="--------------------------------------------------------">
+				<lineSequenceRecord search="SUCCESS"
+					className="com.nsn.healthview.feature.FeatureUtilization">
+					<sequenceLine lineNumber="-1">
+						<field attribute="code" offset="4" length="8" trim="true" />
+						<field attribute="utilized" offset="19" length="8" type="int"
+							trim="true" />
+					</sequenceLine>
+				</lineSequenceRecord>
+			</block>
+		</block>
+	</parser>
+	<parser sensorType="FEATURE" command="" lineBreak="&#10;">
+		<block start="FEATURE INFORMATION:" end="COMMAND EXECUTED">
+			<block start="----------------------------------------------"
+				className="com.nsn.healthview.feature.Feature">
+				<field attribute="code" start="FEATURE CODE:.............."
+					end="&#10;" trim="true" />
+				<field attribute="name" start="FEATURE NAME:.............."
+					end="&#10;" trim="true" />
+				<field attribute="capacity" start="FEATURE CAPACITY:.........."
+					end="&#10;" type="int" trim="true" />
+			</block>
+		</block>
+	</parser>
+	<parser sensorType="SW_VERSION" command="MML-ZWQORUN-MSC-{0}"
+		id="swVersionMsc">
+		<block end="COMMAND EXECUTED">
+			<block start="WORKING PACKAGES IN UNITS PAGE">
+				<block start=" MBA UNIT     NAME       STATUS  PACKAGE_ID     (REP-ID)">
+					<line className="com.tieto.parser.model.SwVersion" error="ERROR:">
+						<field attribute="unitName" offset="5" length="9" trim="true" />
+						<field attribute="name" offset="14" length="11" trim="true" />
+						<field attribute="version" offset="32" length="17" trim="true" />
+						<field attribute="status" offset="25" length="7" trim="true" />
+					</line>
+				</block>
+			</block>
+		</block>
+	</parser>
+	<parser sensorType="SW_PACKAGE" command="MML-ZWQOCR-MSC-{0}" id="swPackageMsc">
+		<block start="CD-ID" end="COMMAND EXECUTED">
+			<lineSequenceRecord search=" Y "
+				className="com.tieto.parser.model.SwPackage">
+				<sequenceLine lineNumber="0">
+					<field attribute="name" offset="3" length="15" trim="true" />
+					<field attribute="status" offset="18" length="9" trim="true" />
+					<field attribute="def" offset="69" length="3" trim="true"
+						type="java.lang.Boolean" converter="com.tieto.parser.converter.BooleanConverter" />
+					<field attribute="act" offset="74" length="3" trim="true"
+						type="java.lang.Boolean" converter="com.tieto.parser.converter.BooleanConverter" />
+				</sequenceLine>
+				<sequenceLine lineNumber="1">
+					<field attribute="version" offset="28" length="16" trim="true" />
+				</sequenceLine>
+			</lineSequenceRecord>
+		</block>
+	</parser>
+	<parser id="pullLogEntry" lineBreak="&#10;">
+		<block end="*******************************************&#10;"
+			className="com.tieto.parser.model.LogEntry">
+			<line lineNumber="0">
+				<field attribute="time" type="java.util.Date"
+					converter="com.tieto.parser.converter.HgDateConverter" />
+			</line>
+			<line lineNumber="2">
+				<field attribute="branch" start="Executing" end="-branch"
+					trim="true" />
+			</line>
+			<block start="adding file changes" end="Refresh done">
+				<field attribute="files" type="int" start="changes to" end="files"
+					trim="true" />
+			</block>
+		</block>
+	</parser>
+	<parser id="pushLogEntry" lineBreak="&#10;">
+		<block end="*******************************************&#10;"
+			className="com.tieto.parser.model.LogEntry">
+			<line lineNumber="0">
+				<field attribute="time" type="java.util.Date"
+					converter="com.tieto.parser.converter.HgDateConverter" />
+			</line>
+			<line lineNumber="2">
+				<field attribute="branch" start="Executing" end="-branch"
+					trim="true" />
+			</line>
+			<block start="searching for changes" end="Refresh done">
+				<field attribute="files" type="int" start="changes to" end="files"
+					trim="true" />
+			</block>
+		</block>
+	</parser>
+</parsers>

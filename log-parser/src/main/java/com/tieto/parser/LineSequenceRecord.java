@@ -1,0 +1,65 @@
+package com.tieto.parser;
+
+import java.util.List;
+
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * LineSequenceRecord is a special type of textParser needed for parsing alarms.
+ * Alarms have only one string that can be used for finding an alarm record in
+ * MML-output. This string is not on the first line of record, but on second.
+ * Therefore LineSequenceRecord splits output into lines, but is aware of other
+ * lines. Together with SequenceLine it can parse alarms.
+ */
+@Getter
+@Setter
+public class LineSequenceRecord extends Line {
+    // TODO move to line
+    protected String search;
+
+    @Override
+    public void parse(ParserData parserData, String input, String className) {
+        this.lineBreak = createLineBreak(parserData.getLineBreak());
+        if (input == null) {
+            return;
+        }
+        if (this.className != null) {
+            className = this.className;
+        }
+        List<String> splitInputs = splitInput(input);
+        for (int i = 0; i < splitInputs.size(); i++) {
+            String splitInput = splitInputs.get(i);
+            if (isMatchingLine(splitInput)) {
+                // TODO consider changing to parseLine, so parse could be inherited from Line
+                for (TextParser textParser : textParsers) {
+                    if (textParser instanceof Line) {
+                        Line line = (Line) textParser;
+                        int lineNumber = i + line.getLineNumber();
+                        if (lineNumber > 0 && lineNumber < splitInputs.size()) {
+                            line.parse(parserData, splitInputs.get(lineNumber), className);
+                        }
+                    }
+                }
+                if (this.className != null && parserData.getCurrentObject() != null) {
+                    parserData.getObjects().add(parserData.getCurrentObject());
+                    parserData.setCurrentObject(null);
+                }
+            }
+        }
+    }
+
+    private boolean isMatchingLine(String splitInput) {
+        boolean isMatchingLine = false;
+        if (search != null) {
+            if (splitInput.indexOf(search) != -1) {
+                isMatchingLine = true;
+            }
+        } else if (searchRegExp != null) {
+            if (splitInput.matches(searchRegExp)) {
+                isMatchingLine = true;
+            }
+        }
+        return isMatchingLine;
+    }
+}

@@ -1,0 +1,370 @@
+ZZDOI:; 
+ 
+ 
+LOADING PROGRAM VERSION 3.18-0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      OMU-1      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                      48 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CM-0       
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CM-1       
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      M-1        
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CCM-0      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CMU-0      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CMU-1      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CCSU-0     
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CCSU-1     
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CASU-0     
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CASU-1     
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      PAU-0      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      PAU-1      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CCSU-2     
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CCSU-4     
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BSU-0      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BSU-1      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BSU-3      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BSU-4      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BSU-5      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BSU-6      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BSU-8      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BSU-10     
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      STU-0      
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CHU-0-0    
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       5 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CHU-0-1    
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      CHU-1-1    
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      VLRU-0-1   
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      VLRU-1-0   
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      VLRU-1-1   
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      VLRU-2-0   
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      VLRU-2-1   
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      VLRU-3-0   
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       0 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      VLRU-5-0   
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BDCU-0     
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+PROCESSOR TIME USAGE 
+ 
+UNIT:                      BDCU-1     
+ 
+SUPERVISION OF CPU 
+TIME USAGE ALLOWED:               YES 
+SUPERVISION OF CPU 
+LOAD ALLOWED:                     YES 
+LOAD PERCENT:                       1 
+CALLS FOR CRRQ:                     0 
+ 
+COMMAND EXECUTED 
+
+ 
+OPERATING SYSTEM SUPERVISION AND STATISTICS HANDLING COMMAND  
+<   

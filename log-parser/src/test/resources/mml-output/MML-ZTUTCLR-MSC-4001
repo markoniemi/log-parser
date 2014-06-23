@@ -1,0 +1,30 @@
+ZZTUT:CLR; 
+ 
+ 
+LOADING PROGRAM VERSION 16.20-0 
+ 
+MSCi      JALLU                     2010-11-15  12:15:22 
+ 
+CLEAR CODES OF CALLS 
+ 
+OUTPUT INTERVAL: 15 MIN   SAMPLE DATE: 2010-11-15  12:15:22 
+ 
+SIGNALLING     RING    SPEECH  CLEAR CODE 
+ 
+        4         0     47342  000H NORMAL END OF THE CALL     
+     3539       199         1  015H NORMAL UNSPECIFIED         
+        0       401         0  822H RECOVERY ON TIMER EXPIRY   
+    22450         0         1  843H CONGESTION ON MGW          
+      604         0         0  885H MGW INTERNAL FAILURE       
+        2         0         0  888H MGW TERM DOUBLE SEIZURE    
+     5166       342         0  A03H INTERWORKING FAILED        
+      386         0         0  D08H GSM ERH408 TIME OUT        
+ 
+END OF REPORT 
+ 
+COMMAND EXECUTED 
+
+ 
+
+FIELD REPORTING COMMAND <TU_> 
+<   
