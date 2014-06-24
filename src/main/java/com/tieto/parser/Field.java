@@ -159,6 +159,8 @@ public class Field implements TextParser {
     }
 
     public String parseValue(String input) {
+        // TODO instead of overloading getValueString, rename each method
+        // TODO rearrange else if statements to achieve full coverage
         String value = null;
         if (searchRegExp != null) {
             Pattern pattern = Pattern.compile(searchRegExp);

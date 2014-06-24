@@ -18,6 +18,14 @@ public class FieldTest {
         value = field.parseValue("0123456789");
         Assert.assertEquals("56", value);
     }
+    
+    @Test
+    public void parseTooLongOffset() {
+        Field field = new Field();
+        field.setOffset(10);
+        String value = field.parseValue("0123456789");
+        Assert.assertNull(value);
+    }
 
     @Test
     public void parseStart() {
@@ -34,6 +42,14 @@ public class FieldTest {
         field.setLength(4);
         value = field.parseValue("START..123");
         Assert.assertEquals("123", value);
+    }
+
+    @Test
+    public void parseEnd() {
+        Field field = new Field();
+        field.setEnd("END");
+        String value = field.parseValue("123..END");
+        Assert.assertEquals("123..", value);
     }
 
     @Test
@@ -140,5 +156,16 @@ public class FieldTest {
         parserData.setCurrentObject(new TestClass());
         field.parse(parserData, "00 00 123-23 45 65", null);
         Assert.assertEquals("123-23", ((TestClass) parserData.getCurrentObject()).getValue());
+    }
+    
+    @Test
+    public void testSearchRegExpNotFound() {
+        Field field = new Field();
+        field.setAttribute("value");
+        field.setSearchRegExp("\\d+-\\d+");
+        ParserData parserData = new ParserData();
+        parserData.setCurrentObject(new TestClass());
+        field.parse(parserData, "", null);
+        Assert.assertNull(((TestClass) parserData.getCurrentObject()).getValue());
     }
 }
