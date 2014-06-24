@@ -35,12 +35,4 @@ public class ParserManagerTest {
         Assert.assertNotNull(parser);
         Assert.assertEquals("unitInfoMaster", parser.getId());
     }
-
-    @Test
-    public void testGetParent() throws Exception {
-        ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
-        Parser parser = parserManager.getParser("unitInfoRNC");
-        Assert.assertNotNull(parser);
-        Assert.assertEquals("unitInfoRNC", parser.getId());
-    }
 }
