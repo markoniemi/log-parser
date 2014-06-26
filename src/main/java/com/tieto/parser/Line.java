@@ -17,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 @Setter
 public class Line extends Block {
+    // TODO change to int
     private Integer lineNumber;
     protected String lineBreak;
 
@@ -50,6 +51,7 @@ public class Line extends Block {
     /**
      * Use system line break if xml does not define it.
      */
+    // TODO scan for linebreak in text, so we can support both linebreaks
     protected String createLineBreak(String lineBreak) {
         if (!StringUtils.isEmpty(lineBreak)) {
             return lineBreak;

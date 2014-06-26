@@ -7,13 +7,14 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.tieto.parser.model.Alarm;
+import com.tieto.parser.model.TestClass;
 import com.tieto.parser.model.UnitInfo;
 
 public class BlockTest {
     public static final String LINE_BREAK = System.getProperty("line.separator");
 
     @Test
-    public void testSplitInputOffset() {
+    public void splitInputOffset() {
         Block block = new Block();
         block.setOffset(5);
         List<String> splitInput = block.splitInput("012345678");
@@ -27,7 +28,26 @@ public class BlockTest {
     }
 
     @Test
-    public void testSplitInputStartEnd() {
+    public void splitInputOffsetWithTooBigOffset() {
+        Block block = new Block();
+        block.setOffset(10);
+        block.setLength(5);
+        List<String> splitInput = block.splitInput("012345678");
+        Assert.assertNull(splitInput.get(0));
+    }
+
+    @Test
+    public void splitInputWithTrim() {
+        Block block = new Block();
+        block.setOffset(5);
+        block.setLength(5);
+        block.setTrim(true);
+        List<String> splitInput = block.splitInput(" 012345678 ");
+        Assert.assertEquals("45678", splitInput.get(0));
+    }
+
+    @Test
+    public void splitInputStartEnd() {
         Block block = new Block();
         block.setStart("START");
         block.setEnd("END");
@@ -35,10 +55,6 @@ public class BlockTest {
         Assert.assertEquals(" INPUT ", splitInput.get(0));
         block.setStart("START");
         block.setEnd("END");
-        // splitInput = record.splitInput("STARTEND");
-        // Assert.assertEquals("", splitInput.get(0));
-        splitInput = block.splitInput("START INPUT ");
-        Assert.assertEquals(" INPUT ", splitInput.get(0));
         splitInput = block.splitInput("START INPUT END START INPUT END");
         Assert.assertEquals(2, splitInput.size());
         Assert.assertEquals(" INPUT ", splitInput.get(0));
@@ -50,10 +66,20 @@ public class BlockTest {
         Assert.assertEquals(" INPUT ", splitInput.get(2));
         splitInput = block.splitInput(" INPUT ");
         Assert.assertEquals(0, splitInput.size());
+        // no end
+        splitInput = block.splitInput("START INPUT ");
+        Assert.assertEquals(" INPUT ", splitInput.get(0));
+        // no end and no text after start
+        splitInput = block.splitInput("START");
+        Assert.assertEquals(0, splitInput.size());
+        // empty strings between start and end
+        splitInput = block.splitInput("STARTEND STARTEND STARTEND");
+        Assert.assertEquals(0, splitInput.size());
+        // empty strings between start and end
     }
 
     @Test
-    public void testSplitInputStart() {
+    public void splitInputStart() {
         Block block = new Block();
         block.setStart("START");
         List<String> splitInput = block.splitInput("START INPUT ");
@@ -67,7 +93,7 @@ public class BlockTest {
     }
 
     @Test
-    public void testSplitInputEnd() {
+    public void splitInputEnd() {
         Block block = new Block();
         block.setEnd("END");
         List<String> splitInput = block.splitInput(" INPUT END");
@@ -86,7 +112,7 @@ public class BlockTest {
     }
 
     @Test
-    public void testSplitInputSearchRegExp() {
+    public void splitInputSearchRegExp() {
         Block block = new Block();
         block.setSearchRegExp("\\d+-\\d+");
         List<String> splitInput = block.splitInput("123-23");
@@ -105,7 +131,7 @@ public class BlockTest {
     }
 
     @Test
-    public void testRegExp() throws Exception {
+    public void regExp() throws Exception {
         Block block = new Block();
         block.setSearchRegExp("IN LOC\\s+.*\\d+-\\d+");
         block.setClassName("com.tieto.parser.model.UnitInfo");
@@ -134,7 +160,7 @@ public class BlockTest {
     }
 
     @Test
-    public void testParseWithoutObject() throws Exception {
+    public void parseWithoutObject() throws Exception {
         Block block = new Block();
         block.setClassName("com.tieto.parser.model.UnitInfo");
         block.setOffset(0);
@@ -154,7 +180,47 @@ public class BlockTest {
     }
 
     @Test
-    public void testParseBlockHierarcy() throws Exception {
+    public void parseCount() throws Exception {
+        Block block = new Block();
+        block.setStart("START");
+        block.setEnd("END");
+        block.setClassName("com.tieto.parser.model.TestClass");
+        block.setCount(1);
+        Field field = new Field();
+        field.setOffset(0);
+        field.setLength(5);
+        field.setTrim(true);
+        field.setAttribute("value");
+        List<TextParser> fields = new ArrayList<TextParser>();
+        fields.add(field);
+        block.setTextParsers(fields);
+        ParserData parserData = new ParserData();
+        block.parse(parserData, "START 123 END START 345 END", null);
+        Assert.assertEquals(1, parserData.getObjects().size());
+        TestClass testClass = (TestClass) parserData.getObjects().get(0);
+        Assert.assertEquals("123", testClass.getValue());
+        // count is bigger than the amount of blocks found
+        parserData = new ParserData();
+        block.setCount(3);
+        block.parse(parserData, "START 123 END START 345 END", null);
+        Assert.assertEquals(2, parserData.getObjects().size());
+        testClass = (TestClass) parserData.getObjects().get(1);
+        Assert.assertEquals("345", testClass.getValue());
+    }
+
+    @Test
+    public void parseWithoutChildren() throws Exception {
+        Block block = new Block();
+        block.setStart("START");
+        block.setEnd("END");
+        block.setClassName("com.tieto.parser.model.TestClass");
+        ParserData parserData = new ParserData();
+        block.parse(parserData, "START 123 END START 345 END", null);
+        Assert.assertEquals(0, parserData.getObjects().size());
+    }
+    
+    @Test
+    public void parseBlockHierarcy() throws Exception {
         Block block = new Block();
         block.setClassName("com.tieto.parser.model.UnitInfo");
         block.setOffset(0);
@@ -179,7 +245,7 @@ public class BlockTest {
     }
 
     @Test
-    public void testParseBlockHierarcy2() throws Exception {
+    public void parseBlockHierarcy2() throws Exception {
         Block block = new Block();
         block.setStart("RECORD_START");
         block.setEnd("RECORD_END");
@@ -207,7 +273,7 @@ public class BlockTest {
         unitInfo = (UnitInfo) parserData.getObjects().get(1);
         Assert.assertEquals("345", unitInfo.getName());
     }
-
+    
     @Test
     public void testAlarm() throws Exception {
         LineSequenceRecord lineSequenceRecord = new LineSequenceRecord();

@@ -42,6 +42,9 @@ public class FieldTest {
         field.setLength(4);
         value = field.parseValue("START..123");
         Assert.assertEquals("123", value);
+        // start string is not found
+        value = field.parseValue("..123");
+        Assert.assertEquals(null, value);
     }
 
     @Test
@@ -49,6 +52,9 @@ public class FieldTest {
         Field field = new Field();
         field.setEnd("END");
         String value = field.parseValue("123..END");
+        Assert.assertEquals("123..", value);
+        // end string is not found
+        value = field.parseValue("123..");
         Assert.assertEquals("123..", value);
     }
 
@@ -66,10 +72,13 @@ public class FieldTest {
         field.setTrim(true);
         value = field.parseValue("START 123 END");
         Assert.assertEquals("123", value);
+        // start string is not found
+        value = field.parseValue(" 123 END");
+        Assert.assertEquals(null, value);
     }
 
     @Test
-    public void testCreateMethodName() {
+    public void createMethodName() {
         Field field = new Field();
         field.setAttribute("name");
         field.createMethodName();
@@ -89,6 +98,18 @@ public class FieldTest {
     }
 
     @Test
+    public void parseWithTooLongLength() {
+        Field field = new Field();
+        field.setAttribute("value");
+        field.setOffset(0);
+        field.setLength(4);
+        ParserData parserData = new ParserData();
+        parserData.setCurrentObject(new TestClass());
+        field.parse(parserData, "123", null);
+        Assert.assertEquals("123", ((TestClass) parserData.getCurrentObject()).getValue());
+    }
+
+    @Test
     public void parseWithNullInput() {
         Field field = new Field();
         ParserData parserData = new ParserData();
@@ -96,7 +117,7 @@ public class FieldTest {
     }
 
     @Test
-    public void testSetStringValue() throws Exception {
+    public void setStringValue() throws Exception {
         Field field = new Field();
         field.setType("java.lang.String");
         field.setAttribute("name");
@@ -107,7 +128,7 @@ public class FieldTest {
     }
 
     @Test
-    public void testSetIntegerValue() throws Exception {
+    public void setIntegerValue() throws Exception {
         Field field = new Field();
         field.setType("int");
         field.setAttribute("alarmNumber");
@@ -118,7 +139,7 @@ public class FieldTest {
     }
 
     @Test
-    public void testSetLongValue() throws Exception {
+    public void setLongValue() throws Exception {
         Field field = new Field();
         field.setType("long");
         field.setAttribute("longValue");
@@ -129,7 +150,7 @@ public class FieldTest {
     }
 
     @Test
-    public void testSetBooleanValue() throws Exception {
+    public void setBooleanValue() throws Exception {
         Field field = new Field();
         field.setType("boolean");
         field.setAttribute("booleanValue");
@@ -140,7 +161,48 @@ public class FieldTest {
     }
 
     @Test
-    public void testSearchRegExp() {
+    public void setDateWithConverter() throws Exception {
+        Field field = new Field();
+        field.setType("java.util.Date");
+        field.setAttribute("date");
+        field.setConverter("com.tieto.parser.converter.DateConverter");
+        ParserData parserData = new ParserData();
+        String valueString = new String("2014-06-25 17:13:00");
+        field.setValue(parserData, valueString, "com.tieto.parser.model.TestClass");
+        Assert.assertNotNull(((TestClass) parserData.getCurrentObject()).getDate());
+        Assert.assertEquals(1403705580000L, ((TestClass) parserData.getCurrentObject()).getDate().getTime());
+    }
+
+    @Test(expected = ParseException.class)
+    public void parseWithError() {
+        Field field = new Field();
+        field.setOffset(0);
+        field.setLength(2);
+        field.setAttribute("value");
+        field.setMethodName("nonexistent");
+        ParserData parserData = new ParserData();
+        // failOnError = false
+        field.parse(parserData, "123-23", "com.tieto.parser.model.TestClass");
+        // failOnError = true
+        parserData.setFailOnError(true);
+        field.parse(parserData, "123-23", "com.tieto.parser.model.TestClass");
+        Assert.fail();
+    }
+    
+    @Test
+    public void setStringValueWithMethod() throws Exception {
+        Field field = new Field();
+        field.setType("java.lang.String");
+        field.setAttribute("name");
+        field.setMethodName("setName");
+        ParserData parserData = new ParserData();
+        String valueString = new String("abc");
+        field.setValue(parserData, valueString, "com.tieto.parser.model.UnitInfo");
+        Assert.assertEquals("abc", ((UnitInfo) parserData.getCurrentObject()).getName());
+    }
+    
+    @Test
+    public void searchRegExp() {
         Field field = new Field();
         field.setAttribute("value");
         field.setSearchRegExp("\\d+-\\d+");
@@ -159,7 +221,7 @@ public class FieldTest {
     }
     
     @Test
-    public void testSearchRegExpNotFound() {
+    public void searchRegExpNotFound() {
         Field field = new Field();
         field.setAttribute("value");
         field.setSearchRegExp("\\d+-\\d+");

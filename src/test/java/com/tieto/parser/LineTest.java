@@ -13,7 +13,7 @@ public class LineTest {
     public static final String LINE_BREAK = System.getProperty("line.separator");
 
     @Test
-    public void testSplitInput() {
+    public void splitInput() {
         Line line = new Line();
         line.setLineBreak(LINE_BREAK);
         List<String> splitInput = line.splitInput("a" + LINE_BREAK + "b" + LINE_BREAK + "");
@@ -27,12 +27,88 @@ public class LineTest {
     }
 
     @Test
-    public void testError() {
+    public void splitInputWithError() {
         Line line = new Line();
         line.setError("ERROR:");
         line.setLineBreak(LINE_BREAK);
         List<String> splitInput = line.splitInput("ERROR:a" + LINE_BREAK + "b" + LINE_BREAK + "");
         Assert.assertEquals("b", splitInput.get(0));
+        splitInput = line.splitInput("a" + LINE_BREAK + "b" + LINE_BREAK + "");
+        Assert.assertEquals(2, splitInput.size());
+        Assert.assertEquals("a", splitInput.get(0));
+        line.setLineNumber(0);
+        splitInput = line.splitInput("ERROR:a" + LINE_BREAK + "b" + LINE_BREAK + "");
+        Assert.assertEquals(0, splitInput.size());
+        line.setLineNumber(0);
+        splitInput = line.splitInput("a" + LINE_BREAK + "b" + LINE_BREAK + "");
+        Assert.assertEquals(1, splitInput.size());
+        Assert.assertEquals("a", splitInput.get(0));
+    }
+    @Test
+    public void splitInputWithLineNumber() {
+        Line line = new Line();
+        line.setLineBreak(LINE_BREAK);
+        line.setLineNumber(1);
+        List<String> splitInput = line.splitInput("a" + LINE_BREAK + "b" + LINE_BREAK + "");
+        Assert.assertEquals(1, splitInput.size());
+        Assert.assertEquals("b", splitInput.get(0));
+        line.setLineNumber(0);
+        splitInput = line.splitInput("a" + LINE_BREAK + "b" + LINE_BREAK + "");
+        Assert.assertEquals(1, splitInput.size());
+        Assert.assertEquals("a", splitInput.get(0));
+    }
+
+    @Test
+    public void parse() {
+        Line line = new Line();
+        line.setLineBreak(LINE_BREAK);
+        line.setClassName("com.tieto.parser.model.TestClass");
+        Field field = new Field();
+        field.setAttribute("value");
+        field.setOffset(0);
+        field.setLength(1);
+        List<TextParser> fields = new ArrayList<TextParser>();
+        fields.add(field);
+        line.setTextParsers(fields);
+        ParserData parserData = new ParserData();
+        line.parse(parserData, "a" + LINE_BREAK + "b" + LINE_BREAK + "", null);
+        List<Object> objects = parserData.getObjects();
+        Assert.assertEquals(2, objects.size());
+        TestClass testClass = (TestClass) objects.get(0);
+        Assert.assertEquals("a", testClass.getValue());
+    }
+
+    @Ignore
+    @Test
+    public void parseBlock() {
+        Block block = new Block();
+        block.setClassName("com.tieto.parser.model.TestClass");
+        block.setEnd("END");
+        Line line = new Line();
+        line.setLineBreak(LINE_BREAK);
+        Field field = new Field();
+        field.setAttribute("value");
+        field.setOffset(0);
+        field.setLength(1);
+        List<TextParser> fields = new ArrayList<TextParser>();
+        fields.add(field);
+        line.setTextParsers(fields);
+        List<TextParser> lines = new ArrayList<TextParser>();
+        lines.add(line);
+        block.setTextParsers(lines);
+        ParserData parserData = new ParserData();
+        block.parse(parserData, "a" + LINE_BREAK + "b" + LINE_BREAK + "END" + "c" + LINE_BREAK + "d" + LINE_BREAK + "END", null);
+        List<Object> objects = parserData.getObjects();
+        Assert.assertEquals(2, objects.size());
+        TestClass testClass = (TestClass) objects.get(0);
+        Assert.assertEquals("a", testClass.getValue());
+    }
+    
+    @Test
+    public void parseWithNullInput() {
+        Line line = new Line();
+        ParserData parserData = new ParserData();
+        line.parse(parserData, null, null);
     }
 
     @Ignore("not yet working")

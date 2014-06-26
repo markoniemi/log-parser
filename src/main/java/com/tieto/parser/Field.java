@@ -6,12 +6,11 @@ import java.lang.reflect.Method;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringUtils;
-
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+
+import org.apache.commons.lang.StringUtils;
 
 import com.tieto.parser.converter.Converter;
 
@@ -35,7 +34,6 @@ import com.tieto.parser.converter.Converter;
 @Slf4j
 @Getter
 @Setter
-@ToString(of = { "type", "attribute" })
 public class Field implements TextParser {
     /**
      * Attribute contains the name of the attribute that is used for getting the
@@ -231,6 +229,7 @@ public class Field implements TextParser {
     }
 
     protected void createMethodName() {
+        // TODO use some bean util
         if (!StringUtils.isBlank(attribute)) {
             String setterMethodName = "set" + attribute.substring(0, 1).toUpperCase()
                     + attribute.substring(1);

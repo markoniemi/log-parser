@@ -1,6 +1,6 @@
 package com.tieto.parser.model;
 
-import org.junit.Test;
+import java.util.Date;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ public class TestClass {
     private String value;
     private long longValue;
     private boolean booleanValue;
-    @Test
+    private Date date;
     public void dummy() {
         // TODO rename TestClass or exclude from maven test
     }

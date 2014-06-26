@@ -10,9 +10,9 @@ import org.junit.runners.Suite;
     LineTest.class, 
     BlockTest.class,
     LineSequenceRecordTest.class, 
-    ParserTest.class,
     HgPullLogTest.class,
-    HgPushLogTest.class
+    HgPushLogTest.class,
+    ParserTest.class
 })
 public class ParserTestSuite {
 }
