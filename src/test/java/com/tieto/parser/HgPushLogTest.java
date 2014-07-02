@@ -2,8 +2,9 @@ package com.tieto.parser;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
+
+import javax.xml.bind.JAXBException;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -16,7 +17,7 @@ import com.tieto.parser.model.LogEntry;
 @Slf4j
 public class HgPushLogTest {
     @Test
-    public void parsePushLog() throws IOException {
+    public void parsePushLog() throws IOException, JAXBException {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("pullLogEntry");
         List<Object> list = parser.parse(FileUtils.readFileToString(new File("src/test/resources/hg_push_output.log")));

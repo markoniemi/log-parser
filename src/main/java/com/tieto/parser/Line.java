@@ -3,6 +3,8 @@ package com.tieto.parser;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAttribute;
+
 import org.apache.commons.lang.StringUtils;
 
 import lombok.Getter;
@@ -18,7 +20,9 @@ import lombok.extern.slf4j.Slf4j;
 @Setter
 public class Line extends Block {
     // TODO change to int
+    @XmlAttribute
     private Integer lineNumber;
+    @XmlAttribute
     protected String lineBreak;
 
     /**

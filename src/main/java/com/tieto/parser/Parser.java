@@ -2,6 +2,12 @@ package com.tieto.parser;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElements;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,11 +18,21 @@ import org.apache.commons.lang.StringUtils;
  * textParsers and field. Parser delegates parsing to textParsers, which in turn
  * delegates to child textParsers and fields.
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
-public class Parser implements TextParser {
+public class Parser extends TextParser {
+    @XmlAttribute
     private String id;
+    @XmlElements({
+        @XmlElement(name="block", type=Block.class),
+        @XmlElement(name="field", type=Field.class),
+        @XmlElement(name="line", type=Line.class),
+        @XmlElement(name="lineSequenceRecord", type=LineSequenceRecord.class),
+        @XmlElement(name="sequenceLine", type=SequenceLine.class),
+    })
     private List<TextParser> textParsers;
+    @XmlAttribute
     protected String lineBreak;
 
     public List<Object> parse(String input) {

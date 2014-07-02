@@ -4,10 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
+import javax.xml.bind.JAXBException;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,7 +21,7 @@ import com.tieto.parser.model.LogEntry;
 @Slf4j
 public class HgPullLogTest {
     @Test
-    public void parsePullLog() throws IOException {
+    public void parsePullLog() throws IOException, JAXBException {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("pullLogEntry");
         List<Object> list = parser.parse(FileUtils.readFileToString(new File("src/test/resources/hg_pull_output.log")));
@@ -30,7 +31,7 @@ public class HgPullLogTest {
     }
 
     @Test
-    public void parsePullLog2() throws IOException {
+    public void parsePullLog2() throws IOException, JAXBException {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("pullLogEntry");
         List<Object> list = parser.parse(FileUtils.readFileToString(new File("src/test/resources/hg_pull_output_two_records.log")));

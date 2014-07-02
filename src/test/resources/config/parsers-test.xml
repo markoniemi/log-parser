@@ -1,0 +1,9 @@
+<parsers>
+	<parser id="parserId" lineBreak="lineBreak">
+		<block start="start" end="end"/>
+		<field start="start"/>
+		<line lineNumber="1"/>
+		<lineSequenceRecord search="search"/>
+		<sequenceLine lineNumber="1"/>
+	</parser>
+</parsers>

@@ -2,6 +2,10 @@ package com.tieto.parser;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,10 +16,12 @@ import lombok.Setter;
  * Therefore LineSequenceRecord splits output into lines, but is aware of other
  * lines. Together with SequenceLine it can parse alarms.
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
 public class LineSequenceRecord extends Line {
     // TODO move to line
+    @XmlAttribute
     protected String search;
 
     @Override

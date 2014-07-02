@@ -3,12 +3,16 @@ package com.tieto.parser;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+
 /**
  * SequenceLine is one line in LineSequenceRecord. When parsing, there is no
  * need to split input, since LineSequenceRecord has already done that.
  * 
  * @see com.tieto.parser.LineSequenceRecord
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SequenceLine extends Line {
     /**
      * There is no need to split input, since LineSequenceRecord has already

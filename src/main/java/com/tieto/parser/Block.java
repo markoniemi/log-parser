@@ -5,6 +5,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElements;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -14,21 +20,37 @@ import org.apache.commons.lang.StringUtils;
 /**
  * Block splits input into text blocks and passes parsing to textParsers.
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @Slf4j
 @Getter
 @Setter
-public class Block implements TextParser {
+public class Block extends TextParser {
+    @XmlElements({
+        @XmlElement(name="block", type=Block.class),
+        @XmlElement(name="field", type=Field.class),
+        @XmlElement(name="line", type=Line.class),
+        @XmlElement(name="lineSequenceRecord", type=LineSequenceRecord.class),
+        @XmlElement(name="sequenceLine", type=SequenceLine.class),
+    })
     protected List<TextParser> textParsers;
+    @XmlAttribute
     protected String start;
+    @XmlAttribute
     protected String end;
+    @XmlAttribute
     protected String searchRegExp;
+    @XmlAttribute
     protected String className;
+    @XmlAttribute
     protected boolean trim;
+    @XmlAttribute
     protected int offset;
+    @XmlAttribute
     protected int length;
+    @XmlAttribute
     protected String error;
+    @XmlAttribute
     protected int count;
-    protected List<String> versions;
 
     @Override
     public void parse(ParserData parserData, String input, String clsName) {

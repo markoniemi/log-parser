@@ -6,6 +6,10 @@ import java.lang.reflect.Method;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -31,34 +35,45 @@ import com.tieto.parser.converter.Converter;
  * &lt;field attribute="time" offset="56" length="20" type="java.util.Date" converter="com.tieto.parser.DateConverter" /&gt;
  * </pre>
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @Slf4j
 @Getter
 @Setter
-public class Field implements TextParser {
+public class Field extends TextParser {
     /**
      * Attribute contains the name of the attribute that is used for getting the
      * name of the setter for the value.
      */
+    @XmlAttribute
     private String attribute;
     /**
      * MethodName is the name of the setter method, if the java class does not
      * comply to java bean standard.
      */
+    @XmlAttribute
     private String methodName;
+    @XmlAttribute
     private int offset;
+    @XmlAttribute
     private int length;
+    @XmlAttribute
     private String start;
+    @XmlAttribute
     private String end;
     /** Is value trimmed before trying to read it */
+    @XmlAttribute
     private boolean trim;
     /** Type of the attribute where value is written. Can also use primitives. */
+    @XmlAttribute
     private String type;
     /** Regexp to use for finding the string */
+    @XmlAttribute
     private String searchRegExp;
     /**
      * Converter is a name of the converter class, that should be used for
      * converting the value, for example when the value is Date.
      */
+    @XmlAttribute
     private String converter;
 
     @Override
