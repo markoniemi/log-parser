@@ -274,7 +274,7 @@
 		</lineSequenceRecord>
 	</parser>
 	<!-- parses log4j log that was written with conversion pattern '%-5p [%t]: %m%n' -->
-	<parser id="log4j">
+	<parser id="log4j" lineBreak="&#13;&#10;">
 		<lineSequenceRecord searchRegExp=".*((TRACE|DEBUG|INFO|WARN|ERROR|FATAL)).*" className="com.tieto.parser.log4j.LogEvent">
 			<sequenceLine lineNumber="0">
 				<field attribute="time" offset="0" length="23" type="java.util.Date"
