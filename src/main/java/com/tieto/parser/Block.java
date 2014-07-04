@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlElements;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import org.apache.commons.lang.StringUtils;
@@ -24,6 +25,7 @@ import org.apache.commons.lang.StringUtils;
 @Slf4j
 @Getter
 @Setter
+@ToString(of = { "className" })
 public class Block extends TextParser {
     @XmlElements({
         @XmlElement(name="block", type=Block.class),

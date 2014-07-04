@@ -9,6 +9,7 @@ import org.apache.commons.lang.StringUtils;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -18,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Getter
 @Setter
+@ToString(of = { "lineNumber" })
 public class Line extends Block {
     // TODO change to int
     @XmlAttribute

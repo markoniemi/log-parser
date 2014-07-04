@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import org.apache.commons.lang.StringUtils;
@@ -39,6 +40,7 @@ import com.tieto.parser.converter.Converter;
 @Slf4j
 @Getter
 @Setter
+@ToString(of = { "attribute" })
 public class Field extends TextParser {
     /**
      * Attribute contains the name of the attribute that is used for getting the

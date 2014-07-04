@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
+import lombok.ToString;
+
 /**
  * SequenceLine is one line in LineSequenceRecord. When parsing, there is no
  * need to split input, since LineSequenceRecord has already done that.

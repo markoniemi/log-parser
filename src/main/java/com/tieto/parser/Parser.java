@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlElements;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -21,6 +22,7 @@ import org.apache.commons.lang.StringUtils;
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
+@ToString(of = { "id" })
 public class Parser extends TextParser {
     @XmlAttribute
     private String id;
@@ -36,7 +38,12 @@ public class Parser extends TextParser {
     protected String lineBreak;
 
     public List<?> parse(String input) {
+        return parse(input, false);
+    }
+    
+    public List<?> parse(String input, boolean failOnError) {
         ParserData parserData = new ParserData();
+        parserData.setFailOnError(failOnError);
         parserData.setLineBreak(createLineBreak(lineBreak));
         parse(parserData, input, null);
         return parserData.getObjects();

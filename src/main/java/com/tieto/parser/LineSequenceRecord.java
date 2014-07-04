@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * LineSequenceRecord is a special type of textParser needed for parsing alarms.
@@ -19,6 +20,7 @@ import lombok.Setter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
+@ToString(of = { "search" })
 public class LineSequenceRecord extends Line {
     // TODO move to line
     @XmlAttribute
