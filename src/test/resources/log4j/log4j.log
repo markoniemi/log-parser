@@ -1,0 +1,400 @@
+2014-07-04 11:44:29,202 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,002' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,209 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,210 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,210 [main] DEBUG Field - Setting value '07-04 09:03:38,002 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,210 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,004' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,211 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,211 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,211 [main] DEBUG Field - Setting value '07-04 09:03:38,004 [main] DEBUG Field - Setting value '07-04 09:01:30,350 [main] DEBUG Field - Setting value 'WARN' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,211 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,004' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,211 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,211 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,212 [main] DEBUG Field - Setting value '07-04 09:03:38,004 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,212 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,004' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,213 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,213 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,213 [main] DEBUG Field - Setting value '07-04 09:03:38,004 [main] DEBUG Field - Setting value '07-04 09:01:30,351 [main] DEBUG Field - Setting value 'SimpleThreadScope does not support descruction callbacks. Co' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,213 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,005' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,214 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,214 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,214 [main] DEBUG Field - Setting value '07-04 09:03:38,005 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,214 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,005' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,214 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,215 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,215 [main] DEBUG Field - Setting value '07-04 09:03:38,005 [main] DEBUG Field - Setting value '07-04 09:01:30,352 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,215 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,005' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,215 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,215 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,215 [main] DEBUG Field - Setting value '07-04 09:03:38,005 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,216 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,005' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,216 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,216 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,216 [main] DEBUG Field - Setting value '07-04 09:03:38,005 [main] DEBUG Field - Setting value '07-04 09:01:30,352 [main] DEBUG Field - Setting value 'paint: null' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,217 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,006' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,217 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,217 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,217 [main] DEBUG Field - Setting value '07-04 09:03:38,006 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,217 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,006' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,218 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,218 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,218 [main] DEBUG Field - Setting value '07-04 09:03:38,006 [main] DEBUG Field - Setting value '07-04 09:01:30,352 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,218 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,006' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,219 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,219 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,219 [main] DEBUG Field - Setting value '07-04 09:03:38,006 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,219 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,006' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,220 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,220 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,220 [main] DEBUG Field - Setting value '07-04 09:03:38,006 [main] DEBUG Field - Setting value '07-04 09:01:30,352 [main] DEBUG Field - Setting value 'paint: 1' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,220 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,006' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,220 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,221 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,221 [main] DEBUG Field - Setting value '07-04 09:03:38,006 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,221 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,006' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,223 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,223 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,223 [main] DEBUG Field - Setting value '07-04 09:03:38,006 [main] DEBUG Field - Setting value '07-04 09:01:30,353 [main] DEBUG Field - Setting value 'INFO' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,224 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,007' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,224 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,224 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,224 [main] DEBUG Field - Setting value '07-04 09:03:38,007 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,225 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,007' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,227 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,228 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,229 [main] DEBUG Field - Setting value '07-04 09:03:38,007 [main] DEBUG Field - Setting value '07-04 09:01:30,353 [main] DEBUG Field - Setting value 'User(id=null, username=user, email=email, role=ROLE_USER)' t' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,232 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,007' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,233 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,233 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,233 [main] DEBUG Field - Setting value '07-04 09:03:38,007 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,233 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,007' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,233 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,234 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,234 [main] DEBUG Field - Setting value '07-04 09:03:38,007 [main] DEBUG Field - Setting value '07-04 09:01:30,353 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,234 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,008' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,234 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,234 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,234 [main] DEBUG Field - Setting value '07-04 09:03:38,008 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,235 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,008' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,235 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,235 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,235 [main] DEBUG Field - Setting value '07-04 09:03:38,008 [main] DEBUG Field - Setting value '07-04 09:01:30,353 [main] DEBUG Field - Setting value 'editUser(): username: user' to com.tieto.parser.log4j.LogEve' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,235 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,008' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,235 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,236 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,236 [main] DEBUG Field - Setting value '07-04 09:03:38,008 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,236 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,008' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,236 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,236 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,236 [main] DEBUG Field - Setting value '07-04 09:03:38,008 [main] DEBUG Field - Setting value '07-04 09:01:30,353 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,237 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,009' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,237 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,237 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,237 [main] DEBUG Field - Setting value '07-04 09:03:38,009 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,237 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,009' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,238 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,238 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,238 [main] DEBUG Field - Setting value '07-04 09:03:38,009 [main] DEBUG Field - Setting value '07-04 09:01:30,354 [main] DEBUG Field - Setting value 'editUser(): user: User(id=2, username=user, email=email, rol' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,239 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,009' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,242 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,242 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,242 [main] DEBUG Field - Setting value '07-04 09:03:38,009 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,242 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,009' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,242 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,243 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,243 [main] DEBUG Field - Setting value '07-04 09:03:38,009 [main] DEBUG Field - Setting value '07-04 09:01:30,354 [main] DEBUG Field - Setting value 'INFO' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,243 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,010' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,243 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,243 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,243 [main] DEBUG Field - Setting value '07-04 09:03:38,010 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,244 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,010' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,244 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,244 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,244 [main] DEBUG Field - Setting value '07-04 09:03:38,010 [main] DEBUG Field - Setting value '07-04 09:01:30,354 [main] DEBUG Field - Setting value 'User(id=2, username=user, email=newemail@test.com, role=ROLE' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,244 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,010' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,244 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,244 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,245 [main] DEBUG Field - Setting value '07-04 09:03:38,010 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,245 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,010' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,245 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,245 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,245 [main] DEBUG Field - Setting value '07-04 09:03:38,010 [main] DEBUG Field - Setting value '07-04 09:01:30,354 [main] DEBUG Field - Setting value 'INFO' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,245 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,011' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,246 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,246 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,246 [main] DEBUG Field - Setting value '07-04 09:03:38,011 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,246 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,013' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,246 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,246 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,246 [main] DEBUG Field - Setting value '07-04 09:03:38,013 [main] DEBUG Field - Setting value '07-04 09:01:30,354 [main] DEBUG Field - Setting value 'User(id=null, username=user, email=email, role=ROLE_USER)' t' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,247 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,014' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,247 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,247 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,247 [main] DEBUG Field - Setting value '07-04 09:03:38,014 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,247 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,014' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,248 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,248 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,248 [main] DEBUG Field - Setting value '07-04 09:03:38,014 [main] DEBUG Field - Setting value '07-04 09:01:30,355 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,248 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,015' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,248 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,248 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,248 [main] DEBUG Field - Setting value '07-04 09:03:38,015 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,249 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,015' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,249 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,249 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,249 [main] DEBUG Field - Setting value '07-04 09:03:38,015 [main] DEBUG Field - Setting value '07-04 09:01:30,355 [main] DEBUG Field - Setting value 'editUser(): username: user' to com.tieto.parser.log4j.LogEve' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,250 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,015' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,250 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,250 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,250 [main] DEBUG Field - Setting value '07-04 09:03:38,015 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,250 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,015' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,250 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,251 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,251 [main] DEBUG Field - Setting value '07-04 09:03:38,015 [main] DEBUG Field - Setting value '07-04 09:01:30,355 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,251 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,016' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,251 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,251 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,251 [main] DEBUG Field - Setting value '07-04 09:03:38,016 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,252 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,016' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,252 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,252 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,252 [main] DEBUG Field - Setting value '07-04 09:03:38,016 [main] DEBUG Field - Setting value '07-04 09:01:30,355 [main] DEBUG Field - Setting value 'editUser(): user: User(id=3, username=user, email=email, rol' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,252 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,016' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,253 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,253 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,253 [main] DEBUG Field - Setting value '07-04 09:03:38,016 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,253 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,016' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,254 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,254 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,254 [main] DEBUG Field - Setting value '07-04 09:03:38,016 [main] DEBUG Field - Setting value '07-04 09:01:30,355 [main] DEBUG Field - Setting value 'INFO' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,254 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,017' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,254 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,254 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,254 [main] DEBUG Field - Setting value '07-04 09:03:38,017 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,255 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,017' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,255 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,255 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,255 [main] DEBUG Field - Setting value '07-04 09:03:38,017 [main] DEBUG Field - Setting value '07-04 09:01:30,356 [main] DEBUG Field - Setting value 'User(id=3, username=user, email=newemail@test.com, role=ROLE' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,256 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,017' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,256 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,256 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,256 [main] DEBUG Field - Setting value '07-04 09:03:38,017 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,256 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,018' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,257 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,257 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,257 [main] DEBUG Field - Setting value '07-04 09:03:38,018 [main] DEBUG Field - Setting value '07-04 09:01:30,357 [main] DEBUG Field - Setting value 'INFO' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,257 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,018' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,257 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,257 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,257 [main] DEBUG Field - Setting value '07-04 09:03:38,018 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,258 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,018' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,258 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,258 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,258 [main] DEBUG Field - Setting value '07-04 09:03:38,018 [main] DEBUG Field - Setting value '07-04 09:01:30,357 [main] DEBUG Field - Setting value 'Poll(id=null, name=poll, owner=null, questions=null)' to com' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,258 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,019' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,259 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,259 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,259 [main] DEBUG Field - Setting value '07-04 09:03:38,019 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,259 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,019' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,259 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,259 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,260 [main] DEBUG Field - Setting value '07-04 09:03:38,019 [main] DEBUG Field - Setting value '07-04 09:01:30,357 [main] DEBUG Field - Setting value 'INFO' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,260 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,019' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,260 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,260 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,260 [main] DEBUG Field - Setting value '07-04 09:03:38,019 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,260 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,019' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,261 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,261 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,261 [main] DEBUG Field - Setting value '07-04 09:03:38,019 [main] DEBUG Field - Setting value '07-04 09:01:30,357 [main] DEBUG Field - Setting value 'Poll(id=1, name=poll, owner=null, questions=[Question(id=nul' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,261 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,020' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,261 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,261 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,261 [main] DEBUG Field - Setting value '07-04 09:03:38,020 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,262 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,020' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,262 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,262 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,262 [main] DEBUG Field - Setting value '07-04 09:03:38,020 [main] DEBUG Field - Setting value '07-04 09:01:30,358 [main] DEBUG Field - Setting value 'INFO' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,262 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,020' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,263 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,263 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,263 [main] DEBUG Field - Setting value '07-04 09:03:38,020 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,263 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,021' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,263 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,263 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,263 [main] DEBUG Field - Setting value '07-04 09:03:38,021 [main] DEBUG Field - Setting value '07-04 09:01:30,358 [main] DEBUG Field - Setting value 'Poll(id=null, name=poll, owner=null, questions=null)' to com' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,263 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,021' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,264 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,264 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,264 [main] DEBUG Field - Setting value '07-04 09:03:38,021 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,264 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,021' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,264 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,264 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,265 [main] DEBUG Field - Setting value '07-04 09:03:38,021 [main] DEBUG Field - Setting value '07-04 09:01:30,358 [main] DEBUG Field - Setting value 'INFO' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,265 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,022' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,265 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,265 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,265 [main] DEBUG Field - Setting value '07-04 09:03:38,022 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,265 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,022' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,266 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,266 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,266 [main] DEBUG Field - Setting value '07-04 09:03:38,022 [main] DEBUG Field - Setting value '07-04 09:01:30,358 [main] DEBUG Field - Setting value 'Poll(id=null, name=poll, owner=null, questions=[])' to com.t' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,266 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,022' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,267 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,267 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,267 [main] DEBUG Field - Setting value '07-04 09:03:38,022 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,267 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,023' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,267 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,267 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,267 [main] DEBUG Field - Setting value '07-04 09:03:38,023 [main] DEBUG Field - Setting value '07-04 09:01:30,359 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,267 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,023' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value '07-04 09:03:38,023 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,023' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value '07-04 09:03:38,023 [main] DEBUG Field - Setting value '07-04 09:01:30,360 [main] DEBUG Field - Setting value 'Unable to create poll, a poll with same name already exists:' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,024' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,268 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,269 [main] DEBUG Field - Setting value '07-04 09:03:38,024 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,269 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,024' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,269 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,269 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,269 [main] DEBUG Field - Setting value '07-04 09:03:38,024 [main] DEBUG Field - Setting value '07-04 09:01:30,361 [main] DEBUG Field - Setting value 'WARN' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,269 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,025' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,269 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,269 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,269 [main] DEBUG Field - Setting value '07-04 09:03:38,025 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,270 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,025' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,270 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,270 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,270 [main] DEBUG Field - Setting value '07-04 09:03:38,025 [main] DEBUG Field - Setting value '07-04 09:01:30,361 [main] DEBUG Field - Setting value 'SimpleThreadScope does not support descruction callbacks. Co' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,270 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,026' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,271 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,271 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,271 [main] DEBUG Field - Setting value '07-04 09:03:38,026 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,271 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,026' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,271 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,271 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,271 [main] DEBUG Field - Setting value '07-04 09:03:38,026 [main] DEBUG Field - Setting value '07-04 09:01:30,362 [main] DEBUG Field - Setting value 'WARN' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,271 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,026' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,271 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,272 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,272 [main] DEBUG Field - Setting value '07-04 09:03:38,026 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,272 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,026' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,272 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,272 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,272 [main] DEBUG Field - Setting value '07-04 09:03:38,026 [main] DEBUG Field - Setting value '07-04 09:01:30,362 [main] DEBUG Field - Setting value 'SimpleThreadScope does not support descruction callbacks. Co' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,272 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,027' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,272 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,272 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,273 [main] DEBUG Field - Setting value '07-04 09:03:38,027 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,273 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,027' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,273 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,273 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,273 [main] DEBUG Field - Setting value '07-04 09:03:38,027 [main] DEBUG Field - Setting value '07-04 09:01:30,362 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,275 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,028' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,276 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,276 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,276 [main] DEBUG Field - Setting value '07-04 09:03:38,028 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,276 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,028' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,276 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,276 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,276 [main] DEBUG Field - Setting value '07-04 09:03:38,028 [main] DEBUG Field - Setting value '07-04 09:01:30,362 [main] DEBUG Field - Setting value 'File(id=null, filename=filename, mimeType=mimeType, createTi' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,276 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,028' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,276 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,277 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,277 [main] DEBUG Field - Setting value '07-04 09:03:38,028 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,277 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,028' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,277 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,277 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,277 [main] DEBUG Field - Setting value '07-04 09:03:38,028 [main] DEBUG Field - Setting value '07-04 09:01:30,364 [main] DEBUG Field - Setting value 'WARN' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,277 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,029' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,277 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,277 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,278 [main] DEBUG Field - Setting value '07-04 09:03:38,029 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,278 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,029' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,278 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,278 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,278 [main] DEBUG Field - Setting value '07-04 09:03:38,029 [main] DEBUG Field - Setting value '07-04 09:01:30,364 [main] DEBUG Field - Setting value 'SimpleThreadScope does not support descruction callbacks. Co' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,278 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,042' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,278 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,278 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,278 [main] DEBUG Field - Setting value '07-04 09:03:38,042 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,279 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,042' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,279 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,279 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,279 [main] DEBUG Field - Setting value '07-04 09:03:38,042 [main] DEBUG Field - Setting value '07-04 09:01:30,365 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,279 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,042' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,279 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,279 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,279 [main] DEBUG Field - Setting value '07-04 09:03:38,042 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,280 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,042' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,280 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,280 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,280 [main] DEBUG Field - Setting value '07-04 09:03:38,042 [main] DEBUG Field - Setting value '07-04 09:01:30,365 [main] DEBUG Field - Setting value 'paint: test' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,280 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,042' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,280 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,280 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,280 [main] DEBUG Field - Setting value '07-04 09:03:38,042 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,281 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,042' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,281 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,281 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,281 [main] DEBUG Field - Setting value '07-04 09:03:38,042 [main] DEBUG Field - Setting value '07-04 09:01:30,365 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,281 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,042' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,281 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,281 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,281 [main] DEBUG Field - Setting value '07-04 09:03:38,042 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,281 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,043' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,282 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,282 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,282 [main] DEBUG Field - Setting value '07-04 09:03:38,043 [main] DEBUG Field - Setting value '07-04 09:01:30,365 [main] DEBUG Field - Setting value 'paint: null' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,282 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,043' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,282 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,282 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,282 [main] DEBUG Field - Setting value '07-04 09:03:38,043 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,282 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,043' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,283 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,283 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,283 [main] DEBUG Field - Setting value '07-04 09:03:38,043 [main] DEBUG Field - Setting value '07-04 09:01:30,366 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,283 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,043' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,283 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,283 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,283 [main] DEBUG Field - Setting value '07-04 09:03:38,043 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,283 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,043' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,284 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,284 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,284 [main] DEBUG Field - Setting value '07-04 09:03:38,043 [main] DEBUG Field - Setting value '07-04 09:01:30,366 [main] DEBUG Field - Setting value 'authenticate' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,284 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,043' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,284 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,284 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,284 [main] DEBUG Field - Setting value '07-04 09:03:38,043 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,284 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,043' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,285 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,285 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,285 [main] DEBUG Field - Setting value '07-04 09:03:38,043 [main] DEBUG Field - Setting value '07-04 09:01:30,366 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,285 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,044' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,285 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,285 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,285 [main] DEBUG Field - Setting value '07-04 09:03:38,044 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,285 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,044' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,285 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,286 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,286 [main] DEBUG Field - Setting value '07-04 09:03:38,044 [main] DEBUG Field - Setting value '07-04 09:01:30,366 [main] DEBUG Field - Setting value 'authenticate' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,286 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,044' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,286 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,286 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,286 [main] DEBUG Field - Setting value '07-04 09:03:38,044 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,286 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,044' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,286 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,286 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,287 [main] DEBUG Field - Setting value '07-04 09:03:38,044 [main] DEBUG Field - Setting value '07-04 09:01:30,367 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,287 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,044' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,287 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,287 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,287 [main] DEBUG Field - Setting value '07-04 09:03:38,044 [main] DEBUG Field - Setting value '-07-04' to com.tieto.parser.log4j.LogEvent.level' to com.tieto.parser.log4j.LogEvent.message
+2014-07-04 11:44:29,287 [main] DEBUG Field - Setting value '2014-07-04 09:03:38,044' to com.tieto.parser.log4j.LogEvent.time
+2014-07-04 11:44:29,287 [main] DEBUG Field - Setting value 'DEBUG' to com.tieto.parser.log4j.LogEvent.level
+2014-07-04 11:44:29,287 [main] DEBUG Field - Setting value '2014-07-04' to com.tieto.parser.log4j.LogEvent.className
+2014-07-04 11:44:29,287 [main] DEBUG Field - Setting value '07-04 09:03:38,044 [main] DEBUG Field - Setting value '07-04 09:01:30,367 [main] DEBUG Field - Setting value 'authenticate' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message' to com.tieto.parser.log4j.LogEvent.message

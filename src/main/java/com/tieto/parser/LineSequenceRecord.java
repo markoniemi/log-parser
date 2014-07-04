@@ -42,7 +42,7 @@ public class LineSequenceRecord extends Line {
                     if (textParser instanceof Line) {
                         Line line = (Line) textParser;
                         int lineNumber = i + line.getLineNumber();
-                        if (lineNumber > 0 && lineNumber < splitInputs.size()) {
+                        if (lineNumber >= 0 && lineNumber < splitInputs.size()) {
                             line.parse(parserData, splitInputs.get(lineNumber), className);
                         }
                     }

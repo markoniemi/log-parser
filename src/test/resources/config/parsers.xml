@@ -252,4 +252,41 @@
 			</block>
 		</block>
 	</parser>
+	<!-- parser definition for default git log format -->
+	<parser id="git">
+		<lineSequenceRecord search="Author:"
+			className="com.tieto.parser.git.GitCommit">
+			<sequenceLine lineNumber="-1">
+				<field attribute="sha1" start="commit " trim="true"/>
+			</sequenceLine>
+<!-- 			<sequenceLine lineNumber="0" className="com.tieto.parser.git.Author" attribute="author"> -->
+			<sequenceLine lineNumber="0">
+				<field attribute="authorName" start="Author:" end="&lt;" trim="true"/>
+				<field attribute="authorEmail" start="&lt;" end="&gt;"/>
+			</sequenceLine>
+			<sequenceLine lineNumber="1">
+				<field attribute="time" start="Date: " type="java.util.Date"
+					converter="com.tieto.parser.git.GitDateConverter" trim="true"/>
+			</sequenceLine>
+			<sequenceLine lineNumber="3">
+				<field attribute="title" trim="true"/>
+			</sequenceLine>
+		</lineSequenceRecord>
+	</parser>
+	<!-- parses log4j log that was written with conversion pattern '%-5p [%t]: %m%n' -->
+	<parser id="log4j">
+		<lineSequenceRecord searchRegExp=".*((TRACE|DEBUG|INFO|WARN|ERROR|FATAL)).*" className="com.tieto.parser.log4j.LogEvent">
+			<sequenceLine lineNumber="0">
+				<field attribute="time" offset="0" length="23" type="java.util.Date"
+					converter="com.tieto.parser.log4j.LogDateConverter" trim="true"/>
+				<field attribute="level" offset="30" length="7" trim="true" converter="com.tieto.parser.log4j.LogLevelConverter" type="org.apache.log4j.Level"/>
+				<field attribute="className" offset="37" end=" "/>
+				<field attribute="message" start="-" trim="true"/>
+			</sequenceLine>
+		</lineSequenceRecord>
+<!-- 		<line searchRegExp=".*((TRACE|DEBUG|INFO|WARN|ERROR|FATAL)).*" className="com.tieto.parser.log4j.LogEvent"> -->
+<!-- 			<field attribute="level" location="11" end="-"/> -->
+<!-- 			<field attribute="message" start="-"/> -->
+<!-- 		</line> -->
+	</parser>
 </parsers>

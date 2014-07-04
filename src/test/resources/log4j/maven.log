@@ -1,0 +1,47 @@
+Running com.tieto.user.XPathTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.117 sec
+Running com.tieto.user.bean.FilesBeanTest
+main WARN  SimpleThreadScope - SimpleThreadScope does not support descruction callbacks. Consider using a RequestScope in a Web environment.
+main DEBUG FilesBean - paint: null
+main DEBUG FilesBean - paint: 1
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.008 sec
+Running com.tieto.user.bean.EditUserBeanTest
+main INFO  EditUserBean - User(id=null, username=user, email=email, role=ROLE_USER)
+main DEBUG EditUserBean - editUser(): username: user
+main DEBUG EditUserBean - editUser(): user: User(id=2, username=user, email=email, role=ROLE_USER)
+main INFO  EditUserBean - User(id=2, username=user, email=newemail@test.com, role=ROLE_USER)
+main INFO  EditUserBean - User(id=null, username=user, email=email, role=ROLE_USER)
+main DEBUG EditUserBean - editUser(): username: user
+main DEBUG EditUserBean - editUser(): user: User(id=3, username=user, email=email, role=ROLE_USER)
+main INFO  EditUserBean - User(id=3, username=user, email=newemail@test.com, role=ROLE_USER)
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.395 sec
+Running com.tieto.user.bean.UsersBeanTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.374 sec
+Running com.tieto.user.bean.EditPollBeanTest
+main INFO  EditPollBean - Poll(id=null, name=poll, owner=null, questions=null)
+main INFO  EditPollBean - Poll(id=1, name=poll, owner=null, questions=[Question(id=null, text=text1, description=null, type=LABEL)])
+main INFO  EditPollBean - Poll(id=null, name=poll, owner=null, questions=null)
+main INFO  EditPollBean - Poll(id=null, name=poll, owner=null, questions=[])
+main DEBUG EditPollBean - Unable to create poll, a poll with same name already exists: {]
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.491 sec
+Running com.tieto.user.bean.FileUploadBeanTest
+main WARN  SimpleThreadScope - SimpleThreadScope does not support descruction callbacks. Consider using a RequestScope in a Web environment.
+main WARN  SimpleThreadScope - SimpleThreadScope does not support descruction callbacks. Consider using a RequestScope in a Web environment.
+main DEBUG FileUploadBean - File(id=null, filename=filename, mimeType=mimeType, createTime=1402823611042, size=7, owner=null)
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.396 sec
+Running com.tieto.user.bean.VersionBeanTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.tieto.user.bean.MediaBeanTest
+main WARN  SimpleThreadScope - SimpleThreadScope does not support descruction callbacks. Consider using a RequestScope in a Web environment.
+main DEBUG MediaBean - paint: test
+main DEBUG MediaBean - paint: null
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.427 sec
+Running com.tieto.user.bean.PollsBeanTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.415 sec
+Running com.tieto.user.validator.EmailValidatorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.tieto.user.security.UserRepositoryAuthenticationProviderTest
+main DEBUG UserRepositoryAuthenticationProvider - authenticate
+main DEBUG UserRepositoryAuthenticationProvider - authenticate
+main DEBUG UserRepositoryAuthenticationProvider - authenticate
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 sec

@@ -35,7 +35,7 @@ public class Parser extends TextParser {
     @XmlAttribute
     protected String lineBreak;
 
-    public List<Object> parse(String input) {
+    public List<?> parse(String input) {
         ParserData parserData = new ParserData();
         parserData.setLineBreak(createLineBreak(lineBreak));
         parse(parserData, input, null);

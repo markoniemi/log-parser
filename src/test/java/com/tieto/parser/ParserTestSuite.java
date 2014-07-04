@@ -3,6 +3,9 @@ package com.tieto.parser;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import com.tieto.parser.git.GitLogTest;
+import com.tieto.parser.log4j.Log4jLogTest;
+
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ 
     ParserManagerTest.class, 
@@ -12,7 +15,9 @@ import org.junit.runners.Suite;
     LineSequenceRecordTest.class, 
     HgPullLogTest.class,
     HgPushLogTest.class,
-    ParserTest.class
+    ParserTest.class,
+    GitLogTest.class,
+    Log4jLogTest.class
 })
 public class ParserTestSuite {
 }

@@ -23,12 +23,12 @@ public class ParserTest {
     public void testUnitInfo() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("unitInfoMaster");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<UnitInfo> list = (List<UnitInfo>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWTIU-MSC-4001"));
         Assert.assertNotNull(list);
         Assert.assertEquals(166, list.size());
-        for (Object object : list) {
-            UnitInfo unitInfo = (UnitInfo) object;
+        for (UnitInfo unitInfo : list) {
             Assert.assertNotNull(unitInfo.getName());
         }
         UnitInfo unitInfo = (UnitInfo) list.get(0);
@@ -41,12 +41,12 @@ public class ParserTest {
     public void testMgwUnitInfo() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("unitInfoIPA");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<UnitInfo> list = (List<UnitInfo>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWFIPS-MGW-4201"));
         Assert.assertNotNull(list);
         Assert.assertEquals(50, list.size());
-        for (Object object : list) {
-            UnitInfo unitInfo = (UnitInfo) object;
+        for (UnitInfo unitInfo : list) {
             Assert.assertNotNull(unitInfo.getLocation());
         }
         UnitInfo unitInfo = (UnitInfo) list.get(0);
@@ -59,12 +59,12 @@ public class ParserTest {
     public void testCabinetLayout() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("cabinetLayoutMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<CabinetInfo> list = (List<CabinetInfo>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWTIJ-MSC-4001"));
         Assert.assertNotNull(list);
         Assert.assertEquals(10, list.size());
-        for (Object object : list) {
-            CabinetInfo cabinet = (CabinetInfo) object;
+        for (CabinetInfo cabinet : list) {
             Assert.assertNotNull(cabinet.getName());
         }
         CabinetInfo cabinet = (CabinetInfo) list.get(0);
@@ -76,12 +76,12 @@ public class ParserTest {
     public void testMgwCabinetLayout() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("cabinetLayoutIPA");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<CabinetInfo> list = (List<CabinetInfo>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWFIJ-MGW-4201"));
         Assert.assertNotNull(list);
         Assert.assertEquals(1, list.size());
-        for (Object object : list) {
-            CabinetInfo cabinet = (CabinetInfo) object;
+        for (CabinetInfo cabinet : list) {
             Assert.assertNotNull(cabinet.getName());
         }
         CabinetInfo cabinet = (CabinetInfo) list.get(0);
@@ -93,12 +93,12 @@ public class ParserTest {
     public void testUnitState() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("unitStateMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<UnitInfo> list = (List<UnitInfo>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZUSI-MSC-4001"));
         Assert.assertNotNull(list);
         Assert.assertEquals(143, list.size());
-        for (Object object : list) {
-            UnitInfo unitInfo = (UnitInfo) object;
+        for (UnitInfo unitInfo : list) {
             Assert.assertNotNull(unitInfo.getName());
         }
         UnitInfo unitInfo = (UnitInfo) list.get(0);
@@ -111,12 +111,12 @@ public class ParserTest {
     public void testUnitStateMgw() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("unitStateIPA");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<UnitInfo> list = (List<UnitInfo>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZUSI-MGW-4201"));
         Assert.assertNotNull(list);
         Assert.assertEquals(34, list.size());
-        for (Object object : list) {
-            UnitInfo unitInfo = (UnitInfo) object;
+        for (UnitInfo unitInfo : list) {
             Assert.assertNotNull(unitInfo.getName());
         }
         UnitInfo unitInfo = (UnitInfo) list.get(0);
@@ -129,12 +129,12 @@ public class ParserTest {
     public void testAlarm() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("alarmMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<Alarm> list = (List<Alarm>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZAHO-MSC-4001"));
         Assert.assertNotNull(list);
         Assert.assertEquals(195, list.size());
-        for (Object object : list) {
-            Alarm alarm = (Alarm) object;
+        for (Alarm alarm : list) {
             Assert.assertNotNull("" + alarm.getAlarmNumber(), alarm.getUnitName());
             Assert.assertNotNull("" + alarm.getAlarmNumber(), alarm.getTime());
             Assert.assertNotNull("" + alarm.getAlarmNumber(), alarm.getSeverity());
@@ -149,12 +149,12 @@ public class ParserTest {
     public void testAlarmMgw() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("alarmIPA");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<Alarm> list = (List<Alarm>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZAAP-MGW-4201"));
         Assert.assertNotNull(list);
         Assert.assertEquals(47, list.size());
-        for (Object object : list) {
-            Alarm alarm = (Alarm) object;
+        for (Alarm alarm : list) {
             Assert.assertNotNull("" + alarm.getAlarmNumber(), alarm.getUnitName());
             Assert.assertNotNull("" + alarm.getAlarmNumber(), alarm.getTime());
             Assert.assertNotNull("" + alarm.getAlarmNumber(), alarm.getSeverity());
@@ -169,12 +169,12 @@ public class ParserTest {
     public void testCpuLoad() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("cpuLoadMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<CpuLoad> list = (List<CpuLoad>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZDOI-MSC-4001"));
         Assert.assertNotNull(list);
         Assert.assertEquals(36, list.size());
-        for (Object object : list) {
-            CpuLoad cpuLoad = (CpuLoad) object;
+        for (CpuLoad cpuLoad : list) {
             Assert.assertNotNull(cpuLoad.getCpuLoad());
         }
         CpuLoad cpuLoad = (CpuLoad) list.get(0);
@@ -186,12 +186,12 @@ public class ParserTest {
     public void testClearCode() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("clearCodeMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<ClearCode> list = (List<ClearCode>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZTUTCLR-MSC-4001"));
         Assert.assertNotNull(list);
         Assert.assertEquals(8, list.size());
-        for (Object object : list) {
-            ClearCode clearCode = (ClearCode) object;
+        for (ClearCode clearCode : list) {
             Assert.assertNotNull(clearCode.getInfo(), clearCode.getInfo());
             Assert.assertNotNull(clearCode.getInfo(), clearCode.getSignalling());
             Assert.assertNotNull(clearCode.getInfo(), clearCode.getRing());
@@ -210,12 +210,12 @@ public class ParserTest {
     public void testLicense() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("licenseMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<LicenseInfo> list = (List<LicenseInfo>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWTILICFULL-MSC-4001"));
         Assert.assertNotNull(list);
         Assert.assertEquals(37, list.size());
-        for (Object object : list) {
-            LicenseInfo license = (LicenseInfo) object;
+        for (LicenseInfo license : list) {
             Assert.assertNotNull(license.getName());
         }
         LicenseInfo license = (LicenseInfo) list.get(0);
@@ -227,12 +227,12 @@ public class ParserTest {
     public void testLicenseSgsn() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("licenseMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<LicenseInfo> list = (List<LicenseInfo>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWTILICFULL-SGSN-4101"));
         Assert.assertNotNull(list);
         Assert.assertEquals(37, list.size());
-        for (Object object : list) {
-            LicenseInfo license = (LicenseInfo) object;
+        for (LicenseInfo license : list) {
             Assert.assertNotNull(license.getName());
         }
         LicenseInfo license = (LicenseInfo) list.get(0);
@@ -244,11 +244,11 @@ public class ParserTest {
     public void testSwVersion() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("swVersionMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<SwVersion> list = (List<SwVersion>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWQORUN-MSC-4001"));
         Assert.assertNotNull(list);
-        for (Object object : list) {
-            SwVersion swVersion = (SwVersion) object;
+        for (SwVersion swVersion : list) {
             Assert.assertNotNull(swVersion.getUnitName(), swVersion.getVersion());
         }
         Assert.assertEquals(25, list.size());
@@ -262,11 +262,11 @@ public class ParserTest {
     public void testSwVersionAUB143W() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("swVersionMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<SwVersion> list = (List<SwVersion>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWQORUN-MGW-AUB143W"));
         Assert.assertNotNull(list);
-        for (Object object : list) {
-            SwVersion swVersion = (SwVersion) object;
+        for (SwVersion swVersion : list) {
             Assert.assertNotNull(swVersion.getUnitName(), swVersion.getVersion());
         }
         Assert.assertEquals(273, list.size());
@@ -280,12 +280,12 @@ public class ParserTest {
     public void testSwPackage() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("swPackageMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<SwPackage> list = (List<SwPackage>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWQOCR-MSC-4001"));
         Assert.assertNotNull(list);
         Assert.assertEquals(6, list.size());
-        for (Object object : list) {
-            SwPackage swPackage = (SwPackage) object;
+        for (SwPackage swPackage : list) {
             Assert.assertNotNull(swPackage.getName(), swPackage.getVersion());
         }
         SwPackage swPackage = (SwPackage) list.get(0);
@@ -299,12 +299,12 @@ public class ParserTest {
     public void testSwPackage4007() throws Exception {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("swPackageMsc");
-        List<Object> list = parser
+        @SuppressWarnings("unchecked")
+        List<SwPackage> list = (List<SwPackage>) parser
                 .parse(readFile("src/test/resources/mml-output/MML-ZWQOCR-MSC-4007"));
         Assert.assertNotNull(list);
         Assert.assertEquals(6, list.size());
-        for (Object object : list) {
-            SwPackage swPackage = (SwPackage) object;
+        for (SwPackage swPackage : list) {
             Assert.assertNotNull(swPackage.getName(), swPackage.getVersion());
         }
         SwPackage swPackage = (SwPackage) list.get(0);

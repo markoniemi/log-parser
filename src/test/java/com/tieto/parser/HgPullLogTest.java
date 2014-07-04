@@ -24,9 +24,10 @@ public class HgPullLogTest {
     public void parsePullLog() throws IOException, JAXBException {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("pullLogEntry");
-        List<Object> list = parser.parse(FileUtils.readFileToString(new File("src/test/resources/hg_pull_output.log")));
+        @SuppressWarnings("unchecked")
+        List<LogEntry> list = (List<LogEntry>) parser.parse(FileUtils.readFileToString(new File("src/test/resources/hg/hg_pull_output.log")));
         Assert.assertEquals(259, list.size());
-        LogEntry logEntry = (LogEntry) list.get(0);
+        LogEntry logEntry = list.get(0);
         Assert.assertNotNull(logEntry.getTime());
     }
 
@@ -34,9 +35,10 @@ public class HgPullLogTest {
     public void parsePullLog2() throws IOException, JAXBException {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
         Parser parser = parserManager.getParser("pullLogEntry");
-        List<Object> list = parser.parse(FileUtils.readFileToString(new File("src/test/resources/hg_pull_output_two_records.log")));
+        @SuppressWarnings("unchecked")
+        List<LogEntry> list = (List<LogEntry>) parser.parse(FileUtils.readFileToString(new File("src/test/resources/hg/hg_pull_output_two_records.log")));
         Assert.assertEquals(2, list.size());
-        LogEntry logEntry = (LogEntry) list.get(0);
+        LogEntry logEntry = list.get(0);
         Assert.assertNotNull(logEntry.getTime());
     }
     private Date createTime(String time) throws ParseException {
