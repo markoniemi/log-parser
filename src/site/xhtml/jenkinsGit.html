@@ -1,0 +1,61 @@
+<html>
+<head>
+<style media="screen" type="text/css">
+.code {
+	background-color: #EEEEEE;
+	overflow: auto;
+	padding: 3px;
+}
+</style>
+</head>
+<body>
+	<h1>Setting up Jenkins with BitBucket</h1>
+	<p>These steps were done using a following article: 
+		<a
+			href="https://github.com/Tozkoparan/Deneme/wiki/Setup-Jenkins-for-working-with-a-private-Github-repository">Instructions
+			for setting up Jenkins for Git</a>
+	</p>
+	<ol>
+		<li>Install Jenkins Git and SSH Credentials plugins.</li>
+		<li>Install Git on Jenkins:
+			<div class="code">
+				<code>sudo apt-get git-core</code>
+			</div>
+		</li>
+		<li>List users and check that jenkins use exists:
+			<div class="code">
+				<code>sudo cat /etc/passwd</code>
+			</div>
+		</li>
+		<li>Change to jenkins user:
+			<div class="code">
+				<code>sudo su -s /bin/bash jenkins</code>
+			</div>
+		</li>
+		<li>create SSH keypair:
+			<div class="code">
+				<code>ssh-keygen -p -t dsa</code>
+			</div>
+		</li>
+		<li>Try to ssh on BitBucket:
+			<div class="code">
+				<code>ssh -T bitbucket.org</code>
+			</div>
+		</li>
+		<li>Show the public key:
+			<div class="code">
+				<code>cat /var/lib/jenkins/.ssh/id_dsa.pub</code>
+			</div>
+		</li>
+		<li>Goto BitBucket, select repository, select Settings,
+			Deployment keys, Add key, paste 'ssh-dss &lt;key&gt;'.</li>
+		<li>Select repository, select Overview, select SSH next to
+			repository link, copy SSH url.
+			<div class="code">
+				<code>git@bitbucket.org:niemimac/log-parser.git</code>
+			</div>
+		</li>
+		<li>Goto Jenkins, select job, past SSH url to Git repository URL.</li>
+		<li>Add BitBucket credentials to SSH Credentials plugin.</li>
+	</ol>
+</body>

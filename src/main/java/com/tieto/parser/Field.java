@@ -75,8 +75,7 @@ public class Field extends TextParser {
      * Converter is a name of the converter class, that should be used for
      * converting the value, for example when the value is Date.
      */
-    @XmlAttribute
-    private String converter;
+    private com.tieto.parser.Converter converter;
 
     @Override
     public void parse(ParserData parserData, String input, String className) throws ParseException {
@@ -148,9 +147,17 @@ public class Field extends TextParser {
             IllegalAccessException, ClassNotFoundException, SecurityException,
             NoSuchMethodException, IllegalArgumentException, InvocationTargetException {
         Object value = null;
+        // TODO split into methods
         if (converter != null) {
             @SuppressWarnings("rawtypes")
-            Converter converterClass = (Converter) Class.forName(converter).newInstance();
+            Converter converterClass = null;
+            if (converter.getParameter() != null) {
+                Constructor<? extends Object> constructor = Class.forName(converter.getClassName()).getConstructor(
+                        String.class);
+                converterClass = (Converter) constructor.newInstance(converter.getParameter());
+            } else {
+                converterClass = (Converter) Class.forName(converter.getClassName()).newInstance();
+            }
             value = converterClass.convert(valueString);
         } else {
             if (type != null) {

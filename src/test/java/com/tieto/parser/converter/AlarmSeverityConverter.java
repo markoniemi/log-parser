@@ -3,7 +3,7 @@ package com.tieto.parser.converter;
 import com.tieto.parser.converter.Converter;
 import com.tieto.parser.model.Severity;
 
-public class AlarmSeverityConverter implements Converter {
+public class AlarmSeverityConverter extends Converter {
     public Object convert(String input) {
         String trimmedInput = input.trim();
         if ("****".equals(trimmedInput)) {

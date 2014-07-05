@@ -11,9 +11,9 @@ package com.tieto.parser.converter;
  * &lt;field attribute="time" offset="56" length="20" type="java.util.Date" converter="com.tieto.parser.DateConverter" /&gt;
  * </pre>
  */
-public interface Converter<T> {
+public abstract class Converter<T> {
     /**
      * Convert input to an object.
      */
-    T convert(String input);
+    public abstract T convert(String input);
 }

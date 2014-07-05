@@ -17,8 +17,9 @@
 			<line className="com.tieto.parser.model.UnitInfo">
 				<field attribute="name" offset="27" length="14" trim="true" />
 				<field attribute="cabinet" offset="0" length="2" trim="true" />
-				<field attribute="location" offset="4" length="11" trim="true"
-					converter="com.tieto.parser.converter.MgwLocationConverter" />
+				<field attribute="location" offset="4" length="11" trim="true">
+					<converter className="com.tieto.parser.converter.MgwLocationConverter" />
+				</field>
 			</line>
 		</block>
 	</parser>
@@ -71,13 +72,15 @@
 			<lineSequenceRecord searchRegExp=".*\*+\s+((ALARM|DISTUR)).*"
 				className="com.tieto.parser.model.Alarm">
 				<sequenceLine lineNumber="-1">
-					<field attribute="time" offset="56" length="20" type="java.util.Date"
-						converter="com.tieto.parser.converter.DateConverter" />
+					<field attribute="time" offset="56" length="20" type="java.util.Date">
+						<converter className="com.tieto.parser.converter.DateConverter" />
+					</field>
 				</sequenceLine>
 				<sequenceLine lineNumber="0">
 					<field attribute="severity" offset="0" length="3"
-						converter="com.tieto.parser.converter.AlarmSeverityConverter"
-						type="com.tieto.parser.model.Severity" />
+						type="com.tieto.parser.model.Severity" >
+						<converter className="com.tieto.parser.converter.AlarmSeverityConverter"/>
+					</field>
 					<field attribute="unitName" offset="11" length="8" trim="true" />
 				</sequenceLine>
 				<sequenceLine lineNumber="1">
@@ -98,13 +101,15 @@
 				className="com.tieto.parser.model.Alarm">
 				<sequenceLine lineNumber="-1">
 					<field attribute="alarmId" offset="5" length="5" />
-					<field attribute="time" offset="58" length="19" type="java.util.Date"
-						converter="com.tieto.parser.converter.DateConverter" />
+					<field attribute="time" offset="58" length="19" type="java.util.Date">
+						<converter className="com.tieto.parser.converter.DateConverter" />
+					</field>
 				</sequenceLine>
 				<sequenceLine lineNumber="0">
 					<field attribute="severity" offset="0" length="3"
-						converter="com.tieto.parser.converter.AlarmSeverityConverter"
-						type="com.tieto.parser.model.Severity" />
+						type="com.tieto.parser.model.Severity" >
+						<converter className="com.tieto.parser.converter.AlarmSeverityConverter"/>
+					</field>
 					<block offset="11" length="8">
 						<block start=" " end=" ">
 							<field attribute="unitName" offset="0" length="8" trim="true" />
@@ -152,7 +157,9 @@
 				<field attribute="speech" type="int" offset="20" length="9"
 					trim="true" />
 				<field attribute="type" type="int" offset="30" length="4"
-					trim="true" converter="com.tieto.parser.converter.HexConverter" />
+					trim="true" >
+					<converter className="com.tieto.parser.converter.HexConverter" />
+				</field>
 				<field attribute="info" offset="36" length="30" trim="true" />
 			</line>
 		</block>
@@ -174,11 +181,15 @@
 				<field attribute="state" start="LICENCE STATE:............."
 					end="&#10;" trim="true" />
 				<field attribute="startDate" start="START DATE:................"
-					end="&#10;" type="java.util.Date" converter="com.tieto.parser.converter.DateConverter"
-					trim="true" />
+					end="&#10;" type="java.util.Date" 
+					trim="true">
+					<converter className="com.tieto.parser.converter.DateConverter"/>
+				</field>
 				<field attribute="expirationTime" start="EXPIRATION DATE:..........."
-					end="&#10;" type="java.util.Date" converter="com.tieto.parser.converter.DateConverter"
-					trim="true" />
+					end="&#10;" type="java.util.Date" 
+					trim="true" >
+					<converter className="com.tieto.parser.converter.DateConverter"/>
+				</field>
 				<field attribute="expirationWarningPeriod" start="EXPIRATION WARNING PERIOD:."
 					end="&#10;" type="int" trim="true" />
 				<field attribute="capacity" start="LICENCE CAPACITY:.........."
@@ -208,9 +219,13 @@
 					<field attribute="name" offset="3" length="15" trim="true" />
 					<field attribute="status" offset="18" length="9" trim="true" />
 					<field attribute="def" offset="69" length="3" trim="true"
-						type="java.lang.Boolean" converter="com.tieto.parser.converter.BooleanConverter" />
+						type="java.lang.Boolean">
+						<converter className="com.tieto.parser.converter.BooleanConverter" />
+					</field>
 					<field attribute="act" offset="74" length="3" trim="true"
-						type="java.lang.Boolean" converter="com.tieto.parser.converter.BooleanConverter" />
+						type="java.lang.Boolean">
+						<converter className="com.tieto.parser.converter.BooleanConverter" />
+					</field>
 				</sequenceLine>
 				<sequenceLine lineNumber="1">
 					<field attribute="version" offset="28" length="16" trim="true" />
@@ -222,8 +237,9 @@
 		<block end="*******************************************&#10;"
 			className="com.tieto.parser.model.LogEntry">
 			<line lineNumber="0">
-				<field attribute="time" type="java.util.Date"
-					converter="com.tieto.parser.converter.HgDateConverter" />
+				<field attribute="time" type="java.util.Date">
+					<converter className="com.tieto.parser.converter.DateConverter" parameter="EEE MMM dd hh:mm:ss z yyyy"/>
+				</field>
 			</line>
 			<line lineNumber="2">
 				<field attribute="branch" start="Executing" end="-branch"
@@ -239,8 +255,9 @@
 		<block end="*******************************************&#10;"
 			className="com.tieto.parser.model.LogEntry">
 			<line lineNumber="0">
-				<field attribute="time" type="java.util.Date"
-					converter="com.tieto.parser.converter.HgDateConverter" />
+				<field attribute="time" type="java.util.Date">
+					<converter className="com.tieto.parser.converter.DateConverter" parameter="EEE MMM dd hh:mm:ss z yyyy"/>
+				</field>
 			</line>
 			<line lineNumber="2">
 				<field attribute="branch" start="Executing" end="-branch"
@@ -265,8 +282,9 @@
 				<field attribute="authorEmail" start="&lt;" end="&gt;"/>
 			</sequenceLine>
 			<sequenceLine lineNumber="1">
-				<field attribute="time" start="Date: " type="java.util.Date"
-					converter="com.tieto.parser.git.GitDateConverter" trim="true"/>
+				<field attribute="time" start="Date: " type="java.util.Date" trim="true">
+					<converter className="com.tieto.parser.converter.DateConverter" parameter="EEE MMM dd hh:mm:ss yyyy ZZZZZ"/>
+				</field>
 			</sequenceLine>
 			<sequenceLine lineNumber="3">
 				<field attribute="title" trim="true"/>
@@ -277,9 +295,12 @@
 	<parser id="log4j" lineBreak="&#13;&#10;">
 		<lineSequenceRecord searchRegExp=".*((TRACE|DEBUG|INFO|WARN|ERROR|FATAL)).*" className="com.tieto.parser.log4j.LogEvent">
 			<sequenceLine lineNumber="0">
-				<field attribute="time" offset="0" length="23" type="java.util.Date"
-					converter="com.tieto.parser.log4j.LogDateConverter" trim="true"/>
-				<field attribute="level" offset="30" length="7" trim="true" converter="com.tieto.parser.log4j.LogLevelConverter" type="org.apache.log4j.Level"/>
+				<field attribute="time" offset="0" length="23" type="java.util.Date" trim="true">
+					<converter className="com.tieto.parser.converter.DateConverter" parameter="yyyy-MM-dd hh:mm:ss,SSS"/>
+				</field>
+				<field attribute="level" offset="30" length="7" trim="true" type="org.apache.log4j.Level">
+					<converter className="com.tieto.parser.log4j.LogLevelConverter" />
+				</field>
 				<field attribute="className" offset="37" end=" "/>
 				<field attribute="message" start="-" trim="true"/>
 			</sequenceLine>

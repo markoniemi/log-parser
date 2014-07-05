@@ -3,7 +3,7 @@ package com.tieto.parser.converter;
 import com.tieto.parser.Field;
 import com.tieto.parser.converter.Converter;
 
-public class FlexiNSLocationConverter implements Converter {
+public class FlexiNSLocationConverter extends Converter {
 
 	private static final int SHELF_OFFSET = 0;
 	private static final int SHELF_LENGTH = 3;

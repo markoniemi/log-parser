@@ -165,12 +165,21 @@ public class FieldTest {
         Field field = new Field();
         field.setType("java.util.Date");
         field.setAttribute("date");
-        field.setConverter("com.tieto.parser.converter.DateConverter");
+        Converter converter = new Converter();
+        converter.setClassName("com.tieto.parser.converter.DateConverter");
+        field.setConverter(converter);
         ParserData parserData = new ParserData();
         String valueString = new String("2014-06-25 17:13:00");
         field.setValue(parserData, valueString, "com.tieto.parser.model.TestClass");
         Assert.assertNotNull(((TestClass) parserData.getCurrentObject()).getDate());
         Assert.assertEquals(1403705580000L, ((TestClass) parserData.getCurrentObject()).getDate().getTime());
+        // use constructor parameter for converter
+        converter.setParameter("yyyy-MM-dd hh:mm:ss,SSS");
+        parserData = new ParserData();
+        valueString = new String("2014-06-25 17:13:00,123");
+        field.setValue(parserData, valueString, "com.tieto.parser.model.TestClass");
+        Assert.assertNotNull(((TestClass) parserData.getCurrentObject()).getDate());
+        Assert.assertEquals(1403705580123L, ((TestClass) parserData.getCurrentObject()).getDate().getTime());
     }
 
     @Test(expected = ParseException.class)
