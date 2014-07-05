@@ -12,6 +12,7 @@ import javax.xml.bind.Unmarshaller;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Read parser configuration from XML and store parsers in parsers list. Use
@@ -19,6 +20,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@Slf4j
 public class ParserManager {
     private List<Parser> parsers;
 
@@ -39,6 +41,7 @@ public class ParserManager {
         
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         ParserConfig parserConfig = (ParserConfig) jaxbUnmarshaller.unmarshal(configInputSream);
+        log.debug("Parsers: {}", parserConfig.getParsers());
         return parserConfig.getParsers();
     }
     

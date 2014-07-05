@@ -21,9 +21,8 @@ import lombok.extern.slf4j.Slf4j;
 @Setter
 @ToString(of = { "lineNumber" })
 public class Line extends Block {
-    // TODO change to int
     @XmlAttribute
-    private Integer lineNumber;
+    protected Integer lineNumber;
     @XmlAttribute
     protected String lineBreak;
 
@@ -31,7 +30,8 @@ public class Line extends Block {
      * Split input into lines and pass it to children.
      */
     @Override
-    public void parse(ParserData parserData, String input, String className) {
+    protected void parse(ParserData parserData, String input, String className) {
+        log.debug("Parsing using {}", this);
         this.lineBreak = createLineBreak(parserData.getLineBreak());
         if (input == null) {
             return;

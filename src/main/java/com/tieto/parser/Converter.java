@@ -6,10 +6,12 @@ import javax.xml.bind.annotation.XmlAttribute;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @Setter
 @Getter
+@ToString(of = { "className", "parameter" })
 public class Converter {
     @XmlAttribute
     private String className;

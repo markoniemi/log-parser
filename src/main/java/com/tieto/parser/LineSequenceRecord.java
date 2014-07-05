@@ -9,6 +9,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * LineSequenceRecord is a special type of textParser needed for parsing alarms.
@@ -21,13 +22,15 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString(of = { "search" })
+@Slf4j
 public class LineSequenceRecord extends Line {
     // TODO move to line
     @XmlAttribute
     protected String search;
 
     @Override
-    public void parse(ParserData parserData, String input, String className) {
+    protected void parse(ParserData parserData, String input, String className) {
+        log.debug("Parsing using {}", this);
         this.lineBreak = createLineBreak(parserData.getLineBreak());
         if (input == null) {
             return;

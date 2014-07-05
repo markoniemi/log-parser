@@ -55,7 +55,8 @@ public class Block extends TextParser {
     protected int count;
 
     @Override
-    public void parse(ParserData parserData, String input, String clsName) {
+    protected void parse(ParserData parserData, String input, String clsName) {
+        log.debug("Parsing using {}", this);
         if (input == null) {
             return;
         }
@@ -69,20 +70,8 @@ public class Block extends TextParser {
         }
         for (int i = 0; i < inputCount; i++) {
             String splitInput = splitInputs.get(i);
-            log.debug("{}", splitInput);
+            log.trace("{} delegating {} to child parsers", this, splitInput);
             delegateParse(parserData, splitInput, clsName);
-        }
-    }
-
-    protected void delegateParse(ParserData parserData, String input, String clsName) {
-        if (textParsers != null) {
-            for (TextParser textParser : textParsers) {
-                textParser.parse(parserData, input, clsName);
-            }
-        }
-        if (this.className != null && parserData.getCurrentObject() != null) {
-            parserData.getObjects().add(parserData.getCurrentObject());
-            parserData.setCurrentObject(null);
         }
     }
 
@@ -111,6 +100,21 @@ public class Block extends TextParser {
             splitInputs = splitInput(input, startString, true);
         }
         return splitInputs;
+    }
+
+    /**
+     * Delegates split inputs to child parsers.
+     */
+    protected void delegateParse(ParserData parserData, String input, String clsName) {
+        if (textParsers != null) {
+            for (TextParser textParser : textParsers) {
+                textParser.parse(parserData, input, clsName);
+            }
+        }
+        if (this.className != null && parserData.getCurrentObject() != null) {
+            parserData.getObjects().add(parserData.getCurrentObject());
+            parserData.setCurrentObject(null);
+        }
     }
 
     private String getAtOffset(String input) {

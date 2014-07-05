@@ -5,6 +5,5 @@ public abstract class TextParser {
     /**
      * Parse input to classes.
      */
-    abstract void parse(ParserData parserData, String input, String clsName);
-
+    abstract protected void parse(ParserData parserData, String input, String clsName);
 }

@@ -78,7 +78,7 @@ public class Field extends TextParser {
     private com.tieto.parser.Converter converter;
 
     @Override
-    public void parse(ParserData parserData, String input, String className) throws ParseException {
+    protected void parse(ParserData parserData, String input, String className) throws ParseException {
         try {
             if (input == null) {
                 return;
@@ -91,6 +91,54 @@ public class Field extends TextParser {
         }
     }
 
+    public String parseValue(String input) {
+        String value = null;
+        if (searchRegExp != null) {
+            value = parseUsingRegExp(input, value);
+        } else if (end == null) {
+            if (start == null) {
+                // end == null && start == null
+                value = parseUsingOffsetAndLength(input);
+            } else {
+                // end == null && start != null
+                value = parseUsingStartOffsetAndLength(input, start, offset, length);
+            }
+        } else {
+            if (start == null) {
+                // end != null && start == null
+                value = parseUsingEnd(input, end);
+            } else {
+                // end != null && start != null
+                value = parseUsingStartAndEnd(input, start, end);
+            }
+        }
+        value = trim(value);
+        return value;
+    }
+
+    /**
+     * Sets value to object. Creates value object if necessary. Creates and
+     * object of proper type. Creates a converter if necessary and sets value to
+     * value object.
+     */
+    protected void setValue(ParserData parserData, String valueString, String className)
+            throws InstantiationException, IllegalAccessException, ClassNotFoundException,
+            SecurityException, IllegalArgumentException, NoSuchMethodException,
+            InvocationTargetException {
+        if (StringUtils.isBlank(valueString)) {
+            log.warn("Parsed text is empty: class: {} field: {}", className, this);
+            return;
+        }
+        createClass(parserData, className);
+        Class<?> typeClass = createValueType();
+        Object value = convertValueToObject(valueString);
+        log.debug("{}: Setting value '{}' to {}.{} (of type {})", this, valueString, className, attribute, type);
+        setValueToValueObject(parserData.getCurrentObject(), typeClass, value);
+    }
+    
+    /**
+     * Log error message and throw an exception if failOnError is true.
+     */
     private void logAndThrowException(boolean failOnError, String input, String className,
             String attribute, Exception e) throws ParseException {
         String message = "Error parsing string: " + input + " to class: " + className + "." + attribute;
@@ -100,120 +148,138 @@ public class Field extends TextParser {
         }
     }
 
-    protected void setValue(ParserData parserData, String valueString, String className)
-            throws InstantiationException, IllegalAccessException, ClassNotFoundException,
-            SecurityException, IllegalArgumentException, NoSuchMethodException,
-            InvocationTargetException {
-        if (StringUtils.isBlank(valueString)) {
-            log.debug("Parsed text is empty: class: {} field: {}", className, this);
-            return;
-        }
-        log.debug("Setting value '{}' to {}.{}", valueString, className, attribute);
-        // create accessor method name
-        if (methodName == null) {
-            createMethodName();
-        }
-        // create class
-        if (parserData.getCurrentObject() == null) {
-            parserData.setCurrentObject(Class.forName(className).newInstance());
-        }
-        // create value type
-        Object value = null;
+    /**
+     * Sets value to value object either by setter or custom method name if provided.
+     */
+    private void setValueToValueObject(Object currentObject, Class<?> typeClass, Object value) throws NoSuchMethodException,
+            IllegalAccessException, InvocationTargetException {
+        createAccessorMethodName();
+        log.trace("Using setter: {}", methodName);
+        Method method = currentObject.getClass().getMethod(methodName, typeClass);
+        method.invoke(currentObject, value);
+    }
+
+    /**
+     * Creates value object.
+     */
+    private Class<?> createValueType() throws ClassNotFoundException {
         Class<?> typeClass = null;
         if (type != null) {
             if (type.equals("int")) {
-                value = getValue(valueString);
                 typeClass = int.class;
             } else if (type.equals("long")) {
-                value = getValue(valueString);
                 typeClass = long.class;
             } else if (type.equals("boolean")) {
-                value = getValue(valueString);
                 typeClass = boolean.class;
             } else {
                 typeClass = Class.forName(type);
-                value = getValue(valueString);
             }
         } else {
             typeClass = Class.forName("java.lang.String");
-            value = getValue(valueString);
         }
-        // set value using method
-        Method method = parserData.getCurrentObject().getClass().getMethod(methodName, typeClass);
-        method.invoke(parserData.getCurrentObject(), value);
+        return typeClass;
     }
 
-    protected Object getValue(String valueString) throws InstantiationException,
+    /**
+     * Creates class if it is not yet created.
+     */
+    private void createClass(ParserData parserData, String className) throws InstantiationException,
+            IllegalAccessException, ClassNotFoundException {
+        if (parserData.getCurrentObject() == null) {
+            parserData.setCurrentObject(Class.forName(className).newInstance());
+        }
+    }
+
+    /**
+     * Gets value from string, and converts it using converter if necessary.
+     */
+    protected Object convertValueToObject(String valueString) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException, SecurityException,
             NoSuchMethodException, IllegalArgumentException, InvocationTargetException {
         Object value = null;
-        // TODO split into methods
         if (converter != null) {
-            @SuppressWarnings("rawtypes")
-            Converter converterClass = null;
-            if (converter.getParameter() != null) {
-                Constructor<? extends Object> constructor = Class.forName(converter.getClassName()).getConstructor(
-                        String.class);
-                converterClass = (Converter) constructor.newInstance(converter.getParameter());
-            } else {
-                converterClass = (Converter) Class.forName(converter.getClassName()).newInstance();
-            }
+            Converter<?> converterClass = createConverter();
+            log.debug("Converting '{}' with converter {}", valueString, converter);
             value = converterClass.convert(valueString);
         } else {
-            if (type != null) {
-                if (type.equals("int")) {
-                    value = Integer.parseInt(valueString);
-                } else if (type.equals("long")) {
-                    value = Long.parseLong(valueString);
-                } else if (type.equals("boolean")) {
-                    value = Boolean.parseBoolean(valueString);
-                } else {
-                    Class<?> typeClass = Class.forName(type);
-                    Constructor<? extends Object> constructor = typeClass
-                            .getConstructor(String.class);
-                    value = constructor.newInstance(valueString);
-                }
+            value = getValueFromString(valueString);
+        }
+        return value;
+    }
+
+    /**
+     * Gets value from string.
+     */
+    private Object getValueFromString(String valueString) throws ClassNotFoundException, NoSuchMethodException,
+            InstantiationException, IllegalAccessException, InvocationTargetException {
+        Object value;
+        if (type != null) {
+            if (type.equals("int")) {
+                value = Integer.parseInt(valueString);
+            } else if (type.equals("long")) {
+                value = Long.parseLong(valueString);
+            } else if (type.equals("boolean")) {
+                value = Boolean.parseBoolean(valueString);
             } else {
-                value = valueString;
+                value = createCustomValueObject(valueString);
             }
+        } else {
+            // default type is string
+            value = valueString;
         }
         return value;
     }
 
-    public String parseValue(String input) {
-        // TODO instead of overloading getValueString, rename each method
-        // TODO rearrange else if statements to achieve full coverage
+    private Object createCustomValueObject(String valueString) throws ClassNotFoundException, NoSuchMethodException,
+            InstantiationException, IllegalAccessException, InvocationTargetException {
+        Object value;
+        Class<?> typeClass = Class.forName(type);
+        Constructor<? extends Object> constructor = typeClass
+                .getConstructor(String.class);
+        value = constructor.newInstance(valueString);
+        return value;
+    }
+
+    private Converter<?> createConverter() throws NoSuchMethodException, ClassNotFoundException, InstantiationException,
+            IllegalAccessException, InvocationTargetException {
+        Converter<?> converterClass = null;
+        if (converter.getParameter() != null) {
+            Constructor<? extends Object> constructor = Class.forName(converter.getClassName()).getConstructor(
+                    String.class);
+            converterClass = (Converter<?>) constructor.newInstance(converter.getParameter());
+        } else {
+            converterClass = (Converter<?>) Class.forName(converter.getClassName()).newInstance();
+        }
+        return converterClass;
+    }
+
+    private String parseUsingRegExp(String input, String value) {
+        log.debug("{} parse using regexp '{}'", this, searchRegExp);
+        Pattern pattern = Pattern.compile(searchRegExp);
+        Matcher matcher = pattern.matcher(input);
+        if (matcher.find()) {
+            value = matcher.group();
+        }
+        return value;
+    }
+    
+    private String parseUsingOffsetAndLength(String input) {
+        log.debug("{} parse using offset {} and length {}", this, offset, length);
         String value = null;
-        if (searchRegExp != null) {
-            Pattern pattern = Pattern.compile(searchRegExp);
-            Matcher matcher = pattern.matcher(input);
-            if (matcher.find()) {
-                value = matcher.group();
+        if (offset < input.length()) {
+            // if length is 0, return to the end of the input string
+            if (length == 0 || offset + length > input.length()) {
+                value = input.substring(offset);
+            } else {
+                value = input.substring(offset, offset + length);
             }
-        } else if (start == null && end == null) {
-            if (offset < input.length()) {
-                // if length is 0, return to the end of the input string
-                if (length == 0 || offset + length > input.length()) {
-                    value = input.substring(offset);
-                } else {
-                    value = input.substring(offset, offset + length);
-                }
-            }
-        } else if (start != null && end == null) {
-            value = getValueString(input, start, offset, length);
-        } else if (start == null && end != null) {
-            value = getValueString(input, end);
-        } else if (start != null && end != null) {
-            value = getValueString(input, start, end);
-        }
-        if (trim) {
-            value = StringUtils.trim(value);
         }
         return value;
     }
 
-    protected String getValueString(String input, String startString, int startOffset,
+    protected String parseUsingStartOffsetAndLength(String input, String startString, int startOffset,
             int fieldLength) {
+        log.debug("{} parse using start '{}', offset {} and length {}", this, start, offset, length);
         String value = null;
         int startIndex = input.indexOf(startString);
         if (startIndex != -1) {
@@ -229,7 +295,8 @@ public class Field extends TextParser {
         return value;
     }
 
-    private String getValueString(String input, String endString) {
+    private String parseUsingEnd(String input, String endString) {
+        log.debug("{} parse using end '{}'", this, end);
         String value = null;
         int endIndex = input.indexOf(endString);
         if (endIndex != -1) {
@@ -240,7 +307,8 @@ public class Field extends TextParser {
         return value;
     }
 
-    private String getValueString(String input, String startString, String endString) {
+    private String parseUsingStartAndEnd(String input, String startString, String endString) {
+        log.debug("{} parse using start '{}' and end '{}'", this, start, end);
         String value = null;
         int startIndex = input.indexOf(startString);
         if (startIndex != -1) {
@@ -252,12 +320,20 @@ public class Field extends TextParser {
         return value;
     }
 
-    protected void createMethodName() {
-        // TODO use some bean util
-        if (!StringUtils.isBlank(attribute)) {
-            String setterMethodName = "set" + attribute.substring(0, 1).toUpperCase()
-                    + attribute.substring(1);
-            setMethodName(setterMethodName);
+    private String trim(String value) {
+        if (trim) {
+            value = StringUtils.trim(value);
+        }
+        return value;
+    }
+
+    protected void createAccessorMethodName() {
+        if (methodName == null) {
+            if (!StringUtils.isBlank(attribute)) {
+                String setterMethodName = "set" + attribute.substring(0, 1).toUpperCase()
+                        + attribute.substring(1);
+                setMethodName(setterMethodName);
+            }
         }
     }
 }

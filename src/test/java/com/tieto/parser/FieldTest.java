@@ -81,7 +81,7 @@ public class FieldTest {
     public void createMethodName() {
         Field field = new Field();
         field.setAttribute("name");
-        field.createMethodName();
+        field.createAccessorMethodName();
         Assert.assertEquals("setName", field.getMethodName());
     }
 

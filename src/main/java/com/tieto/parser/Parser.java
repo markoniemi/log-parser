@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlElements;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -20,6 +21,7 @@ import org.apache.commons.lang.StringUtils;
  * delegates to child textParsers and fields.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@Slf4j
 @Getter
 @Setter
 @ToString(of = { "id" })
@@ -50,7 +52,8 @@ public class Parser extends TextParser {
     }
 
     @Override
-    public void parse(ParserData parserData, String input, String clsName) {
+    protected void parse(ParserData parserData, String input, String clsName) {
+        log.debug("Parsing using {}", this);
         for (TextParser textParser : textParsers) {
             textParser.parse(parserData, input, clsName);
         }
