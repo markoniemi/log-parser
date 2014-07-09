@@ -56,7 +56,6 @@ public class Block extends TextParser {
 
     @Override
     protected void parse(ParserData parserData, String input, String clsName) {
-        log.debug("Parsing using {}", this);
         if (input == null) {
             return;
         }

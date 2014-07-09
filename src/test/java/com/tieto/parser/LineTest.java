@@ -44,6 +44,7 @@ public class LineTest {
         Assert.assertEquals(1, splitInput.size());
         Assert.assertEquals("a", splitInput.get(0));
     }
+
     @Test
     public void splitInputWithLineNumber() {
         Line line = new Line();
@@ -58,6 +59,34 @@ public class LineTest {
         Assert.assertEquals("a", splitInput.get(0));
     }
 
+    @Test
+    public void splitInputWithSearch() {
+        Line line = new Line();
+        line.setLineBreak(LINE_BREAK);
+        line.setSearch("a");
+        List<String> splitInput = line.splitInput("a" + LINE_BREAK + "b" + LINE_BREAK + "");
+        Assert.assertEquals(1, splitInput.size());
+        Assert.assertEquals("a", splitInput.get(0));
+        line.setSearch("b");
+        splitInput = line.splitInput("a" + LINE_BREAK + "b" + LINE_BREAK + "");
+        Assert.assertEquals(1, splitInput.size());
+        Assert.assertEquals("b", splitInput.get(0));
+    }
+    
+    @Test
+    public void splitInputWithSearchRegExp() {
+        Line line = new Line();
+        line.setLineBreak(LINE_BREAK);
+        line.setSearchRegExp("a");
+        List<String> splitInput = line.splitInput("a" + LINE_BREAK + "b" + LINE_BREAK + "");
+        Assert.assertEquals(1, splitInput.size());
+        Assert.assertEquals("a", splitInput.get(0));
+        line.setSearchRegExp("b");
+        splitInput = line.splitInput("a" + LINE_BREAK + "b" + LINE_BREAK + "");
+        Assert.assertEquals(1, splitInput.size());
+        Assert.assertEquals("b", splitInput.get(0));
+    }
+    
     @Test
     public void parse() {
         Line line = new Line();

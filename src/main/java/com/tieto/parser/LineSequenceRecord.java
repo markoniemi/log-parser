@@ -1,10 +1,10 @@
 package com.tieto.parser;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -24,13 +24,9 @@ import lombok.extern.slf4j.Slf4j;
 @ToString(of = { "search" })
 @Slf4j
 public class LineSequenceRecord extends Line {
-    // TODO move to line
-    @XmlAttribute
-    protected String search;
 
     @Override
     protected void parse(ParserData parserData, String input, String className) {
-        log.debug("Parsing using {}", this);
         this.lineBreak = createLineBreak(parserData.getLineBreak());
         if (input == null) {
             return;
@@ -42,7 +38,6 @@ public class LineSequenceRecord extends Line {
         for (int i = 0; i < splitInputs.size(); i++) {
             String splitInput = splitInputs.get(i);
             if (isMatchingLine(splitInput)) {
-                // TODO consider changing to parseLine, so parse could be inherited from Line
                 for (TextParser textParser : textParsers) {
                     if (textParser instanceof Line) {
                         Line line = (Line) textParser;
@@ -54,11 +49,26 @@ public class LineSequenceRecord extends Line {
                 }
                 if (this.className != null && parserData.getCurrentObject() != null) {
                     parserData.getObjects().add(parserData.getCurrentObject());
+                    log.debug("{}: object count: {}", this, parserData.getObjects().size());
                     parserData.setCurrentObject(null);
                 }
             }
         }
     }
+    
+    protected List<String> splitInput(String input) {
+        List<String> splitInputs = new ArrayList<String>();
+        int currentOffset = 0;
+        int endIndex = input.indexOf(lineBreak);
+        while (endIndex != -1) {
+            String splitInput = input.substring(currentOffset, endIndex);
+            splitInputs.add(splitInput);
+            currentOffset = endIndex + lineBreak.length();
+            endIndex = input.indexOf(lineBreak, currentOffset);
+        }
+        return splitInputs;
+    }
+    
 
     private boolean isMatchingLine(String splitInput) {
         boolean isMatchingLine = false;

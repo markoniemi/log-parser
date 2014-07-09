@@ -2,6 +2,8 @@ package com.tieto.parser;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.xml.bind.annotation.XmlAttribute;
 
@@ -19,19 +21,20 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Getter
 @Setter
-@ToString(of = { "lineNumber" })
+@ToString(of = { "lineNumber", "search", "searchRegExp" })
 public class Line extends Block {
     @XmlAttribute
     protected Integer lineNumber;
     @XmlAttribute
     protected String lineBreak;
+    @XmlAttribute
+    protected String search;
 
     /**
      * Split input into lines and pass it to children.
      */
     @Override
     protected void parse(ParserData parserData, String input, String className) {
-        log.debug("Parsing using {}", this);
         this.lineBreak = createLineBreak(parserData.getLineBreak());
         if (input == null) {
             return;
@@ -41,7 +44,7 @@ public class Line extends Block {
         }
         List<String> splitInputs = splitInput(input);
         for (String splitInput : splitInputs) {
-            log.debug("{}", splitInput);
+            log.trace("{} delegating {} to child parsers", this, splitInput);
             if (textParsers != null) {
                 for (TextParser textParser : textParsers) {
                     textParser.parse(parserData, splitInput, className);
@@ -63,7 +66,7 @@ public class Line extends Block {
             return lineBreak;
         }
         return System.getProperty("line.separator");
-    }    
+    }
 
     protected List<String> splitInput(String input) {
         List<String> splitInputs = new ArrayList<String>();
@@ -71,21 +74,41 @@ public class Line extends Block {
         int currentLineNumber = 0;
         int endIndex = input.indexOf(lineBreak);
         while (endIndex != -1) {
-            if (lineNumber == null) {
-                String splitInput = input.substring(currentOffset, endIndex);
-                if (error == null || !splitInput.contains(error)) {
-                    splitInputs.add(splitInput);
-                }
-            } else if (lineNumber == currentLineNumber) {
-                String splitInput = input.substring(currentOffset, endIndex);
-                if (error == null || !splitInput.contains(error)) {
-                    splitInputs.add(splitInput);
-                }
+            String splitInput = input.substring(currentOffset, endIndex);
+            if (isMatchingLine(splitInput, currentLineNumber)) {
+                splitInputs.add(splitInput);
             }
             currentLineNumber++;
             currentOffset = endIndex + lineBreak.length();
             endIndex = input.indexOf(lineBreak, currentOffset);
         }
         return splitInputs;
+    }
+
+    private boolean isMatchingLine(String splitInput, int currentLineNumber) {
+        boolean isMatchingLine = true;
+        if (search != null) {
+            if (splitInput.indexOf(search) == -1) {
+                isMatchingLine = false;
+            }
+        } else if (searchRegExp != null) {
+            if (!splitInput.matches(searchRegExp)) {
+                Pattern pattern = Pattern.compile(searchRegExp);
+                Matcher matcher = pattern.matcher(splitInput);
+                if (!matcher.find()) {
+                    isMatchingLine = false;
+                }
+            }
+        } else if (lineNumber != null) {
+            if (currentLineNumber != lineNumber) {
+                isMatchingLine = false;
+            }
+        }
+        if (error != null) {
+            if (splitInput.contains(error)) {
+                isMatchingLine = false;
+            }
+        }
+        return isMatchingLine;
     }
 }

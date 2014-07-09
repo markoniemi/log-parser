@@ -12,6 +12,8 @@ public class LineSequenceRecordTest {
     public void testRegExp() {
         String string = new String("*** ALARM");
         Assert.assertTrue(string.matches(".*\\*+\\s+((ALARM)|(DISTUR)).*"));
+        string = new String("    2915    FAULT RATE MONITORING                                            ");
+        Assert.assertTrue(string.matches("\\s{4}\\d{4}\\s{4}[A-Za-z0-9].*"));
     }
     @Test
     public void searchRegExp() {

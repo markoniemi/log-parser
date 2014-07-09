@@ -293,21 +293,15 @@
 	</parser>
 	<!-- parses log4j log that was written with conversion pattern '%-5p [%t]: %m%n' -->
 	<parser id="log4j" lineBreak="&#13;&#10;">
-		<lineSequenceRecord searchRegExp=".*((TRACE|DEBUG|INFO|WARN|ERROR|FATAL)).*" className="com.tieto.parser.log4j.LogEvent">
-			<sequenceLine lineNumber="0">
-				<field attribute="time" offset="0" length="23" type="java.util.Date" trim="true">
-					<converter className="com.tieto.parser.converter.DateConverter" parameter="yyyy-MM-dd hh:mm:ss,SSS"/>
-				</field>
-				<field attribute="level" offset="30" length="7" trim="true" type="org.apache.log4j.Level">
-					<converter className="com.tieto.parser.log4j.LogLevelConverter" />
-				</field>
-				<field attribute="className" offset="37" end=" "/>
-				<field attribute="message" start="-" trim="true"/>
-			</sequenceLine>
-		</lineSequenceRecord>
-<!-- 		<line searchRegExp=".*((TRACE|DEBUG|INFO|WARN|ERROR|FATAL)).*" className="com.tieto.parser.log4j.LogEvent"> -->
-<!-- 			<field attribute="level" location="11" end="-"/> -->
-<!-- 			<field attribute="message" start="-"/> -->
-<!-- 		</line> -->
+		<line searchRegExp=".*((TRACE|DEBUG|INFO|WARN|ERROR|FATAL)).*" className="com.tieto.parser.log4j.LogEvent">
+			<field attribute="time" offset="0" length="23" type="java.util.Date" trim="true">
+				<converter className="com.tieto.parser.converter.DateConverter" parameter="yyyy-MM-dd hh:mm:ss,SSS"/>
+			</field>
+			<field attribute="level" offset="30" length="7" trim="true" type="org.apache.log4j.Level">
+				<converter className="com.tieto.parser.log4j.LogLevelConverter" />
+			</field>
+			<field attribute="className" offset="37" end=" "/>
+			<field attribute="message" start="-" trim="true"/>
+		</line>
 	</parser>
 </parsers>

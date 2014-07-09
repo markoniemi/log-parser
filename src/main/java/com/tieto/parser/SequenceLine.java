@@ -24,21 +24,39 @@ public class SequenceLine extends Line {
      */
     @Override
     protected void parse(ParserData parserData, String input, String className) {
-        log.debug("Parsing using {}", this);
         if (this.className != null) {
             className = this.className;
         }
-        if (searchRegExp != null) {
-            Pattern pattern = Pattern.compile(searchRegExp);
-            Matcher matcher = pattern.matcher(input);
-            if (!matcher.find()) {
-                return;
+        if (isMatchingLine(input)) {
+            log.debug("{} found matching line, delegating to child parses.", this);
+            if (textParsers != null) {
+                for (TextParser textParser : textParsers) {
+                    textParser.parse(parserData, input, className);
+                }
             }
         }
-        if (textParsers != null) {
-            for (TextParser textParser : textParsers) {
-                textParser.parse(parserData, input, className);
+    }
+
+    private boolean isMatchingLine(String splitInput) {
+        boolean isMatchingLine = true;
+        if (search != null) {
+            if (splitInput.indexOf(search) == -1) {
+                isMatchingLine = false;
+            }
+        } else if (searchRegExp != null) {
+            if (!splitInput.matches(searchRegExp)) {
+                Pattern pattern = Pattern.compile(searchRegExp);
+                Matcher matcher = pattern.matcher(splitInput);
+                if (!matcher.find()) {
+                    isMatchingLine = false;
+                }
             }
         }
+        if (error != null) {
+            if (splitInput.contains(error)) {
+                isMatchingLine = false;
+            }
+        }
+        return isMatchingLine;
     }
 }
