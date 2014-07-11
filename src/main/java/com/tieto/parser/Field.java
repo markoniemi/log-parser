@@ -133,7 +133,7 @@ public class Field extends TextParser {
         Class<?> typeClass = createValueType();
         Object value = convertValueToObject(valueString);
         log.debug("{}: Setting value '{}' to {}.{} (of type {})", this, valueString, className, attribute, type);
-        setValueToValueObject(parserData.getCurrentObject(), typeClass, value);
+        setValueToAttribute(parserData.getCurrentObject(), typeClass, value);
     }
     
     /**
@@ -149,9 +149,9 @@ public class Field extends TextParser {
     }
 
     /**
-     * Sets value to value object either by setter or custom method name if provided.
+     * Sets value to attribute either by setter or custom method name if provided.
      */
-    private void setValueToValueObject(Object currentObject, Class<?> typeClass, Object value) throws NoSuchMethodException,
+    private void setValueToAttribute(Object currentObject, Class<?> typeClass, Object value) throws NoSuchMethodException,
             IllegalAccessException, InvocationTargetException {
         createAccessorMethodName();
         log.trace("Using setter: {}", methodName);

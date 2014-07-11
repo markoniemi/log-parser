@@ -19,7 +19,7 @@ public class HgPushLogTest {
     @Test
     public void parsePushLog() throws IOException, JAXBException {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
-        Parser parser = parserManager.getParser("pullLogEntry");
+        Parser parser = parserManager.getParser("hgPushLogEntry");
         @SuppressWarnings("unchecked")
         List<LogEntry> list = (List<LogEntry>) parser.parse(FileUtils.readFileToString(new File("src/test/resources/hg/hg_push_output.log")));
         Assert.assertEquals(185, list.size());

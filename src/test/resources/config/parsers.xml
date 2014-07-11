@@ -233,7 +233,7 @@
 			</lineSequenceRecord>
 		</block>
 	</parser>
-	<parser id="pullLogEntry" lineBreak="&#10;">
+	<parser id="hgPullLogEntry" lineBreak="&#10;">
 		<block end="*******************************************&#10;"
 			className="com.tieto.parser.model.LogEntry">
 			<line lineNumber="0">
@@ -251,7 +251,7 @@
 			</block>
 		</block>
 	</parser>
-	<parser id="pushLogEntry" lineBreak="&#10;">
+	<parser id="hgPushLogEntry" lineBreak="&#10;">
 		<block end="*******************************************&#10;"
 			className="com.tieto.parser.model.LogEntry">
 			<line lineNumber="0">
@@ -268,28 +268,6 @@
 					trim="true" />
 			</block>
 		</block>
-	</parser>
-	<!-- parser definition for default git log format -->
-	<parser id="git">
-		<lineSequenceRecord search="Author:"
-			className="com.tieto.parser.git.GitCommit">
-			<sequenceLine lineNumber="-1">
-				<field attribute="sha1" start="commit " trim="true"/>
-			</sequenceLine>
-<!-- 			<sequenceLine lineNumber="0" className="com.tieto.parser.git.Author" attribute="author"> -->
-			<sequenceLine lineNumber="0">
-				<field attribute="authorName" start="Author:" end="&lt;" trim="true"/>
-				<field attribute="authorEmail" start="&lt;" end="&gt;"/>
-			</sequenceLine>
-			<sequenceLine lineNumber="1">
-				<field attribute="time" start="Date: " type="java.util.Date" trim="true">
-					<converter className="com.tieto.parser.converter.DateConverter" parameter="EEE MMM dd hh:mm:ss yyyy ZZZZZ"/>
-				</field>
-			</sequenceLine>
-			<sequenceLine lineNumber="3">
-				<field attribute="title" trim="true"/>
-			</sequenceLine>
-		</lineSequenceRecord>
 	</parser>
 	<!-- parses log4j log that was written with conversion pattern '%-5p [%t]: %m%n' -->
 	<parser id="log4j" lineBreak="&#13;&#10;">

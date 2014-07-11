@@ -1,0 +1,73 @@
+<parsers>
+	<!-- parser definition for default git log format -->
+	<parser id="git">
+		<lineSequenceRecord search="Author:"
+			className="com.tieto.parser.git.GitCommit">
+			<sequenceLine lineNumber="-1" search="commit ">
+				<field attribute="sha1" start="commit " trim="true"/>
+			</sequenceLine>
+			<sequenceLine lineNumber="0" search="Author:">
+				<field attribute="authorName" start="Author:" end="&lt;" trim="true"/>
+				<field attribute="authorEmail" start="&lt;" end="&gt;"/>
+			</sequenceLine>
+			<sequenceLine lineNumber="1" search="Date: ">
+				<field attribute="time" start="Date: " type="java.util.Date" trim="true">
+					<converter className="com.tieto.parser.converter.DateConverter" parameter="EEE MMM dd hh:mm:ss yyyy ZZZZZ"/>
+				</field>
+			</sequenceLine>
+			<sequenceLine lineNumber="3">
+				<field attribute="title" trim="true"/>
+			</sequenceLine>
+		</lineSequenceRecord>
+	</parser>
+	<!-- parser definition using regexp -->
+	<parser id="git-regexp">
+		<lineSequenceRecord searchRegExp="Author:"
+			className="com.tieto.parser.git.GitCommit">
+			<sequenceLine lineNumber="-1">
+				<field attribute="sha1" start="commit " trim="true"/>
+			</sequenceLine>
+			<sequenceLine lineNumber="0" searchRegExp="Author:">
+				<field attribute="authorName" start="Author:" end="&lt;" trim="true"/>
+				<field attribute="authorEmail" start="&lt;" end="&gt;"/>
+			</sequenceLine>
+			<sequenceLine lineNumber="1">
+				<field attribute="time" start="Date: " type="java.util.Date" trim="true">
+					<converter className="com.tieto.parser.converter.DateConverter" parameter="EEE MMM dd hh:mm:ss yyyy ZZZZZ"/>
+				</field>
+			</sequenceLine>
+			<sequenceLine lineNumber="3">
+				<field attribute="title" trim="true"/>
+			</sequenceLine>
+		</lineSequenceRecord>
+	</parser>
+	<!-- git log parser that test different error conditions -->
+	<parser id="git-errors">
+		<lineSequenceRecord search="Author:"
+			className="com.tieto.parser.git.GitCommit">
+			<!-- nonexistent search string -->
+			<sequenceLine lineNumber="-1" search="nonexistent">
+				<field attribute="sha1" start="commit " trim="true"/>
+			</sequenceLine>
+			<!-- nonexistent search regexp string -->
+			<sequenceLine lineNumber="0" searchRegExp="nonexistent">
+				<field attribute="authorName" start="Author:" end="&lt;" trim="true"/>
+				<field attribute="authorEmail" start="&lt;" end="&gt;"/>
+			</sequenceLine>
+			<sequenceLine lineNumber="1" search="Date: ">
+				<field attribute="time" start="Date: " type="java.util.Date" trim="true">
+					<converter className="com.tieto.parser.converter.DateConverter" parameter="EEE MMM dd hh:mm:ss yyyy ZZZZZ"/>
+				</field>
+			</sequenceLine>
+			<!-- lineNumber points beyond start of file -->
+			<sequenceLine lineNumber="-3">
+				<field attribute="title" trim="true"/>
+			</sequenceLine>
+			<!-- lineNumber points beyond end of file -->
+			<sequenceLine lineNumber="16">
+				<field attribute="title" trim="true"/>
+			</sequenceLine>
+			<field attribute="title" trim="true"/>
+		</lineSequenceRecord>
+	</parser>
+</parsers>
