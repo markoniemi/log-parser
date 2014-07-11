@@ -71,6 +71,7 @@ public class Block extends TextParser {
             String splitInput = splitInputs.get(i);
             log.trace("{} delegating {} to child parsers", this, splitInput);
             delegateParse(parserData, splitInput, clsName);
+            addValueObjectToList(parserData);
         }
     }
 
@@ -110,12 +111,16 @@ public class Block extends TextParser {
                 textParser.parse(parserData, input, clsName);
             }
         }
+    }
+
+    protected void addValueObjectToList(ParserData parserData) {
         if (this.className != null && parserData.getCurrentObject() != null) {
             parserData.getObjects().add(parserData.getCurrentObject());
+            log.debug("{}: object count: {}", this, parserData.getObjects().size());
             parserData.setCurrentObject(null);
         }
     }
-
+    
     private String getAtOffset(String input) {
         String currentItem = null;
         if (offset < input.length()) {

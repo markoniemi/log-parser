@@ -1,12 +1,8 @@
 package com.tieto.parser;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
-import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -28,7 +24,7 @@ public class SequenceLine extends Line {
             className = this.className;
         }
         if (isMatchingLine(input)) {
-            log.debug("{} found matching line, delegating to child parses.", this);
+            log.trace("{} delegating {} to child parsers", this, input);
             if (textParsers != null) {
                 for (TextParser textParser : textParsers) {
                     textParser.parse(parserData, input, className);
@@ -39,23 +35,13 @@ public class SequenceLine extends Line {
 
     private boolean isMatchingLine(String splitInput) {
         boolean isMatchingLine = true;
-        if (search != null) {
-            if (splitInput.indexOf(search) == -1) {
-                isMatchingLine = false;
-            }
-        } else if (searchRegExp != null) {
-            if (!splitInput.matches(searchRegExp)) {
-                Pattern pattern = Pattern.compile(searchRegExp);
-                Matcher matcher = pattern.matcher(splitInput);
-                if (!matcher.find()) {
-                    isMatchingLine = false;
-                }
-            }
+        if (search != null && splitInput.indexOf(search) == -1) {
+            isMatchingLine = false;
+        } else if (searchRegExp != null && !findRegExp(splitInput)) {
+            isMatchingLine = false;
         }
-        if (error != null) {
-            if (splitInput.contains(error)) {
-                isMatchingLine = false;
-            }
+        if (error != null && splitInput.contains(error)) {
+            isMatchingLine = false;
         }
         return isMatchingLine;
     }

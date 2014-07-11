@@ -7,12 +7,12 @@ import java.util.regex.Pattern;
 
 import javax.xml.bind.annotation.XmlAttribute;
 
-import org.apache.commons.lang.StringUtils;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+
+import org.apache.commons.lang.StringUtils;
 
 /**
  * Line is a textParser which splits input into lines and passes parsing to
@@ -50,10 +50,7 @@ public class Line extends Block {
                     textParser.parse(parserData, splitInput, className);
                 }
             }
-            if (this.className != null && parserData.getCurrentObject() != null) {
-                parserData.getObjects().add(parserData.getCurrentObject());
-                parserData.setCurrentObject(null);
-            }
+            addValueObjectToList(parserData);
         }
     }
 
@@ -87,28 +84,22 @@ public class Line extends Block {
 
     private boolean isMatchingLine(String splitInput, int currentLineNumber) {
         boolean isMatchingLine = true;
-        if (search != null) {
-            if (splitInput.indexOf(search) == -1) {
-                isMatchingLine = false;
-            }
-        } else if (searchRegExp != null) {
-            if (!splitInput.matches(searchRegExp)) {
-                Pattern pattern = Pattern.compile(searchRegExp);
-                Matcher matcher = pattern.matcher(splitInput);
-                if (!matcher.find()) {
-                    isMatchingLine = false;
-                }
-            }
-        } else if (lineNumber != null) {
-            if (currentLineNumber != lineNumber) {
-                isMatchingLine = false;
-            }
+        if (search != null && splitInput.indexOf(search) == -1) {
+            isMatchingLine = false;
+        } else if (searchRegExp != null && !findRegExp(splitInput)) {
+            isMatchingLine = false;
+        } else if (lineNumber != null && currentLineNumber != lineNumber) {
+            isMatchingLine = false;
         }
-        if (error != null) {
-            if (splitInput.contains(error)) {
-                isMatchingLine = false;
-            }
+        if (error != null && splitInput.contains(error)) {
+            isMatchingLine = false;
         }
         return isMatchingLine;
+    }
+
+    protected boolean findRegExp(String splitInput) {
+        Pattern pattern = Pattern.compile(searchRegExp);
+        Matcher matcher = pattern.matcher(splitInput);
+        return matcher.find();
     }
 }

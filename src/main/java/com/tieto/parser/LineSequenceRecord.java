@@ -38,6 +38,7 @@ public class LineSequenceRecord extends Line {
         for (int i = 0; i < splitInputs.size(); i++) {
             String splitInput = splitInputs.get(i);
             if (isMatchingLine(splitInput)) {
+                log.trace("{} delegating {} to child parsers", this, splitInput);
                 for (TextParser textParser : textParsers) {
                     if (textParser instanceof Line) {
                         Line line = (Line) textParser;
@@ -47,15 +48,11 @@ public class LineSequenceRecord extends Line {
                         }
                     }
                 }
-                if (this.className != null && parserData.getCurrentObject() != null) {
-                    parserData.getObjects().add(parserData.getCurrentObject());
-                    log.debug("{}: object count: {}", this, parserData.getObjects().size());
-                    parserData.setCurrentObject(null);
-                }
+                addValueObjectToList(parserData);
             }
         }
     }
-    
+
     protected List<String> splitInput(String input) {
         List<String> splitInputs = new ArrayList<String>();
         int currentOffset = 0;
@@ -72,14 +69,10 @@ public class LineSequenceRecord extends Line {
 
     private boolean isMatchingLine(String splitInput) {
         boolean isMatchingLine = false;
-        if (search != null) {
-            if (splitInput.indexOf(search) != -1) {
-                isMatchingLine = true;
-            }
-        } else if (searchRegExp != null) {
-            if (splitInput.matches(searchRegExp)) {
-                isMatchingLine = true;
-            }
+        if (search != null && splitInput.indexOf(search) != -1) {
+            isMatchingLine = true;
+        } else if (searchRegExp != null && findRegExp(splitInput)) {
+            isMatchingLine = true;
         }
         return isMatchingLine;
     }
