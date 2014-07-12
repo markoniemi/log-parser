@@ -12,8 +12,6 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
-import org.apache.commons.lang.StringUtils;
-
 /**
  * Line is a textParser which splits input into lines and passes parsing to
  * textParsers and fields.
@@ -21,21 +19,18 @@ import org.apache.commons.lang.StringUtils;
 @Slf4j
 @Getter
 @Setter
-@ToString(of = { "lineNumber", "search", "searchRegExp" })
+@ToString(of = { "lineNumber" }, callSuper=true)
 public class Line extends Block {
     @XmlAttribute
     protected Integer lineNumber;
-    @XmlAttribute
     protected String lineBreak;
-    @XmlAttribute
-    protected String search;
 
     /**
      * Split input into lines and pass it to children.
      */
     @Override
     protected void parse(ParserData parserData, String input, String className) {
-        this.lineBreak = createLineBreak(parserData.getLineBreak());
+        this.lineBreak = parserData.getLineBreak();
         if (input == null) {
             return;
         }
@@ -52,17 +47,6 @@ public class Line extends Block {
             }
             addValueObjectToList(parserData);
         }
-    }
-
-    /**
-     * Use system line break if xml does not define it.
-     */
-    // TODO scan for linebreak in text, so we can support both linebreaks
-    protected String createLineBreak(String lineBreak) {
-        if (!StringUtils.isEmpty(lineBreak)) {
-            return lineBreak;
-        }
-        return System.getProperty("line.separator");
     }
 
     protected List<String> splitInput(String input) {

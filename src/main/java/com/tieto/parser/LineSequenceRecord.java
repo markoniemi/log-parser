@@ -21,13 +21,13 @@ import lombok.extern.slf4j.Slf4j;
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
-@ToString(of = { "search" })
+@ToString(callSuper = true)
 @Slf4j
 public class LineSequenceRecord extends Line {
 
     @Override
     protected void parse(ParserData parserData, String input, String className) {
-        this.lineBreak = createLineBreak(parserData.getLineBreak());
+        this.lineBreak = parserData.getLineBreak();
         if (input == null) {
             return;
         }

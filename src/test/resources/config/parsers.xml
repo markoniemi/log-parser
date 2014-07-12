@@ -67,7 +67,7 @@
 			</line>
 		</block>
 	</parser>
-	<parser id="alarmMsc" lineBreak="&#13;&#10;">
+	<parser id="alarmMsc">
 		<block start="ALARMS CURRENTLY ON" end="END OF ALARMS CURRENTLY ON">
 			<lineSequenceRecord searchRegExp=".*\*+\s+((ALARM|DISTUR)).*"
 				className="com.tieto.parser.model.Alarm">
@@ -95,7 +95,7 @@
 			</lineSequenceRecord>
 		</block>
 	</parser>
-	<parser id="alarmIPA" lineBreak="&#13;&#10;">
+	<parser id="alarmIPA">
 		<block start="ACTIVE ALARMS" end="NUMBER OF ACTIVE ALARMS DISPLAYED:">
 			<lineSequenceRecord searchRegExp=".*\*+\s+((ALARM)).*"
 				className="com.tieto.parser.model.Alarm">
@@ -164,7 +164,7 @@
 			</line>
 		</block>
 	</parser>
-	<parser id="licenseMsc" lineBreak="&#10;">
+	<parser id="licenseMsc">
 		<block start="LICENCE INFORMATION:" end="COMMAND EXECUTED">
 			<block start="----------------------------------------------"
 				className="com.tieto.parser.model.LicenseInfo">
@@ -233,7 +233,7 @@
 			</lineSequenceRecord>
 		</block>
 	</parser>
-	<parser id="hgPullLogEntry" lineBreak="&#10;">
+	<parser id="hgPullLogEntry">
 		<block end="*******************************************&#10;"
 			className="com.tieto.parser.model.LogEntry">
 			<line lineNumber="0">
@@ -251,7 +251,7 @@
 			</block>
 		</block>
 	</parser>
-	<parser id="hgPushLogEntry" lineBreak="&#10;">
+	<parser id="hgPushLogEntry">
 		<block end="*******************************************&#10;"
 			className="com.tieto.parser.model.LogEntry">
 			<line lineNumber="0">
@@ -270,7 +270,7 @@
 		</block>
 	</parser>
 	<!-- parses log4j log that was written with conversion pattern '%-5p [%t]: %m%n' -->
-	<parser id="log4j" lineBreak="&#13;&#10;">
+	<parser id="log4j">
 		<line searchRegExp=".*((TRACE|DEBUG|INFO|WARN|ERROR|FATAL)).*" className="com.tieto.parser.log4j.LogEvent">
 			<field attribute="time" offset="0" length="23" type="java.util.Date" trim="true">
 				<converter className="com.tieto.parser.converter.DateConverter" parameter="yyyy-MM-dd hh:mm:ss,SSS"/>

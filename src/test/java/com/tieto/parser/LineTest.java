@@ -100,6 +100,7 @@ public class LineTest {
         fields.add(field);
         line.setTextParsers(fields);
         ParserData parserData = new ParserData();
+        parserData.setLineBreak(LINE_BREAK);
         line.parse(parserData, "a" + LINE_BREAK + "b" + LINE_BREAK + "", null);
         List<Object> objects = parserData.getObjects();
         Assert.assertEquals(2, objects.size());

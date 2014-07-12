@@ -25,7 +25,7 @@ import org.apache.commons.lang.StringUtils;
 @Slf4j
 @Getter
 @Setter
-@ToString(of = { "className" })
+@ToString(of = { "className", "start", "end", "search", "searchRegExp" })
 public class Block extends TextParser {
     @XmlElements({
         @XmlElement(name="block", type=Block.class),
@@ -39,6 +39,8 @@ public class Block extends TextParser {
     protected String start;
     @XmlAttribute
     protected String end;
+    @XmlAttribute
+    protected String search;
     @XmlAttribute
     protected String searchRegExp;
     @XmlAttribute

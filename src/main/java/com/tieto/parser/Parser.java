@@ -26,6 +26,8 @@ import org.apache.commons.lang.StringUtils;
 @Setter
 @ToString(of = { "id" })
 public class Parser extends TextParser {
+    public static final String LINUX_LINE_BREAK = "\n";
+    public static final String WIN_LINE_BREAK = "\r\n";
     @XmlAttribute
     private String id;
     @XmlElements({
@@ -46,7 +48,7 @@ public class Parser extends TextParser {
     public List<?> parse(String input, boolean failOnError) {
         ParserData parserData = new ParserData();
         parserData.setFailOnError(failOnError);
-        parserData.setLineBreak(createLineBreak(lineBreak));
+        parserData.setLineBreak(createLineBreak(lineBreak, input));
         parse(parserData, input, null);
         return parserData.getObjects();
     }
@@ -62,10 +64,17 @@ public class Parser extends TextParser {
     /**
      * Use system line break if xml does not define it.
      */
-    private String createLineBreak(String lineBreak) {
+    private String createLineBreak(String lineBreak, String input) {
         if (!StringUtils.isEmpty(lineBreak)) {
             return lineBreak;
         }
-        return System.getProperty("line.separator");
+        return scanLineBreak(input);
+    }
+
+    private String scanLineBreak(String input) {
+        if (input.contains(LINUX_LINE_BREAK)) {
+            return LINUX_LINE_BREAK;
+        }
+        return WIN_LINE_BREAK;
     }
 }

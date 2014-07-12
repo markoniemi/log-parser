@@ -297,6 +297,7 @@ public class BlockTest {
         fields.add(field);
         sequenceLine.setTextParsers(fields);
         ParserData parserData = new ParserData();
+        parserData.setLineBreak(LINE_BREAK);
         lineSequenceRecord
                 .parse(parserData,
                         "    (40983) IPA2800                          EQUIPM       2011-09-16 14:09:37.29"
