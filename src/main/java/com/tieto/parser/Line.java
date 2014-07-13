@@ -39,12 +39,7 @@ public class Line extends Block {
         }
         List<String> splitInputs = splitInput(input);
         for (String splitInput : splitInputs) {
-            log.trace("{} delegating {} to child parsers", this, splitInput);
-            if (textParsers != null) {
-                for (TextParser textParser : textParsers) {
-                    textParser.parse(parserData, splitInput, className);
-                }
-            }
+            delegateParse(parserData, splitInput, className);
             addValueObjectToList(parserData);
         }
     }

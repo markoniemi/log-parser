@@ -24,12 +24,7 @@ public class SequenceLine extends Line {
             className = this.className;
         }
         if (isMatchingLine(input)) {
-            log.trace("{} delegating {} to child parsers", this, input);
-            if (textParsers != null) {
-                for (TextParser textParser : textParsers) {
-                    textParser.parse(parserData, input, className);
-                }
-            }
+            delegateParse(parserData, input, className);
         }
     }
 

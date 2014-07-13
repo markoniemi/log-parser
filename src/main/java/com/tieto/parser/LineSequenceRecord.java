@@ -38,9 +38,9 @@ public class LineSequenceRecord extends Line {
         for (int i = 0; i < splitInputs.size(); i++) {
             String splitInput = splitInputs.get(i);
             if (isMatchingLine(splitInput)) {
-                log.trace("{} delegating {} to child parsers", this, splitInput);
                 for (TextParser textParser : textParsers) {
                     if (textParser instanceof Line) {
+                        log.trace("{} delegating {} to child parsers", this, splitInput);
                         Line line = (Line) textParser;
                         int lineNumber = i + line.getLineNumber();
                         if (lineNumber >= 0 && lineNumber < splitInputs.size()) {

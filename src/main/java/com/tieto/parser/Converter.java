@@ -12,6 +12,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString(of = { "className", "parameter" })
+@SuppressWarnings("PMD.UnusedLocalVariable")
 public class Converter {
     @XmlAttribute
     private String className;

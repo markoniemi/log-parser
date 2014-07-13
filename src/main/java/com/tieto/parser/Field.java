@@ -165,11 +165,11 @@ public class Field extends TextParser {
     private Class<?> createValueType() throws ClassNotFoundException {
         Class<?> typeClass = null;
         if (type != null) {
-            if (type.equals("int")) {
+            if ("int".equals(type)) {
                 typeClass = int.class;
-            } else if (type.equals("long")) {
+            } else if ("long".equals(type)) {
                 typeClass = long.class;
-            } else if (type.equals("boolean")) {
+            } else if ("boolean".equals(type)) {
                 typeClass = boolean.class;
             } else {
                 typeClass = Class.forName(type);
