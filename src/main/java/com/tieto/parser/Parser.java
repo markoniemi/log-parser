@@ -25,7 +25,7 @@ import org.apache.commons.lang.StringUtils;
 @Getter
 @Setter
 @ToString(of = { "id" })
-@SuppressWarnings("PMD.UnusedLocalVariable")
+@SuppressWarnings("PMD.UnusedPrivateField")
 public class Parser extends TextParser {
     public static final String LINUX_LINE_BREAK = "\n";
     public static final String WIN_LINE_BREAK = "\r\n";

@@ -42,6 +42,9 @@ import com.tieto.parser.converter.Converter;
 @Setter
 @ToString(of = { "attribute" })
 public class Field extends TextParser {
+    private static final String BOOLEAN = "boolean";
+    private static final String LONG = "long";
+    private static final String INTEGER = "int";
     /**
      * Attribute contains the name of the attribute that is used for getting the
      * name of the setter for the value.
@@ -83,7 +86,6 @@ public class Field extends TextParser {
             if (input == null) {
                 return;
             }
-            log.trace("attribute: {} input: {}", attribute, input);
             String valueString = parseValue(input);
             setValue(parserData, valueString, className);
         } catch (Exception e) {
@@ -92,9 +94,10 @@ public class Field extends TextParser {
     }
 
     public String parseValue(String input) {
+        log.trace("attribute: {} input: {}", attribute, input);
         String value = null;
         if (searchRegExp != null) {
-            value = parseUsingRegExp(input, value);
+            value = parseUsingRegExp(input);
         } else if (end == null) {
             if (start == null) {
                 // end == null && start == null
@@ -163,21 +166,18 @@ public class Field extends TextParser {
      * Creates value object.
      */
     private Class<?> createValueType() throws ClassNotFoundException {
-        Class<?> typeClass = null;
         if (type != null) {
-            if ("int".equals(type)) {
-                typeClass = int.class;
-            } else if ("long".equals(type)) {
-                typeClass = long.class;
-            } else if ("boolean".equals(type)) {
-                typeClass = boolean.class;
+            if (INTEGER.equals(type)) {
+                return int.class;
+            } else if (LONG.equals(type)) {
+                return long.class;
+            } else if (BOOLEAN.equals(type)) {
+                return boolean.class;
             } else {
-                typeClass = Class.forName(type);
+                return Class.forName(type);
             }
-        } else {
-            typeClass = Class.forName("java.lang.String");
         }
-        return typeClass;
+        return String.class;
     }
 
     /**
@@ -196,15 +196,13 @@ public class Field extends TextParser {
     protected Object convertValueToObject(String valueString) throws InstantiationException,
             IllegalAccessException, ClassNotFoundException, SecurityException,
             NoSuchMethodException, IllegalArgumentException, InvocationTargetException {
-        Object value = null;
         if (converter != null) {
             Converter<?> converterClass = createConverter();
             log.debug("Converting '{}' with converter {}", valueString, converter);
-            value = converterClass.convert(valueString);
+            return converterClass.convert(valueString);
         } else {
-            value = getValueFromString(valueString);
+            return getValueFromString(valueString);
         }
-        return value;
     }
 
     /**
@@ -212,22 +210,18 @@ public class Field extends TextParser {
      */
     private Object getValueFromString(String valueString) throws ClassNotFoundException, NoSuchMethodException,
             InstantiationException, IllegalAccessException, InvocationTargetException {
-        Object value;
         if (type != null) {
-            if (type.equals("int")) {
-                value = Integer.parseInt(valueString);
-            } else if (type.equals("long")) {
-                value = Long.parseLong(valueString);
-            } else if (type.equals("boolean")) {
-                value = Boolean.parseBoolean(valueString);
+            if (type.equals(INTEGER)) {
+                return Integer.parseInt(valueString);
+            } else if (type.equals(LONG)) {
+                return Long.parseLong(valueString);
+            } else if (type.equals(BOOLEAN)) {
+                return Boolean.parseBoolean(valueString);
             } else {
-                value = createCustomValueObject(valueString);
+                return createCustomValueObject(valueString);
             }
-        } else {
-            // default type is string
-            value = valueString;
         }
-        return value;
+        return valueString;
     }
 
     private Object createCustomValueObject(String valueString) throws ClassNotFoundException, NoSuchMethodException,
@@ -253,14 +247,14 @@ public class Field extends TextParser {
         return converterClass;
     }
 
-    private String parseUsingRegExp(String input, String value) {
+    private String parseUsingRegExp(String input) {
         log.debug("{} parse using regexp '{}'", this, searchRegExp);
         Pattern pattern = Pattern.compile(searchRegExp);
         Matcher matcher = pattern.matcher(input);
         if (matcher.find()) {
-            value = matcher.group();
+            return matcher.group();
         }
-        return value;
+        return null;
     }
     
     private String parseUsingOffsetAndLength(String input) {
@@ -322,18 +316,15 @@ public class Field extends TextParser {
 
     private String trim(String value) {
         if (trim) {
-            value = StringUtils.trim(value);
+            return StringUtils.trim(value);
         }
         return value;
     }
 
     protected void createAccessorMethodName() {
-        if (methodName == null) {
-            if (!StringUtils.isBlank(attribute)) {
-                String setterMethodName = "set" + attribute.substring(0, 1).toUpperCase()
-                        + attribute.substring(1);
-                setMethodName(setterMethodName);
-            }
+        if (methodName == null && !StringUtils.isBlank(attribute)) {
+            String setterMethodName = "set" + attribute.substring(0, 1).toUpperCase() + attribute.substring(1);
+            setMethodName(setterMethodName);
         }
     }
 }

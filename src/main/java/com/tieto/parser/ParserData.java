@@ -15,7 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@SuppressWarnings("PMD.UnusedLocalVariable")
+@SuppressWarnings("PMD.UnusedPrivateField")
 public class ParserData {
     /** Current java class that is being filled from input */
     private Object currentObject;

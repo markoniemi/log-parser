@@ -18,7 +18,7 @@ import lombok.Setter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
-@SuppressWarnings("PMD.UnusedLocalVariable")
+@SuppressWarnings("PMD.UnusedPrivateField")
 public class ParserConfig {
     @XmlElement(name="parser")
     private List<Parser> parsers;
