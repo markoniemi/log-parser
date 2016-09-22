@@ -15,7 +15,7 @@ node {
     step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
   }
   stage ('Sonar') {
-    if (isNightTime()){
+    if (isTimeBetween(13,19)){
       sh "${mvnHome}/bin/mvn -Dmaven.test.failure.ignore sonar:sonar -DskipTests=true -Dsonar.host.url=${env.SONAR_URL}"
     } else {
         println "Skipping Sonar"
@@ -23,14 +23,8 @@ node {
   }
 }
 
-def isNightTime() {
-  def currentTime = new java.util.Date();
-  def startTime = new java.util.Date();
-  startTime.setHours(13);
-  startTime.setMinutes(00);
-  def endTime = new java.util.Date();
-  endTime.setHours(20);
-  endTime.setMinutes(00);
-  // Date.parse('HH:mm:ss', '20:00:00')
-  return currentTime > startTime && currentTime < endTime;
+boolean isTimeBetween(startHour, endHour){
+    def currentTime = new java.util.Date();
+    println currentTime;
+    return currentTime.getHours() >= 13 && currentTime.getHours() <= 19
 }
