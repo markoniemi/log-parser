@@ -13,7 +13,7 @@ import org.junit.Test;
 import com.tieto.parser.Parser;
 import com.tieto.parser.ParserManager;
 
-public class GitLogTest {
+public class GitLogIT {
     @Test
     public void parseGitLog() throws IOException, JAXBException {
         ParserManager parserManager = new ParserManager("src/test/resources/config/git-log-parsers.xml");

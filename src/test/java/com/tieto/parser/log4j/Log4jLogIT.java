@@ -13,7 +13,7 @@ import org.junit.Test;
 import com.tieto.parser.Parser;
 import com.tieto.parser.ParserManager;
 
-public class Log4jLogTest {
+public class Log4jLogIT {
     @Test
     public void parseLog() throws IOException, JAXBException {
         ParserManager parserManager = new ParserManager("src/test/resources/config/parsers.xml");
