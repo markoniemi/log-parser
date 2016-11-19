@@ -5,9 +5,9 @@ node {
     git credentialsId: '73534043-e92f-42d2-b0a3-c954b09ebd49', url: 'https://github.com/markoniemi/log-parser.git'
   }
   stage ('Build') {
-    env.JAVA_HOME="${tool 'JDK 1.8'}"
+    //env.JAVA_HOME="${tool 'JDK 1.8'}"
     //env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
-    sh 'java -version'   
+    sh 'java -version'
     sh "${mvnHome}/bin/mvn -Dmaven.test.failure.ignore clean package -DskipTests=true"
   }
   stage ('Test') {
