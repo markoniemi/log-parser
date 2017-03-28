@@ -31,7 +31,7 @@ node {
   }
   stage ('Sonar') {
     if (isTimeBetween(13,19)){
-      sh "mvn -Dmaven.test.failure.ignore org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar -DskipTests=true -Dsonar.host.url=${env.SONAR_URL}"
+      sh "mvn -Dmaven.test.failure.ignore org.sonarsource.scanner.maven:sonar-maven-plugin:3.0.2:sonar -DskipTests=true -Dsonar.host.url=${env.SONAR_URL}"
     } else {
         println "Skipping Sonar"
     }
