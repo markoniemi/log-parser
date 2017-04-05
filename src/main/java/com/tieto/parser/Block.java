@@ -27,13 +27,10 @@ import org.apache.commons.lang.StringUtils;
 @Setter
 @ToString(of = { "className", "start", "end", "search", "searchRegExp" })
 public class Block extends TextParser {
-    @XmlElements({
-        @XmlElement(name="block", type=Block.class),
-        @XmlElement(name="field", type=Field.class),
-        @XmlElement(name="line", type=Line.class),
-        @XmlElement(name="lineSequenceRecord", type=LineSequenceRecord.class),
-        @XmlElement(name="sequenceLine", type=SequenceLine.class),
-    })
+    @XmlElements({ @XmlElement(name = "block", type = Block.class), @XmlElement(name = "field", type = Field.class),
+            @XmlElement(name = "line", type = Line.class),
+            @XmlElement(name = "lineSequenceRecord", type = LineSequenceRecord.class),
+            @XmlElement(name = "sequenceLine", type = SequenceLine.class), })
     protected List<TextParser> textParsers;
     @XmlAttribute
     protected String start;
@@ -86,18 +83,20 @@ public class Block extends TextParser {
         if (searchRegExp != null) {
             Pattern pattern = Pattern.compile(searchRegExp);
             splitInputs = splitInput(input, pattern);
-        } else if (endString == null && startString == null) {
-            // if end and start is null, use offset
-            splitInputs.add(getAtOffset(input));
-        } else if (endString != null && startString != null) {
-            // both end and start are defined
-            splitInputs = splitInput(input, startString, endString);
-        } else if (endString != null && startString == null) {
+        } else if (endString == null) {
+            if (startString == null) {
+                // if end and start is null, use offset
+                splitInputs.add(getAtOffset(input));
+            } else {
+                // end string is not defined use only start string
+                splitInputs = splitInput(input, startString, true);
+            }
+        } else if (startString == null) {
             // start string is not defined, use only end string
             splitInputs = splitInput(input, endString);
-        } else if (endString == null && startString != null) {
-            // end string is not defined use only start string
-            splitInputs = splitInput(input, startString, true);
+        } else {
+            // both end and start are defined
+            splitInputs = splitInput(input, startString, endString);
         }
         return splitInputs;
     }
@@ -121,7 +120,7 @@ public class Block extends TextParser {
             parserData.setCurrentObject(null);
         }
     }
-    
+
     private String getAtOffset(String input) {
         String currentItem = null;
         if (offset < input.length()) {
@@ -144,11 +143,9 @@ public class Block extends TextParser {
         int indexOfStartString = input.indexOf(startString, currentOffset);
         String substring = null;
         while (indexOfStartString != -1) {
-            int indexOfEndString = input.indexOf(endString,
-                    indexOfStartString + startString.length());
+            int indexOfEndString = input.indexOf(endString, indexOfStartString + startString.length());
             if (indexOfEndString != -1) {
-                substring = input.substring(indexOfStartString + startString.length(),
-                        indexOfEndString);
+                substring = input.substring(indexOfStartString + startString.length(), indexOfEndString);
                 if (!StringUtils.isBlank(substring)) {
                     splitInputs.add(getAtOffset(substring));
                 }
