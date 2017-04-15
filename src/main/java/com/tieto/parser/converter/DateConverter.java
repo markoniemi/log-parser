@@ -24,7 +24,7 @@ public class DateConverter extends Converter<Date> {
     public Date convert(String input) {
         Date date = null;
         try {
-            DateFormat formatter = new SimpleDateFormat(format, new Locale("en"));
+            DateFormat formatter = new SimpleDateFormat(format);
             date = (Date) formatter.parse(input);
         } catch (ParseException e) {
             throw new com.tieto.parser.ParseException(e.getMessage(), e);

@@ -168,7 +168,6 @@ public class FieldTest {
         Converter converter = new Converter();
         converter.setClassName("com.tieto.parser.converter.DateConverter");
         field.setConverter(converter);
-        converter.setParameter("yyyy-MM-dd hh:mm:ss");
         ParserData parserData = new ParserData();
         String valueString = new String("2014-06-25 17:13:00");
         field.setValue(parserData, valueString, "com.tieto.parser.model.TestClass");
