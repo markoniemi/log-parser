@@ -1,5 +1,10 @@
 package com.tieto.parser;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -172,14 +177,20 @@ public class FieldTest {
         String valueString = new String("2014-06-25 17:13:00");
         field.setValue(parserData, valueString, "com.tieto.parser.model.TestClass");
         Assert.assertNotNull(((TestClass) parserData.getCurrentObject()).getDate());
-        Assert.assertEquals(1403705580000L, ((TestClass) parserData.getCurrentObject()).getDate().getTime());
+        Assert.assertEquals(createTime("2014-06-25 17:13:00"), ((TestClass) parserData.getCurrentObject()).getDate());
         // use constructor parameter for converter
         converter.setParameter("yyyy-MM-dd hh:mm:ss,SSS");
         parserData = new ParserData();
-        valueString = new String("2014-06-25 17:13:00,123");
+        valueString = new String("2014-06-25 17:13:00,000");
         field.setValue(parserData, valueString, "com.tieto.parser.model.TestClass");
         Assert.assertNotNull(((TestClass) parserData.getCurrentObject()).getDate());
-        Assert.assertEquals(1403705580123L, ((TestClass) parserData.getCurrentObject()).getDate().getTime());
+        Assert.assertEquals(createTime("2014-06-25 17:13:00"), ((TestClass) parserData.getCurrentObject()).getDate());
+    }
+    
+    private Date createTime(String dateString) throws java.text.ParseException {
+        final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd hh:mm:ss";
+        DateFormat formatter = new SimpleDateFormat(DEFAULT_DATE_FORMAT, new Locale("en"));
+        return formatter.parse(dateString);
     }
 
     @Test(expected = ParseException.class)
