@@ -10,13 +10,14 @@ import java.util.Locale;
  * Converts time string to Date.
  */
 public class DateConverter extends Converter<Date> {
+    private static final Locale locale = new Locale("en");
     private static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd hh:mm:ss";
     private String format = DEFAULT_DATE_FORMAT;
 
     public DateConverter() {
         // need to define default constructor when there is another constructor
     }
-    
+
     public DateConverter(String format) {
         this.format = format;
     }
@@ -24,7 +25,7 @@ public class DateConverter extends Converter<Date> {
     public Date convert(String input) {
         Date date = null;
         try {
-            DateFormat formatter = new SimpleDateFormat(format);
+            DateFormat formatter = new SimpleDateFormat(format, locale);
             date = (Date) formatter.parse(input);
         } catch (ParseException e) {
             throw new com.tieto.parser.ParseException(e.getMessage(), e);
