@@ -11,4 +11,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: '-B clean install verify sonar:sonar -Dsonar.login=$(SONAR_CLOUD_TOKEN) -Dsonar.organization=markoniemi-github'
+    goals: '-B clean install verify sonar:sonar -Dsonar.login=$(SONAR_CLOUD_TOKEN) -Dsonar.organization=markoniemi-github -Dsonar.host.url=https://sonarcloud.io'
