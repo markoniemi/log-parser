@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/log-parser
     docker:
-      - image: circleci/openjdk:8-jdk
+      - image: openjdk/8-jdk-alpine
     steps:
       - checkout
       - restore_cache:
