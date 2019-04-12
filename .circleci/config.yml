@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/log-parser
     docker:
-      - image: openjdk:8-jdk-alpine
+      - image: maven:3.6.0-jdk-8-alpine
     steps:
       - checkout
       - restore_cache:
