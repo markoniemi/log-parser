@@ -1,3 +1,6 @@
+trigger:
+- master
+
 pool:
   vmImage: 'Ubuntu-16.04'
 
@@ -14,4 +17,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: '-B clean install verify sonar:sonar -Dsonar.login=$(SONAR_CLOUD_TOKEN) -Dsonar.organization=markoniemi-github -Dsonar.host.url=https://sonarcloud.io'
+    goals: '-B clean install verify sonar:sonar updateimpact:submit -Dsonar.login=$(SONAR_CLOUD_TOKEN) -Dsonar.organization=markoniemi-github -Dsonar.host.url=https://sonarcloud.io -DUPDATEIMPACT_API_KEY=$(UPDATEIMPACT_API_KEY)'
