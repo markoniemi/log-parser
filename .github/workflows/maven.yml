@@ -10,4 +10,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B clean install verify sonar:sonar -Dsonar.login=${{ secrets.SONAR_CLOUD_TOKEN }} -Dsonar.organization=markoniemi-github -Dsonar.host.url=https://sonarcloud.io
+      run: mvn -B clean install verify
